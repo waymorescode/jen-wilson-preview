@@ -507,17 +507,17 @@ nav {
 /* ============================================
    INVESTMENT SECTION
    ============================================ */
-.investment-section {
+.fees-section {
   background-color: var(--cream);
   padding: 5rem 2rem;
 }
 
-.investment-inner {
+.fees-inner {
   max-width: 1000px;
   margin: 0 auto;
 }
 
-.investment-section h2 {
+.fees-section h2 {
   font-family: var(--font-serif);
   font-size: 2.5rem;
   font-weight: 600;
@@ -526,13 +526,13 @@ nav {
   margin-bottom: 3rem;
 }
 
-.investment-grid {
+.fees-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
-.investment-card {
+.fees-card {
   text-align: center;
   padding: 2.5rem 1.5rem;
   background-color: var(--white);
@@ -540,18 +540,18 @@ nav {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
-.investment-card.highlight {
+.fees-card.highlight {
   background-color: var(--primary);
   color: var(--white);
 }
 
-.investment-card.highlight h3,
-.investment-card.highlight .investment-price,
-.investment-card.highlight p {
+.fees-card.highlight h3,
+.fees-card.highlight .fees-price,
+.fees-card.highlight p {
   color: var(--white);
 }
 
-.investment-card h3 {
+.fees-card h3 {
   font-family: var(--font-serif);
   font-size: 1.3rem;
   font-weight: 600;
@@ -559,7 +559,7 @@ nav {
   margin-bottom: 0.75rem;
 }
 
-.investment-price {
+.fees-price {
   font-family: var(--font-serif);
   font-size: 2.5rem;
   font-weight: 700;
@@ -567,24 +567,24 @@ nav {
   margin-bottom: 0.75rem;
 }
 
-.investment-price span {
+.fees-price span {
   font-size: 1rem;
   font-weight: 400;
   color: var(--accent);
 }
 
-.investment-card.highlight .investment-price span {
+.fees-card.highlight .fees-price span {
   color: rgba(255,255,255,0.7);
 }
 
-.investment-card p {
+.fees-card p {
   font-size: 0.9rem;
   line-height: 1.6;
   color: var(--charcoal);
   margin-bottom: 0;
 }
 
-.investment-note {
+.fees-note {
   text-align: center;
   margin-top: 2rem;
   font-size: 0.9rem;
@@ -819,7 +819,7 @@ footer {
 
   .services-grid,
   .approach-grid,
-  .investment-grid {
+  .fees-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
@@ -831,7 +831,7 @@ footer {
 
   .services-section h2,
   .approach-section h2,
-  .investment-section h2 { font-size: 2rem; }
+  .fees-section h2 { font-size: 2rem; }
 
   .photo-band {
     height: 250px;
@@ -895,7 +895,7 @@ footer {
 
   .services-section h2,
   .approach-section h2,
-  .investment-section h2 { font-size: 1.5rem; }
+  .fees-section h2 { font-size: 1.5rem; }
 
   .cta-section h2 { font-size: 1.5rem; }
   .step-number { font-size: 2rem; }
