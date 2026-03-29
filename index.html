@@ -55,7 +55,7 @@
             margin: 0 auto;
             padding: 3rem 2rem 4rem;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 2.5rem;
         }
 
@@ -272,11 +272,11 @@
 <body>
 
 <div class="header">
-    <h1>Conscious Practice — Two Layout Options</h1>
-    <p>Same voice, same content, two different visual approaches. Click through and see which one feels right.</p>
+    <h1>Conscious Practice — Three Layout Options</h1>
+    <p>Same voice, same content, three different visual approaches. Click through and see which one feels right.</p>
 </div>
 
-<p class="note">Both versions use the "Conscious Practice" branding and your authentic voice throughout. The only difference is the layout and visual style.</p>
+<p class="note">All versions use your authentic voice throughout. The only difference is the layout and visual style.</p>
 
 <div class="options">
 
@@ -322,6 +322,27 @@
         </div>
     </div>
 
+    <!-- Option G2 -->
+    <div class="option-card">
+        <div class="preview-wrapper">
+            <iframe src="Site Version G2 - The Edits (CP)/index.html" loading="lazy"></iframe>
+        </div>
+        <div class="card-body">
+            <span class="version-label">Option G</span>
+            <h2>The Edits</h2>
+            <p>Boutique wellness brand with curated package offerings. Modern, polished, luxe. Feels like discovering a high-end wellness experience designed just for you.</p>
+            <div class="tags">
+                <span class="tag">Boutique Brand</span>
+                <span class="tag">Modern & Luxe</span>
+                <span class="tag">Package-Forward</span>
+            </div>
+            <div class="card-actions">
+                <a href="Site Version G2 - The Edits (CP)/index.html" class="btn btn-primary" target="_blank">Open Full Site</a>
+                <button class="btn btn-secondary" onclick="openPreview('Site Version G2 - The Edits (CP)/index.html', 'Option G — The Edits')">Quick Preview</button>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 <!-- Fullscreen Preview Modal -->
@@ -341,7 +362,8 @@
 <script>
     const versions = [
         { url: 'Site Version A2 - The Friend (CP)/index.html', title: 'Option A — The Friend' },
-        { url: 'Site Version F2 - The Authority (CP)/index.html', title: 'Option F — The Authority' }
+        { url: 'Site Version F2 - The Authority (CP)/index.html', title: 'Option F — The Authority' },
+        { url: 'Site Version G2 - The Edits (CP)/index.html', title: 'Option G — The Edits' }
     ];
     let currentIndex = 0;
 
