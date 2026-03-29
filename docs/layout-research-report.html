@@ -1,0 +1,2350 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>layout-research-report</title><style>html{font-size:16.000000px;}</style><style>/* copy from https://github.com/sindresorhus/github-markdown-css/ */
+
+html,body{background-color: #2d2d2d;}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #cccccc;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 1rem;
+  word-wrap: break-word;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body figure{margin:0;padding:0; display:table;}
+.markdown-body figure figcaption{font-size:92%; text-align:center; color:#f97394;}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -1.25rem;
+  padding-right: 0.25rem;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #6c99bb;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+.markdown-body strong{
+  color: #bed6ff;
+}
+.markdown-body em{
+  color: #bed6ff;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 0.9rem;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #f9a959;
+  text-decoration: none;
+}
+.markdown-body mjx-container[jax="SVG"] > svg a{fill:#f9a959;stroke: #f9a959;}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 0.1875rem 0.3125rem;
+  font: 0.75rem SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 0.75rem;
+  color: #f97394;
+  vertical-align: middle;
+  background-color: #333333;
+  border: 1px solid #494949;
+  border-radius: 0.1875rem;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 0.625rem;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 0.75rem;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.markdown-body hr {
+  height: .25rem;
+  padding: 0;
+  margin: 1.5rem 0;
+  background-color: #494949;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1rem;
+  color: #9b9b9b;
+  border-left: .25rem solid #d25252;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3rem;
+  border-bottom: 1px solid #434343;
+  color: #6c99bb;
+}
+
+.markdown-body h2 {
+  font-size: 1.5rem;
+  color: #6c99bb;
+}
+
+.markdown-body h3 {
+  font-size: 1.25rem;
+  color: #6c99bb;
+}
+
+.markdown-body h4 {
+  font-size: 1rem;
+  color: #6c99bb;
+}
+
+.markdown-body h5 {
+  font-size: .875rem;
+  color: #6c99bb;
+}
+
+.markdown-body h6 {
+  font-size: .85rem;
+  color: #6c99bb;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2rem;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 1rem;
+}
+
+.markdown-body li+li {
+  margin-top: .25rem;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #717171;
+}
+
+.markdown-body table tr {
+  background-color: #2d2d2d;
+  border-top: 1px solid #717171;
+}
+
+.markdown-body table th {
+  background-color: #434343;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #323232;
+}
+
+.markdown-body img,.markdown-body video {
+  max-width: 100%;
+  box-sizing: initial;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 1.25rem;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 1.25rem;
+}
+
+.markdown-body code {
+  padding: .2rem .4rem;
+  margin: 0;
+  font-size: 85%;
+  background-color: #333333;
+  color: #f97394;
+  border-radius: 0.1875rem;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+   font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 1rem;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 1rem;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #333333;
+  border-radius: 0.1875rem;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+  color: #f97394;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 0.1875rem;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2rem .25rem -1.6rem;
+  vertical-align: middle;
+}
+
+.markdown-body .task-list-item input[type="checkbox"]{
+-webkit-appearance: none;-moz-appearance: none;appearance: none;
+width: 0.875rem; height: 0.875rem;outline: none;
+border: 1px solid #f9a959;border-radius: 2px; 
+}
+.markdown-body .task-list-item input[type="checkbox"]:checked {
+  background:no-repeat center/80% url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20fill%3D%22%23f9a959%22%20d%3D%22M173.898%20439.404l-166.4-166.4c-9.997-9.997-9.997-26.206%200-36.204l36.203-36.204c9.997-9.998%2026.207-9.998%2036.204%200L192%20312.69%20432.095%2072.596c9.997-9.997%2026.207-9.997%2036.204%200l36.203%2036.204c9.997%209.997%209.997%2026.206%200%2036.204l-294.4%20294.401c-9.998%209.997-26.207%209.997-36.204-.001z%22%2F%3E%3C%2Fsvg%3E") ;
+}
+
+.markdown-body section.footnotes{
+    margin-top:3rem;
+    border-top:solid 1px #494949;
+    padding-top:0px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .markdown-body mark{color: #111;}
+}
+
+/* PrismJS 1.23.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1rem;
+    margin: .5rem 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background-color: #333333;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1rem;
+    border-radius: .3rem;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #777777;
+}
+
+.token.punctuation {
+    color: #a5c261;
+}
+
+.token.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #ffc66d;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #a5c261;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #$$codeBlockColor$$;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #d197d9;
+}
+
+.token.function,
+.token.class-name {
+    color: #bed6ff;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #f9a959;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8rem;
+  counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8rem;
+  width: 3rem; /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #6b6b6b;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+  .line-numbers-rows > span {
+    display: block;
+    counter-increment: linenumber;
+  }
+
+    .line-numbers-rows > span:before {
+      content: counter(linenumber);
+      color: #6b6b6b;
+      display: block;
+      padding-right: 0.8rem;
+      text-align: right;
+    }
+
+
+</style><script>(n=>{"use strict";let s,r,e;const l=["cdn.jsdelivr.net","fastly.jsdelivr.net","gcore.jsdelivr.net","cdn.zenless.top","testingcf.jsdelivr.net"],t="//",i=l[0],o=Date.now(),a=2e3,c="jsdelivr-auto-fallback",f="/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?",d=e=>e&&e.includes(t+i),m=e=>e.replace(t+i,t+s),u=window.setTimeout,v=n.querySelectorAll.bind(n),b=()=>{let e,t;for(e of v('link[rel="stylesheet"]'))t=e.href,d(t)&&!t.includes(f)&&(e.href=m(t));for(e of v("script"))if(t=e.src,d(t)){const s=n.createElement("script");s.src=m(t),e.defer=!0,e.src="",e.before(s),e.remove()}for(e of v("img"))t=e.src,d(t)&&(e.src="",e.src=m(t));for(e of v("*[style]"))t=e.getAttribute("style"),d(t)&&e.setAttribute("style",m(t));for(e of v("style"))t=e.innerHTML,d(t)&&(e.innerHTML=m(t))},h=()=>{!e&&r&&s&&(console.warn(i+" is not available. Use "+s),e=!0,u(b,0),u(b,20),setInterval(b,500))},g=(()=>{try{return Object.assign({},JSON.parse(localStorage.getItem(c)||"{}"))}catch{return{}}})(),y=()=>{g.time=o,g.failed=!1,g.fastNode=null;for(const t of l)((e,t)=>{let s;const r=n.createElement("link"),l=e=>{s&&(clearTimeout(s),s=0,e||(r.href="data:text/css;base64,"),r.remove(),t(e))};s=u(l,a),r.addEventListener("error",()=>l(!1)),r.addEventListener("load",()=>l(!0)),r.rel="stylesheet",r.text="text/css",r.href=e+f+o,n.head.insertAdjacentElement("afterbegin",r)})("https://"+t,e=>{e||t!==i||(r=!0,g.failed=!0),e&&!s&&(s=t),e&&!g.fastNode&&(g.fastNode=t),h()});u(()=>{r&&!s&&(s=l[1],h()),localStorage.setItem(c,JSON.stringify(g))},a+100)};if(g.time&&o-g.time<36e5&&g.failed&&g.fastNode)r=!0,s=g.fastNode,h(),u(y,1e3);else if(n.head)y();else{const j=new MutationObserver(()=>{n.head&&(j.disconnect(),y())});j.observe(n,{childList:!0,subtree:!0})}})(document);</script>
+<style>.mweb-charts{background:#fff;}
+body{ box-sizing: border-box;
+    margin: 0 auto;}
+@media print{
+    pre, code, pre code {
+     overflow: visible !important;
+     white-space: pre-wrap !important;       /* css-3 */
+     white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+     white-space: -pre-wrap !important;      /* Opera 4-6 */
+     white-space: -o-pre-wrap !important;    /* Opera 7 */
+     word-wrap: break-word !important;       /* Internet Explorer 5.5+ */
+    }
+    html,body{margin:0;padding:4px;}
+    .mweb-yaml{display:none;}
+}
+
+
+
+div.code-toolbar {
+  position: relative;
+}
+
+div.code-toolbar > .toolbar {
+  position: absolute;
+  z-index: 10;
+  top: .3em;
+  right: .2em;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+div.code-toolbar:hover > .toolbar {
+  opacity: 1;
+}
+
+/* Separate line b/c rules are thrown out if selector is invalid.
+   IE11 and old Edge versions don't support :focus-within. */
+div.code-toolbar:focus-within > .toolbar {
+  opacity: 1;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item {
+  display: inline-block;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a {
+  cursor: pointer;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > button {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-user-select: none; /* for button */
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a,
+div.code-toolbar > .toolbar > .toolbar-item > button,
+div.code-toolbar > .toolbar > .toolbar-item > span {
+  color: inherit;
+  font-size: .8em;
+  padding: 4px .5em;
+  background: #f5f2f0;
+  background: rgba(224, 224, 224, 0.4);
+  box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+  border-radius: .5em;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a:hover,
+div.code-toolbar > .toolbar > .toolbar-item > a:focus,
+div.code-toolbar > .toolbar > .toolbar-item > button:hover,
+div.code-toolbar > .toolbar > .toolbar-item > button:focus,
+div.code-toolbar > .toolbar > .toolbar-item > span:hover,
+div.code-toolbar > .toolbar > .toolbar-item > span:focus {
+  color: inherit;
+  text-decoration: none;
+}
+</style><script>window.MathJax = {     tex: { tags: 'ams', displayMath: [ ['\\[', '\\]'] ] } ,     startup: {     pageReady() {       return MathJax.startup.defaultPageReady().then(function () {          window.mweb_mathjax_ready_val = 'yes';          if(window.mweb_mathjax_ready !== undefined){ mweb_mathjax_ready(); }       });     }   }};document.addEventListener('DOMContentLoaded', function(event) {    if (typeof Prism != 'undefined') {         Prism.highlightAll();     }});window.mweb_mathjax_ready_val = '';function theMWebMathJaxRenderIsReady(key){ return window.mweb_mathjax_ready_val; }</script><script>window.MathJax = { tex: { tags: 'ams', displayMath: [ ['\\[', '\\]'] ] } }; </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script> <style>body{max-width:1108px; padding:24px;}</style>
+<script>(()=>{var e={647:(e,t,n)=>{var o,l,r;l=[],void 0===(r="function"==typeof(o=function(e){"use strict";const t=!!(e&&e.document&&e.document.querySelector&&e.addEventListener);if("undefined"==typeof window&&!t)return;const o=n(563);return e.tocbot=o,o}(void 0!==n.g?n.g:window||n.g))?o.apply(t,l):o)||(e.exports=r)},563:(e,t,n)=>{"use strict";function o(e){var t,n=[].forEach,o=[].some,l=document.body,r=!0,i=" ";function s(t,o){var l,r,a,u=o.appendChild((l=t,r=document.createElement("li"),a=document.createElement("a"),e.listItemClass&&r.setAttribute("class",e.listItemClass),e.onClick&&(a.onclick=e.onClick),e.includeTitleTags&&a.setAttribute("title",l.textContent),e.includeHtml&&l.childNodes.length?n.call(l.childNodes,(function(e){a.appendChild(e.cloneNode(!0))})):a.textContent=l.textContent,a.setAttribute("href",e.basePath+"#"+l.id),a.setAttribute("class",e.linkClass+i+"node-name--"+l.nodeName+i+e.extraLinkClasses),r.appendChild(a),r));if(t.children.length){var d=c(t.isCollapsed);t.children.forEach((function(e){s(e,d)})),u.appendChild(d)}}function c(t){var n=e.orderedList?"ol":"ul",o=document.createElement(n),l=e.listClass+i+e.extraListClasses;return t&&(l=(l=l+i+e.collapsibleClass)+i+e.isCollapsedClass),o.setAttribute("class",l),o}function a(t){var n=0;return null!==t&&(n=t.offsetTop,e.hasInnerContainers&&(n+=a(t.offsetParent))),n}function u(e,t){return e&&e.className!==t&&(e.className=t),e}function d(t){return t&&-1!==t.className.indexOf(e.collapsibleClass)&&-1!==t.className.indexOf(e.isCollapsedClass)?(u(t,t.className.replace(i+e.isCollapsedClass,"")),d(t.parentNode.parentNode)):t}return{enableTocAnimation:function(){r=!0},disableTocAnimation:function(t){var n=t.target||t.srcElement;"string"==typeof n.className&&-1!==n.className.indexOf(e.linkClass)&&(r=!1)},render:function(e,n){var o=c(!1);if(n.forEach((function(e){s(e,o)})),null!==(t=e||t))return t.firstChild&&t.removeChild(t.firstChild),0===n.length?t:t.appendChild(o)},updateToc:function(s){var c;c=e.scrollContainer&&document.querySelector(e.scrollContainer)?document.querySelector(e.scrollContainer).scrollTop:document.documentElement.scrollTop||l.scrollTop,e.positionFixedSelector&&function(){var n;n=e.scrollContainer&&document.querySelector(e.scrollContainer)?document.querySelector(e.scrollContainer).scrollTop:document.documentElement.scrollTop||l.scrollTop;var o=document.querySelector(e.positionFixedSelector);"auto"===e.fixedSidebarOffset&&(e.fixedSidebarOffset=t.offsetTop),n>e.fixedSidebarOffset?-1===o.className.indexOf(e.positionFixedClass)&&(o.className+=i+e.positionFixedClass):o.className=o.className.replace(i+e.positionFixedClass,"")}();var f,m=s;if(r&&null!==t&&m.length>0){o.call(m,(function(t,n){return a(t)>c+e.headingsOffset+10?(f=m[0===n?n:n-1],!0):n===m.length-1?(f=m[m.length-1],!0):void 0}));var h=t.querySelector("."+e.activeLinkClass),p=t.querySelector("."+e.linkClass+".node-name--"+f.nodeName+'[href="'+e.basePath+"#"+f.id.replace(/([ #;&,.+*~':"!^$[\]()=>|/\\@])/g,"\\$1")+'"]');if(h===p)return;var C=t.querySelectorAll("."+e.linkClass);n.call(C,(function(t){u(t,t.className.replace(i+e.activeLinkClass,""))}));var g=t.querySelectorAll("."+e.listItemClass);n.call(g,(function(t){u(t,t.className.replace(i+e.activeListItemClass,""))})),p&&-1===p.className.indexOf(e.activeLinkClass)&&(p.className+=i+e.activeLinkClass);var v=p&&p.parentNode;v&&-1===v.className.indexOf(e.activeListItemClass)&&(v.className+=i+e.activeListItemClass);var S=t.querySelectorAll("."+e.listClass+"."+e.collapsibleClass);n.call(S,(function(t){-1===t.className.indexOf(e.isCollapsedClass)&&(t.className+=i+e.isCollapsedClass)})),p&&p.nextSibling&&-1!==p.nextSibling.className.indexOf(e.isCollapsedClass)&&u(p.nextSibling,p.nextSibling.className.replace(i+e.isCollapsedClass,"")),d(p&&p.parentNode.parentNode)}}}}n.r(t),n.d(t,{_buildHtml:()=>i,_headingsArray:()=>c,_options:()=>d,_parseContent:()=>s,_scrollListener:()=>a,destroy:()=>m,init:()=>f,refresh:()=>h});const l={tocSelector:".js-toc",contentSelector:".js-toc-content",headingSelector:"h1, h2, h3",ignoreSelector:".js-toc-ignore",hasInnerContainers:!1,linkClass:"toc-link",extraLinkClasses:"",activeLinkClass:"is-active-link",listClass:"toc-list",extraListClasses:"",isCollapsedClass:"is-collapsed",collapsibleClass:"is-collapsible",listItemClass:"toc-list-item",activeListItemClass:"is-active-li",collapseDepth:0,scrollSmooth:!0,scrollSmoothDuration:420,scrollSmoothOffset:0,scrollEndCallback:function(e){},headingsOffset:1,throttleTimeout:50,positionFixedSelector:null,positionFixedClass:"is-position-fixed",fixedSidebarOffset:"auto",includeHtml:!1,includeTitleTags:!1,onClick:function(e){},orderedList:!0,scrollContainer:null,skipRendering:!1,headingLabelCallback:!1,ignoreHiddenElements:!1,headingObjectCallback:null,basePath:"",disableTocScrollSync:!1,tocScrollOffset:0};function r(e){var t=e.duration,n=e.offset,o=location.hash?l(location.href):location.href;function l(e){return e.slice(0,e.lastIndexOf("#"))}document.body.addEventListener("click",(function(r){var i;"a"!==(i=r.target).tagName.toLowerCase()||!(i.hash.length>0||"#"===i.href.charAt(i.href.length-1))||l(i.href)!==o&&l(i.href)+"#"!==o||r.target.className.indexOf("no-smooth-scroll")>-1||"#"===r.target.href.charAt(r.target.href.length-2)&&"!"===r.target.href.charAt(r.target.href.length-1)||-1===r.target.className.indexOf(e.linkClass)||function(e,t){var n,o,l=window.pageYOffset,r={duration:t.duration,offset:t.offset||0,callback:t.callback,easing:t.easing||function(e,t,n,o){return(e/=o/2)<1?n/2*e*e+t:-n/2*(--e*(e-2)-1)+t}},i=document.querySelector('[id="'+decodeURI(e).split("#").join("")+'"]')||document.querySelector('[id="'+e.split("#").join("")+'"]'),s="string"==typeof e?r.offset+(e?i&&i.getBoundingClientRect().top||0:-(document.documentElement.scrollTop||document.body.scrollTop)):e,c="function"==typeof r.duration?r.duration(s):r.duration;function a(e){o=e-n,window.scrollTo(0,r.easing(o,l,s,c)),o<c?requestAnimationFrame(a):(window.scrollTo(0,l+s),"function"==typeof r.callback&&r.callback())}requestAnimationFrame((function(e){n=e,a(e)}))}(r.target.hash,{duration:t,offset:n,callback:function(){var e,t;e=r.target.hash,(t=document.getElementById(e.substring(1)))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())}})}),!1)}let i,s,c,a,u,d={};function f(e){d=function(){const e={};for(let t=0;t<arguments.length;t++){const n=arguments[t];for(const t in n)p.call(n,t)&&(e[t]=n[t])}return e}(l,e||{}),d.scrollSmooth&&(d.duration=d.scrollSmoothDuration,d.offset=d.scrollSmoothOffset,r(d)),i=o(d),s=function(e){var t=[].reduce;function n(e){return e[e.length-1]}function o(e){return+e.nodeName.toUpperCase().replace("H","")}function l(t){if(!function(e){try{return e instanceof window.HTMLElement||e instanceof window.parent.HTMLElement}catch(t){return e instanceof window.HTMLElement}}(t))return t;if(e.ignoreHiddenElements&&(!t.offsetHeight||!t.offsetParent))return null;const n=t.getAttribute("data-heading-label")||(e.headingLabelCallback?String(e.headingLabelCallback(t.innerText)):(t.innerText||t.textContent).trim());var l={id:t.id,children:[],nodeName:t.nodeName,headingLevel:o(t),textContent:n};return e.includeHtml&&(l.childNodes=t.childNodes),e.headingObjectCallback?e.headingObjectCallback(l,t):l}return{nestHeadingsArray:function(o){return t.call(o,(function(t,o){var r=l(o);return r&&function(t,o){for(var r=l(t),i=r.headingLevel,s=o,c=n(s),a=i-(c?c.headingLevel:0);a>0&&(!(c=n(s))||i!==c.headingLevel);)c&&void 0!==c.children&&(s=c.children),a--;i>=e.collapseDepth&&(r.isCollapsed=!0),s.push(r)}(r,t.nest),t}),{nest:[]})},selectHeadings:function(t,n){var o=n;e.ignoreSelector&&(o=n.split(",").map((function(t){return t.trim()+":not("+e.ignoreSelector+")"})));try{return t.querySelectorAll(o)}catch(e){return console.warn("Headers not found with selector: "+o),null}}}}(d),m();const t=function(e){try{return e.contentElement||document.querySelector(e.contentSelector)}catch(t){return console.warn("Contents element not found: "+e.contentSelector),null}}(d);if(null===t)return;const n=g(d);if(null===n)return;if(c=s.selectHeadings(t,d.headingSelector),null===c)return;const f=s.nestHeadingsArray(c).nest;if(d.skipRendering)return this;i.render(n,f),a=C((function(e){i.updateToc(c),!d.disableTocScrollSync&&function(e){var t=e.tocElement||document.querySelector(e.tocSelector);if(t&&t.scrollHeight>t.clientHeight){var n=t.querySelector("."+e.activeListItemClass);if(n){var o=t.scrollTop,l=o+t.clientHeight,r=n.offsetTop,i=r+n.clientHeight;r<o+e.tocScrollOffset?t.scrollTop-=o-r+e.tocScrollOffset:i>l-e.tocScrollOffset-30&&(t.scrollTop+=i-l+e.tocScrollOffset+60)}}}(d);const t=e&&e.target&&e.target.scrollingElement&&0===e.target.scrollingElement.scrollTop;(e&&(0===e.eventPhase||null===e.currentTarget)||t)&&(i.updateToc(c),d.scrollEndCallback&&d.scrollEndCallback(e))}),d.throttleTimeout),a(),d.scrollContainer&&document.querySelector(d.scrollContainer)?(document.querySelector(d.scrollContainer).addEventListener("scroll",a,!1),document.querySelector(d.scrollContainer).addEventListener("resize",a,!1)):(document.addEventListener("scroll",a,!1),document.addEventListener("resize",a,!1));let h=null;u=C((function(e){d.scrollSmooth&&i.disableTocAnimation(e),i.updateToc(c),h&&clearTimeout(h),h=setTimeout((function(){i.enableTocAnimation()}),d.scrollSmoothDuration)}),d.throttleTimeout),d.scrollContainer&&document.querySelector(d.scrollContainer)?document.querySelector(d.scrollContainer).addEventListener("click",u,!1):document.addEventListener("click",u,!1)}function m(){const e=g(d);null!==e&&(d.skipRendering||e&&(e.innerHTML=""),d.scrollContainer&&document.querySelector(d.scrollContainer)?(document.querySelector(d.scrollContainer).removeEventListener("scroll",a,!1),document.querySelector(d.scrollContainer).removeEventListener("resize",a,!1),i&&document.querySelector(d.scrollContainer).removeEventListener("click",u,!1)):(document.removeEventListener("scroll",a,!1),document.removeEventListener("resize",a,!1),i&&document.removeEventListener("click",u,!1)))}function h(e){m(),f(e||d)}const p=Object.prototype.hasOwnProperty;function C(e,t,n){let o,l;return t||(t=250),function(){const r=n||this,i=+new Date,s=arguments;o&&i<o+t?(clearTimeout(l),l=setTimeout((function(){o=i,e.apply(r,s)}),t)):(o=i,e.apply(r,s))}}function g(e){try{return e.tocElement||document.querySelector(e.tocSelector)}catch(t){return console.warn("TOC element not found: "+e.tocSelector),null}}}},t={};function n(o){var l=t[o];if(void 0!==l)return l.exports;var r=t[o]={exports:{}};return e[o](r,r.exports,n),r.exports}n.d=(e,t)=>{for(var o in t)n.o(t,o)&&!n.o(e,o)&&Object.defineProperty(e,o,{enumerable:!0,get:t[o]})},n.g=function(){if("object"==typeof globalThis)return globalThis;try{return this||new Function("return this")()}catch(e){if("object"==typeof window)return window}}(),n.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),n.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n(647)})();</script>
+<style>#mweb_toc_list_iid{overflow-y:auto}#mweb_toc_list_iid>.toc-list{overflow:hidden;position:relative}.toc>.toc-list li{list-style:none}.toc-list{margin:0;padding-left:10px}a.toc-link{height:100%}.is-collapsible{max-height:1000px;overflow:hidden;transition:all 300ms ease-in-out}.is-collapsed{max-height:0}.is-position-fixed{position:fixed !important;top:0} .is-active-link{} .toc-link::before{background-color:#eee;content:' ';display:inline-block;height:inherit;left:0;margin-top:-1px;position:absolute;width:2px;} .is-active-link::before{background-color:#54bc4b;} .mweb_ct_wrap{margin:0 auto;} .mweb_toc_wrap{margin-top: 18px;}  .mweb_toc_wrap_ct{position: fixed;  width: 266px; padding: 0px; overflow: auto; border-radius:4px; }  .mweb_toc_wrap_ct .markdown-body li{margin: 2px 0;} .mweb_toc_wrap_ct ul{padding-left: 14px;} .mweb_toc_wrap_ct .markdown-body{ padding:12px 12px; font-size: 13px;} .mweb_toc_wrap_ct li.is-active-li{ font-weight: bold;} .mweb_toc_wrap_ct li.is-active-li li{font-weight: normal;} #mweb_toc_list_iid{ padding-left:0px; } #mweb_toc_list_iid>ul{padding-left: 22px;} .mweb_toc_wrap_ct{width: 270px; top:42px; bottom:42px;} .mweb_toc_wrap_ct, .toc-link::before{background-color:#343434;} .is-active-link::before{background-color:#d25252;}.mweb_ct_wrap{padding-left: 300px;} .mweb_toc_wrap{float: left;} .mweb_toc_wrap_ct{ margin-left: -300px;}@media screen and (max-width: 860px) {  .mweb_toc_wrap{display: none;} .mweb_ct_wrap{ padding:30px;} }@media print{ .mweb_toc_wrap{display: none;} .mweb_ct_wrap{ padding:30px;} }</style><script>document.addEventListener('DOMContentLoaded', (event) => {const ele = document.getElementById('markdown_content');const arr = ele.querySelectorAll('h1,h2,h3,h4,h5,h6'); var idNum = 0;arr.forEach((tmpEle) => { var idVal = 'mweb_tt_id_'+idNum;  if(tmpEle.id === ''){  tmpEle.id = idVal;  }  idNum++; });tocbot.init({ tocSelector: '#mweb_toc_list_iid', contentSelector: '#markdown_content',  headingSelector: 'h1, h2, h3, h4, h5, h6',  orderedList: false, collapseDepth: 6,scrollEndCallback: function (e) { const el = document.querySelector('#mweb_toc_list_iid li.is-active-li'); if(document.querySelector('#mweb_toc_list_iid>ul>li:first-child').classList.contains('is-active-li')){ document.getElementById('mweb_toc_list_iid').scrollTop=0; return;} if(typeof el.scrollIntoViewIfNeeded === 'function'){ el.scrollIntoViewIfNeeded();}else{ el.scrollIntoView(true);} },});});</script></head><body><div class='mweb_ct_wrap'><div class='mweb_toc_wrap'><div class='mweb_toc_wrap_ct'><div id='mweb_toc_list_iid' class='mweb_toc markdown-body'></div></div></div><div id='markdown_content' class='markdown-body'><h1><a id="layout-visual-design-research-report" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Layout &amp; Visual Design Research Report</h1>
+<h2><a id="dr-jennifer-wilson-site-redesign%E2%80%94-march-2026" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dr. Jennifer Wilson Site Redesign — March 2026</h2>
+<hr />
+<h2><a id="table-of-contents" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Table of Contents</h2>
+<ol>
+<li><a href="#benchmark-competitors">Benchmark Competitors</a></li>
+<li><a href="#premium-therapy-picks">Premium Therapy Picks</a></li>
+<li><a href="#luxury-wellness-aspirational-sites">Luxury Wellness Aspirational Sites</a></li>
+<li><a href="#comparison-table">Comparison Table</a></li>
+<li><a href="#layout-pattern-recommendations">Layout Pattern Recommendations</a></li>
+</ol>
+<hr />
+<h2><a id="benchmark-competitors" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Benchmark Competitors</h2>
+<h3><a id="state-of-mind-kc%E2%80%94-https-www-stateofmindkc-com" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>State of Mind KC — <a href="https://www.stateofmindkc.com">https://www.stateofmindkc.com</a></h3>
+<p><strong>Overall Aesthetic:</strong> Warm, feminine, lifestyle-forward. Personal brand meets Instagram influencer energy. More lifestyle coach than clinical therapist.</p>
+<p><strong>Platform:</strong> Wix</p>
+<p><strong>Navigation:</strong></p>
+<ul>
+<li>Style: Sticky horizontal header with logo left, nav right</li>
+<li>Items: 6 (Home, About, Tools, Investment, For Therapists, Book Now)</li>
+<li>CTA: &quot;BOOK NOW&quot; as final nav item — styled as navigation link, not button</li>
+<li>Mobile: Hamburger menu</li>
+</ul>
+<p><strong>Hero Section:</strong></p>
+<ul>
+<li>Type: Full-width text-only with stacked heading hierarchy. No hero image in the traditional sense — the hero IS the text.</li>
+<li>Text alignment: Centered, large-scale display type</li>
+<li>Headlines layered: small eyebrow (&quot;Conversational. Encouraging. Compassionate.&quot;) then large display (&quot;THERAPY FOR THE MODERN WOMAN&quot;) then sub (&quot;WHO WANTS TO FEEL AS PUT TOGETHER AS SHE LOOKS&quot;)</li>
+<li>CTA: None in hero itself — scroll-dependent</li>
+<li>Animation: Text animation/fade-in on load</li>
+</ul>
+<p><strong>Homepage Section Order:</strong></p>
+<ol>
+<li>Text-only hero with stacked headlines</li>
+<li>Split section: therapist photo left + specialization list right + &quot;TELL ME MORE&quot; CTA</li>
+<li>Featured-in media logos + therapist name banner</li>
+<li>Pain points section (vertical scrolling text list — &quot;You work hard... You feel disconnected... Your perfectionism...&quot;)</li>
+<li>&quot;It's time for something new&quot; + 3-column services grid (1:1 Therapy, Online Therapy, Shop My Tools)</li>
+<li>Free download lead magnet section (The Overwhelm Cheat Sheet)</li>
+<li>About teaser with photo + bio paragraph (&quot;Meet Greta!&quot;)</li>
+<li>Full-width quote banner (&quot;Therapy has the power to change everything.&quot;)</li>
+<li>Split CTA section (Let's Work Together / Do Some Self-Help)</li>
+<li>Testimonial carousel (3 slides)</li>
+<li>Blog preview (2 posts)</li>
+<li>Footer with nav links, Instagram feed, social, free tools promotion</li>
+</ol>
+<p><strong>Grid &amp; Layout:</strong></p>
+<ul>
+<li>Mix of full-width and contained. Sections alternate between single-column text and 2-column photo/text splits</li>
+<li>Generous whitespace, but layout feels busy overall due to many sections</li>
+<li>Some asymmetric photo/text pairing</li>
+<li>Service cards use image-left/text-right pattern with stacked layout</li>
+</ul>
+<p><strong>Typography:</strong></p>
+<ul>
+<li>Headlines: Sans-serif, all-caps, dramatic scale (lifestyle/fashion aesthetic)</li>
+<li>Body: Clean sans-serif</li>
+<li>Heavy use of ALL CAPS for section headers and CTAs</li>
+<li>Decorative: None — relies on scale and weight for hierarchy</li>
+</ul>
+<p><strong>Color Palette:</strong></p>
+<ul>
+<li>Primary: Off-white/cream backgrounds (~#FAF8F5)</li>
+<li>Secondary: Warm pink/blush accents (from photography)</li>
+<li>Text: Dark charcoal (~#333)</li>
+<li>Buttons: Dark charcoal/black with white text</li>
+<li>Overall: Light, warm, feminine</li>
+</ul>
+<p><strong>Image Style:</strong></p>
+<ul>
+<li>Professional lifestyle portraits — warm-toned, editorial quality</li>
+<li>Therapist shown in fashionable casual clothing, modern settings</li>
+<li>No clinical imagery whatsoever</li>
+<li>Full-bleed photos, some with overlapping text blocks</li>
+</ul>
+<p><strong>CTA Strategy:</strong></p>
+<ul>
+<li>8+ CTAs across homepage</li>
+<li>Button styles: Text links in all-caps with underlines, occasional filled buttons</li>
+<li>Language: &quot;BOOK NOW,&quot; &quot;TELL ME MORE,&quot; &quot;LEARN MORE,&quot; &quot;I'D LOVE THESE,&quot; &quot;SEND IT TO MY INBOX&quot;</li>
+<li>No floating/sticky CTA</li>
+</ul>
+<p><strong>Footer:</strong></p>
+<ul>
+<li>Complex — nav links, Instagram feed grid (3 images), social handle, free tools promotion</li>
+<li>Privacy/terms links</li>
+</ul>
+<p><strong>What Makes This Layout Distinctive:</strong><br />
+The text-only hero with dramatically scaled, stacked typography is the signature move — it reads like a fashion editorial headline rather than a therapy site. The pain-points section uses scrolling text to create emotional resonance before presenting solutions. Overall, it positions therapy as a lifestyle upgrade rather than a clinical service.</p>
+<hr />
+<h3><a id="jaree-basgall%E2%80%94-https-www-jareebasgall-com" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Jaree Basgall — <a href="https://www.jareebasgall.com">https://www.jareebasgall.com</a></h3>
+<p><strong>Overall Aesthetic:</strong> Warm, holistic, healing-focused. Somatic/body-oriented feel with nature imagery. More wellness practitioner than clinical therapist.</p>
+<p><strong>Platform:</strong> Squarespace</p>
+<p><strong>Navigation:</strong></p>
+<ul>
+<li>Style: Transparent header with backdrop-filter blur on scroll</li>
+<li>Items: 5 (About, Work With Me, Courses, Contact, Client Portal)</li>
+<li>CTA: Client Portal as secondary CTA (no prominent booking button in nav)</li>
+<li>Mobile: Hamburger menu</li>
+</ul>
+<p><strong>Hero Section:</strong></p>
+<ul>
+<li>Type: Split layout — full-bleed image right, text left</li>
+<li>Text alignment: Left-aligned with organic positioning</li>
+<li>Image: Full-bleed lifestyle/professional photography</li>
+<li>CTA: Implied through navigation rather than explicit hero button</li>
+</ul>
+<p><strong>Homepage Section Order:</strong></p>
+<ol>
+<li>Hero with split image/text</li>
+<li>Testimonial quote banner</li>
+<li>Welcome/introduction section</li>
+<li>3-column offerings grid (Somatic Therapy | Be Your Own Healer Course | Trauma-Informed Yoga)</li>
+<li>Approach breakdown (&quot;The Science, Sacred, Somatics&quot;)</li>
+<li>Consultation section for practitioners</li>
+<li>Footer</li>
+</ol>
+<p><strong>Grid &amp; Layout:</strong></p>
+<ul>
+<li>24-column desktop grid (Squarespace FlexCell)</li>
+<li>Generous whitespace — breathing, calm layout</li>
+<li>Alternating text-left/image-right then text-right/image-left</li>
+<li>Mix of full-bleed images and constrained text blocks</li>
+</ul>
+<p><strong>Typography:</strong></p>
+<ul>
+<li>Headlines: Sans-serif, geometric, clean</li>
+<li>Body: Sans-serif, readable</li>
+<li>Responsive viewport-based scaling</li>
+<li>Minimal decorative elements</li>
+</ul>
+<p><strong>Color Palette:</strong></p>
+<ul>
+<li>Primary: Off-white/cream backgrounds</li>
+<li>Accents: Warm earth tones from photography</li>
+<li>Text: Dark charcoal</li>
+<li>Minimal use of explicit accent colors — imagery provides warmth</li>
+<li>Overall: Light, calming, understated</li>
+</ul>
+<p><strong>Image Style:</strong></p>
+<ul>
+<li>Lifestyle photography with warm, natural tones</li>
+<li>Therapist portraits in professional but relaxed settings</li>
+<li>Nature-inspired scenes complement somatic therapy focus</li>
+<li>No frames or borders — minimal treatment</li>
+</ul>
+<p><strong>CTA Strategy:</strong></p>
+<ul>
+<li>Text-based &quot;Learn more&quot; links with arrow indicators</li>
+<li>&quot;Get in touch&quot; for consultations</li>
+<li>Conversational, low-pressure language</li>
+<li>No floating CTAs</li>
+</ul>
+<p><strong>Footer:</strong></p>
+<ul>
+<li>Business name, location (Overland Park, KS)</li>
+<li>Social sharing icons (Facebook, Twitter, Pinterest, LinkedIn, Instagram)</li>
+<li>Standard Squarespace footer structure</li>
+</ul>
+<p><strong>What Makes This Layout Distinctive:</strong><br />
+The absence of aggressive CTAs reflects therapeutic values — the site invites rather than sells. The transparent nav with blur-on-scroll is elegant and doesn't compete with content. The overall restraint creates a feeling of safety that matches the somatic therapy brand.</p>
+<hr />
+<h3><a id="shifting-tides-therapeutic-solutions%E2%80%94-https-www-shiftingtidestherapy-com" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shifting Tides Therapeutic Solutions — <a href="https://www.shiftingtidestherapy.com">https://www.shiftingtidestherapy.com</a></h3>
+<p><strong>Overall Aesthetic:</strong> Warm, professional, minimalist. Clean spacing with a soothing color palette. Standard therapy practice positioning.</p>
+<p><strong>Platform:</strong> Wix</p>
+<p><strong>Navigation:</strong></p>
+<ul>
+<li>Style: Fixed/sticky horizontal navigation</li>
+<li>Items: 4-6 standard therapy items</li>
+<li>CTA: Prominent booking button in nav area</li>
+</ul>
+<p><strong>Hero Section:</strong></p>
+<ul>
+<li>Type: Full-width image with gradient overlay for text legibility</li>
+<li>Text alignment: Center-aligned with strong visual hierarchy</li>
+<li>Image: Full-bleed with overlay</li>
+<li>CTA: Below hero content, prominent button</li>
+</ul>
+<p><strong>Homepage Section Order:</strong></p>
+<ol>
+<li>Hero/Header with image and overlay text</li>
+<li>Service offerings grid</li>
+<li>About/credentials teaser</li>
+<li>Testimonials carousel</li>
+<li>Contact/booking CTA banner</li>
+<li>Footer</li>
+</ol>
+<p><strong>Grid &amp; Layout:</strong></p>
+<ul>
+<li>2-3 column desktop grid, single column mobile</li>
+<li>Generous padding and margins</li>
+<li>Centered content containers</li>
+<li>Full-width sections alternating with contained content</li>
+</ul>
+<p><strong>Typography:</strong></p>
+<ul>
+<li>Headlines: Sans-serif (Helvetica/Arial system stack)</li>
+<li>Body: Same sans-serif system font</li>
+<li>Standard hierarchy with 5-6 distinct sizes</li>
+</ul>
+<p><strong>Color Palette:</strong></p>
+<ul>
+<li>Primary: Light neutral background (off-white/soft gray)</li>
+<li>Text: Darker contrasting color</li>
+<li>Accent: Blue/teal tones for CTAs (~#116dff)</li>
+<li>Strategy: Light with high contrast, muted accents</li>
+</ul>
+<p><strong>Image Style:</strong></p>
+<ul>
+<li>Lifestyle and professional photography</li>
+<li>Full-bleed images within contained sections</li>
+<li>Possible subtle rounded corners on cards</li>
+</ul>
+<p><strong>CTA Strategy:</strong></p>
+<ul>
+<li>3-5 CTAs (nav button + sections + footer)</li>
+<li>Solid background buttons with rounded corners</li>
+<li>&quot;Book Now,&quot; &quot;Schedule Appointment,&quot; &quot;Get Started&quot; language</li>
+<li>Possible mobile-triggered floating CTA</li>
+</ul>
+<p><strong>Footer:</strong></p>
+<ul>
+<li>Moderate complexity — contact info, social links, navigation</li>
+<li>Address, phone, email, hours (standard practice)</li>
+</ul>
+<p><strong>What Makes This Layout Distinctive:</strong><br />
+This is the most &quot;template&quot; of the three benchmarks — competent but not distinctive. It follows standard therapy website conventions without any signature design moves. It's a useful baseline showing what &quot;average good&quot; looks like in the therapy space.</p>
+<hr />
+<h2><a id="premium-therapy-picks" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Premium Therapy Picks</h2>
+<h3><a id="minaa-b%E2%80%94-https-www-minaab-com" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Minaa B — <a href="https://www.minaab.com">https://www.minaab.com</a></h3>
+<p><strong>Overall Aesthetic:</strong> Editorial-lifestyle hybrid. Feels like a personal brand/media platform rather than a therapy site. Premium lifestyle magazine energy.</p>
+<p><strong>Platform:</strong> Squarespace</p>
+<p><strong>Navigation:</strong></p>
+<ul>
+<li>Style: Sticky header with logo and horizontal menu</li>
+<li>Items: 6 (About, The Siblinghood Theory, Services [Therapy/Speaking/Books/Press], Resources [Quizzes/Podcast/Newsletter], Get in Touch)</li>
+<li>CTA: &quot;Get in Touch&quot; as final nav item, plus cart icon</li>
+<li>Mobile: Hamburger menu</li>
+</ul>
+<p><strong>Hero Section:</strong></p>
+<ul>
+<li>Type: Split layout — professional portrait left, text right</li>
+<li>Text: &quot;Uncover The Patterns That Keep You Stuck...&quot;</li>
+<li>Image: Warm-toned professional portrait</li>
+<li>CTA: Embedded in text blocks below hero</li>
+<li>Animation: Subtle 0.8s fade-in effects</li>
+</ul>
+<p><strong>Homepage Section Order:</strong></p>
+<ol>
+<li>Split hero (image + text)</li>
+<li>About Minaa introduction</li>
+<li>&quot;Featured In&quot; media logo carousel (5+ outlets)</li>
+<li>Speaking section (image + description + &quot;Book Minaa&quot; CTA)</li>
+<li>Book showcase (&quot;Owning Our Struggles&quot; + cover image + &quot;Order Now!&quot;)</li>
+<li>Resource Hub (animated marquee text)</li>
+<li>Resources grid (Quizzes, Podcast, Newsletter)</li>
+<li>Multi-column footer</li>
+</ol>
+<p><strong>Grid &amp; Layout:</strong></p>
+<ul>
+<li>24-column asymmetric grid with deliberate offset positioning</li>
+<li>Content spans 12-23 columns, creating visual tension</li>
+<li>Generous 4-6vw padding throughout</li>
+<li>Overlapping elements on desktop create depth</li>
+<li>Alternating image/text placement across columns</li>
+</ul>
+<p><strong>Typography:</strong></p>
+<ul>
+<li>Headlines: Modern sans-serif, large scale (4rem for h1)</li>
+<li>Body: Clean sans-serif</li>
+<li>Decorative: Marquee-style animated text for Resource Hub section</li>
+<li>Scale creates dramatic hierarchy</li>
+</ul>
+<p><strong>Color Palette:</strong></p>
+<ul>
+<li>Primary: Off-white/cream backgrounds</li>
+<li>Accent: Soft sage/chartreuse (~hsla(75, 37%, 87%, 1))</li>
+<li>Text: Near-black on light backgrounds</li>
+<li>Minimal color usage — photography provides warmth</li>
+</ul>
+<p><strong>Image Style:</strong></p>
+<ul>
+<li>Professional editorial portraits — warm-toned, styled</li>
+<li>Book covers and media logos</li>
+<li>Full-bleed hero image, contained grid images elsewhere</li>
+<li>No rounding or frames</li>
+</ul>
+<p><strong>CTA Strategy:</strong></p>
+<ul>
+<li>6+ CTAs (&quot;Order Now!&quot;, &quot;Book Minaa&quot;, &quot;Subscribe&quot;, &quot;Listen&quot;, &quot;Take The Quiz&quot;)</li>
+<li>Text links with underlines and arrow indicators</li>
+<li>Action-oriented but not pushy</li>
+<li>No floating CTAs</li>
+</ul>
+<p><strong>Footer:</strong></p>
+<ul>
+<li>Complex multi-column: Navigation, Contact &amp; Legal, Branding (MB logo)</li>
+<li>5 social icons with border styling</li>
+<li>Photographer credit, design credit</li>
+</ul>
+<p><strong>What Makes This Layout Distinctive:</strong><br />
+The asymmetric 24-column grid creates magazine-editorial visual rhythm — nothing is predictably centered or symmetrically stacked. The marquee animated text band adds energy and modernity. This site successfully positions a therapist as a media personality and thought leader, not just a clinician.</p>
+<hr />
+<h3><a id="wholeness-collective%E2%80%94-https-www-wholenesscollectivetherapy-com" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Wholeness Collective — <a href="https://www.wholenesscollectivetherapy.com">https://www.wholenesscollectivetherapy.com</a></h3>
+<p><strong>Overall Aesthetic:</strong> Minimalist, contemporary wellness. Calm, restrained, professional. Prioritizes emotional safety through design restraint.</p>
+<p><strong>Platform:</strong> Squarespace</p>
+<p><strong>Navigation:</strong></p>
+<ul>
+<li>Style: Fixed horizontal header with burger menu on mobile</li>
+<li>Items: 8 (About, Services, Clinicians, TBM, Resources, Cost &amp; Info, Blog, Contact)</li>
+<li>CTA: Cart icon (secondary, not conversion-focused)</li>
+</ul>
+<p><strong>Hero Section:</strong></p>
+<ul>
+<li>Type: Full-width image with centered text overlay</li>
+<li>Text: &quot;WE ARE&quot; headline with location info</li>
+<li>Image: High-quality photography with subtle overlay</li>
+<li>CTA: No hero CTA — calls-to-action appear later</li>
+</ul>
+<p><strong>Homepage Section Order:</strong></p>
+<ol>
+<li>Hero with philosophy quote</li>
+<li>Section 01: About</li>
+<li>Section 02: EMDR Therapy explanation</li>
+<li>Section 03: Clinician profiles (4 therapists with photos)</li>
+<li>Section 04: Resources</li>
+<li>Section 05: Cost &amp; Info</li>
+<li>Section 06: Contact</li>
+<li>Social media links and footer</li>
+</ol>
+<p><strong>Grid &amp; Layout:</strong></p>
+<ul>
+<li>Numbered sections (01-06) create cognitive ease and navigation clarity</li>
+<li>Staggered section widths create visual rhythm</li>
+<li>Alternating text-left/image-right patterns</li>
+<li>Generous whitespace — wide padding, breathing room</li>
+</ul>
+<p><strong>Typography:</strong></p>
+<ul>
+<li>Headlines: Large serif paired with numbered section markers (&quot;01&quot;, &quot;02&quot;)</li>
+<li>Body: Contemporary sans-serif</li>
+<li>Responsive scaling with 1500px max-page-width</li>
+<li>Numbered labels add structure</li>
+</ul>
+<p><strong>Color Palette:</strong></p>
+<ul>
+<li>Primary: Cream/off-white (~#F5F5F5)</li>
+<li>Accents: Soft greens, warm neutrals</li>
+<li>Text: Dark gray/charcoal</li>
+<li>Minimal contrast — calming effect</li>
+<li>Strategy: Low-saturation for therapeutic calm</li>
+</ul>
+<p><strong>Image Style:</strong></p>
+<ul>
+<li>Lifestyle photography with warm, natural lighting</li>
+<li>Clinician headshots — professional yet approachable</li>
+<li>Background images with subtle opacity overlays</li>
+<li>Consistent warm tone across all photos</li>
+</ul>
+<p><strong>CTA Strategy:</strong></p>
+<ul>
+<li>8+ CTAs but all subtle (&quot;Learn More&quot; text labels)</li>
+<li>Exploration-focused language, not urgency</li>
+<li>No floating CTAs</li>
+<li>Designed for browsing, not funneling</li>
+</ul>
+<p><strong>Footer:</strong></p>
+<ul>
+<li>Contact details prominent (phone number + address)</li>
+<li>Social icons (Instagram, Facebook)</li>
+<li>Copyright, minimal links</li>
+</ul>
+<p><strong>What Makes This Layout Distinctive:</strong><br />
+The numbered section system (01-06) is the signature move — it creates a sense of guided journey through the site, reducing decision fatigue. The absence of aggressive CTAs reflects therapeutic values. Every design choice communicates safety and calm.</p>
+<hr />
+<h3><a id="the-practice%E2%80%94-https-www-thepracticetherapy-com" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Practice — <a href="https://www.thepracticetherapy.com">https://www.thepracticetherapy.com</a></h3>
+<p><strong>Overall Aesthetic:</strong> Modern, bold, conversational. Hand-drawn accents and playful typography create personality. Feels young, urban, contemporary.</p>
+<p><strong>Platform:</strong> Squarespace</p>
+<p><strong>Navigation:</strong></p>
+<ul>
+<li>Style: Fixed header with horizontal nav</li>
+<li>Items: 4 (The Story, The People, The Approach, The FAQs)</li>
+<li>CTA: &quot;LET'S TALK&quot; button — prominent, top-right</li>
+<li>Mobile: Hamburger toggle</li>
+</ul>
+<p><strong>Hero Section:</strong></p>
+<ul>
+<li>Type: Full-screen image with spaced-out typography overlay</li>
+<li>Text: &quot;T H E  P R A C T I C E .&quot; with heavy letter-spacing</li>
+<li>Tagline: &quot;Real <em>People</em>. Real <em>Talk</em>. Real <em>Therapy</em>.&quot; (italic emphasis on key words)</li>
+<li>CTA: Scroll-dependent (&quot;our approach to therapy --&gt;&quot;)</li>
+<li>Image: Large atmospheric photo behind text</li>
+</ul>
+<p><strong>Homepage Section Order:</strong></p>
+<ol>
+<li>Hero with spaced typography</li>
+<li>Scrolling marquee band (treatment tags: HIGH CONFLICT COUPLES, TRAUMA RECOVERY, DEPRESSION, ANXIETY, OCD...)</li>
+<li>&quot;Where feeling better feels good&quot; with imagery</li>
+<li>&quot;WHAT WE PRACTICE&quot; modalities grid</li>
+<li>Tabbed content section (individual/couples/family/group)</li>
+<li>Testimonial section</li>
+<li>&quot;SAY HELLO&quot; contact form</li>
+<li>Footer</li>
+</ol>
+<p><strong>Grid &amp; Layout:</strong></p>
+<ul>
+<li>24-column fluid grid with asymmetric block placement</li>
+<li>Overlapping image/text blocks with z-index layering</li>
+<li>Generous gutters (4vw desktop, 6vw mobile)</li>
+<li>Deliberately misaligned sections create visual surprise</li>
+<li>Full-width marquee band breaks up the page</li>
+</ul>
+<p><strong>Typography:</strong></p>
+<ul>
+<li>Headlines: Wide letter-spacing display type (&quot;W H A T  W E  P R A C T I C E&quot;)</li>
+<li>Selective italic emphasis within sentences</li>
+<li>Body: System stack for readability</li>
+<li>Dramatic size contrast between hero and body</li>
+</ul>
+<p><strong>Color Palette:</strong></p>
+<ul>
+<li>Primary accent: Warm yellow-beige (~#D4C96E) for marquee band</li>
+<li>Dark accents for dividers and shapes</li>
+<li>White/gray backgrounds</li>
+<li>Neutral palette with strategic pops</li>
+</ul>
+<p><strong>Image Style:</strong></p>
+<ul>
+<li>Lifestyle photography — candid, relatable moments</li>
+<li>Warm color grading, soft focus backgrounds</li>
+<li>Decorative SVG shapes (abstract geometric forms) alongside photos</li>
+<li>Not overly polished</li>
+</ul>
+<p><strong>CTA Strategy:</strong></p>
+<ul>
+<li>8+ CTAs with arrow indicators (&quot;our approach to therapy --&gt;&quot;)</li>
+<li>Conversational tone (&quot;Let's talk&quot; vs. &quot;Book now&quot;)</li>
+<li>Underlined text links rather than filled buttons</li>
+<li>Contact form section prominent</li>
+</ul>
+<p><strong>Footer:</strong></p>
+<ul>
+<li>Contact form placement above standard footer content</li>
+<li>Standard practice info</li>
+</ul>
+<p><strong>What Makes This Layout Distinctive:</strong><br />
+The scrolling marquee band of treatment specialties is a brilliant dual-purpose move — SEO keyword visibility plus immediate clarity of services. The extreme letter-spacing in headings creates a distinctive brand identity that's instantly recognizable. The conversational CTA language (&quot;Let's talk&quot;) humanizes the practice.</p>
+<hr />
+<h3><a id="mission-therapie%E2%80%94-https-www-missiontherapie-nl" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mission Therapie — <a href="https://www.missiontherapie.nl">https://www.missiontherapie.nl</a></h3>
+<p><strong>Overall Aesthetic:</strong> Elegant European minimalism with warm earth tones. Clinical credibility meets boutique warmth. Sophisticated restraint.</p>
+<p><strong>Platform:</strong> WordPress (Stockholm theme + Elementor) with Slider Revolution</p>
+<p><strong>Navigation:</strong></p>
+<ul>
+<li>Style: Horizontal sticky header</li>
+<li>Items: 5 (Home, Mijn Verhaal, Behandelingen, Contact, Boek een Consult)</li>
+<li>CTA: &quot;BOEK EEN CONSULT&quot; (Book a Consultation) — prominent warm brown button</li>
+<li>Mobile: Responsive</li>
+</ul>
+<p><strong>Hero Section:</strong></p>
+<ul>
+<li>Type: Full-screen image slider with overlay text</li>
+<li>Text alignment: Left-aligned, stacked hierarchy</li>
+<li>Image: Grayscale-filtered photograph (filter: grayscale 100%, brightness 90%)</li>
+<li>CTA: &quot;Boek nu&quot; with forward arrow icon inline with text</li>
+<li>Animation: Slider Revolution transitions</li>
+</ul>
+<p><strong>Homepage Section Order:</strong></p>
+<ol>
+<li>Hero with headline and CTA</li>
+<li>Welcome/mission statement</li>
+<li>&quot;Why choose us&quot; section with therapist image</li>
+<li>&quot;Our Treatments&quot; — 4-card grid</li>
+<li>Image + &quot;Take the first step&quot; CTA section</li>
+<li>&quot;Our Approach&quot; — 5-step numbered process flow</li>
+<li>&quot;Insights &amp; Inspiration&quot; — 3-column blog preview</li>
+<li>Contact section with image + contact info</li>
+<li>Footer (4-column)</li>
+</ol>
+<p><strong>Grid &amp; Layout:</strong></p>
+<ul>
+<li>1, 2, and 4-column layouts</li>
+<li>Text-image alternation creates visual rhythm (image right, then image left)</li>
+<li>Generous 50-80px vertical gaps between sections</li>
+<li>Offset spacing creates asymmetric feel</li>
+</ul>
+<p><strong>Typography:</strong></p>
+<ul>
+<li>Headlines: &quot;SangBleu Kingdom Light&quot; (elegant light serif)</li>
+<li>Body: &quot;Source Sans 3&quot; (modern sans-serif, 200-900 weight range)</li>
+<li>Dramatic size hierarchy: hero ~42-62px, subheadings ~22px, body ~14-18px</li>
+<li>Serif/sans-serif pairing is the most refined of all analyzed sites</li>
+</ul>
+<p><strong>Color Palette:</strong></p>
+<ul>
+<li>Primary: Warm brown/taupe (~#725D57) for buttons and accents</li>
+<li>Dark accent: ~#56352F for headings</li>
+<li>Neutral gray: ~#A69D94 for secondary text</li>
+<li>Backgrounds: White/off-white with subtle overlays</li>
+<li>Strategy: Warm earthy palette — therapeutic warmth without clinical coldness</li>
+</ul>
+<p><strong>Image Style:</strong></p>
+<ul>
+<li>Professional photography with warm filters</li>
+<li>Grayscale hero with reduced brightness (signature visual treatment)</li>
+<li>Consistent use of therapist imagery</li>
+<li>Responsive sizing</li>
+</ul>
+<p><strong>CTA Strategy:</strong></p>
+<ul>
+<li>7+ CTAs across homepage</li>
+<li>Primary: Filled brown buttons</li>
+<li>Secondary: Outlined buttons</li>
+<li>Text links with underline hover animations</li>
+<li>Action-oriented language (Dutch equivalents of &quot;Book now,&quot; &quot;Discover more,&quot; &quot;Read more&quot;)</li>
+</ul>
+<p><strong>Footer:</strong></p>
+<ul>
+<li>4-column: Logo, Contact info, Links, Helpful links</li>
+<li>Phone, email included</li>
+<li>KVK business number for credibility</li>
+<li>Design credit</li>
+</ul>
+<p><strong>What Makes This Layout Distinctive:</strong><br />
+The grayscale hero image is a bold choice that signals sophistication and sets this site apart from the sea of warm-toned therapy photography. The 5-step numbered treatment process visualization provides extraordinary clarity about the patient journey. The SangBleu serif font pairing elevates the entire typographic experience above generic web templates.</p>
+<hr />
+<h2><a id="luxury-wellness-aspirational-sites" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Luxury Wellness Aspirational Sites</h2>
+<h3><a id="bathhouse%E2%80%94-https-www-abathhouse-com" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bathhouse — <a href="https://www.abathhouse.com">https://www.abathhouse.com</a></h3>
+<p><strong>Overall Aesthetic:</strong> Dark luxury minimalism. Moody, immersive, premium. Feels like a private members club, not a retail spa.</p>
+<p><strong>Platform:</strong> Squarespace</p>
+<p><strong>Navigation:</strong></p>
+<ul>
+<li>Style: Fixed header with translucent blur effect</li>
+<li>Items: Location pages, service categories (Day Pass, Massage, Scrub, Packs), Membership, Gift Cards, Sauna Rituals, Rooftop Pool</li>
+<li>CTA: Cart icon; &quot;Book Now&quot; on location cards</li>
+<li>Mobile: Responsive</li>
+</ul>
+<p><strong>Hero Section:</strong></p>
+<ul>
+<li>Type: Large typographic statement over full-bleed atmospheric image</li>
+<li>Text: &quot;Find a Bathhouse Near You&quot; in massive serif-like type</li>
+<li>Image: Moody thermal pool photography — steam, warm lighting, intimate</li>
+<li>CTA: Dual location cards (Flatiron/Williamsburg) with &quot;Book Now&quot; below hero</li>
+<li>Animation: Subtle fade-ins on scroll</li>
+</ul>
+<p><strong>Homepage Section Order:</strong></p>
+<ol>
+<li>Hero with location finder</li>
+<li>4-card offerings grid (Packs, Day Pass, Massage, Scrub)</li>
+<li>Mission statement: &quot;An oasis to be fundamentally human&quot;</li>
+<li>Large atmospheric sauna image</li>
+<li>&quot;Plan Your Visit&quot; — 3-column (Amenities, Treatments, Sauna Rituals)</li>
+<li>Opening hours widget with live time display</li>
+<li>Mission statement #2</li>
+<li>Footer (locations, hours, links, social)</li>
+</ol>
+<p><strong>Grid &amp; Layout:</strong></p>
+<ul>
+<li>2-3 columns desktop, single column mobile</li>
+<li>Generous 6vw padding on large sections</li>
+<li>Varying card sizes create visual hierarchy</li>
+<li>Full-bleed images contrast with inset content</li>
+</ul>
+<p><strong>Typography:</strong></p>
+<ul>
+<li>Headlines: GT America (proprietary Squarespace font — sans-serif, dramatic)</li>
+<li>Body: System stack sans-serif</li>
+<li>Dramatic size contrast between h1 (2.2rem) and body (1rem)</li>
+<li>Horizontal rule dividers with asterisks</li>
+</ul>
+<p><strong>Color Palette:</strong></p>
+<ul>
+<li>Primary: Near-black (#000 or #111)</li>
+<li>Text: White/off-white (#FFF)</li>
+<li>High-contrast dark mode throughout</li>
+<li>Images provide all color warmth (amber, gold, warm tones)</li>
+</ul>
+<p><strong>Image Style:</strong></p>
+<ul>
+<li>Atmospheric, moody spa photography</li>
+<li>Deep warm tones, steam, intimate moments</li>
+<li>Evocative rather than bright/clinical</li>
+<li>Consistent 3:2 and 1:1 aspect ratios</li>
+</ul>
+<p><strong>CTA Strategy:</strong></p>
+<ul>
+<li>8+ CTAs (Book Now, location cards, service links)</li>
+<li>White solid or outlined text links</li>
+<li>Action-oriented without scarcity/urgency language</li>
+<li>Cart integration for direct booking</li>
+</ul>
+<p><strong>Footer:</strong></p>
+<ul>
+<li>3-column: Locations &amp; Hours | Links | Contact</li>
+<li>Social icons (Instagram, TikTok, Facebook, LinkedIn)</li>
+<li>FAQ, Health &amp; Safety, Careers, Partnerships, Journal links</li>
+</ul>
+<p><strong>What Makes This Layout Distinctive:</strong><br />
+The dark color scheme is the power move — in a sea of light, airy wellness sites, Bathhouse uses darkness to signal exclusivity and sophistication. The atmospheric photography does the selling rather than copy. This site proves that a wellness brand can feel premium without pastel colors.</p>
+<hr />
+<h3><a id="masaj%E2%80%94-https-www-masaj-me" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>MASAJ — <a href="https://www.masaj.me">https://www.masaj.me</a></h3>
+<p><strong>Overall Aesthetic:</strong> Contemporary luxury wellness. Clean, sophisticated, aspirational. Urban premium spa positioning.</p>
+<p><strong>Platform:</strong> Squarespace</p>
+<p><strong>Navigation:</strong></p>
+<ul>
+<li>Style: Fixed header, minimalist</li>
+<li>Items: Treatments (8 types), Studios (2 locations), Team, Vouchers, Insurance, About (Journal/Memberships/FAQs)</li>
+<li>CTA: &quot;BOOK A TREATMENT&quot; — prominent, persistent</li>
+<li>Mobile: Responsive</li>
+</ul>
+<p><strong>Hero Section:</strong></p>
+<ul>
+<li>Type: Full-width text with atmospheric blurred background</li>
+<li>Text: &quot;BESPOKE MODERN BODYWORK&quot; — left-aligned display type</li>
+<li>Image: Atmospheric background with blur effect</li>
+<li>CTA: &quot;Book a treatment&quot; button below text</li>
+</ul>
+<p><strong>Homepage Section Order:</strong></p>
+<ol>
+<li>Hero with CTA</li>
+<li>Featured offers (Gift Vouchers, Studio booking)</li>
+<li>Studio showcase (2 locations with images)</li>
+<li>Benefits grid (8 items)</li>
+<li>Testimonial with 4.9-star rating</li>
+<li>Treatment types carousel (8 services)</li>
+<li>Social proof (10,000+ reviews stat)</li>
+<li>Press logos/media mentions</li>
+<li>Newsletter signup</li>
+<li>Multi-column footer</li>
+</ol>
+<p><strong>Grid &amp; Layout:</strong></p>
+<ul>
+<li>24-column grid with variable gutters</li>
+<li>Asymmetric block placement — offset, staggered content</li>
+<li>Generous 4-6vw padding</li>
+<li>Text blocks deliberately offset from images</li>
+</ul>
+<p><strong>Typography:</strong></p>
+<ul>
+<li>Headlines: Modern sans-serif, clean</li>
+<li>Body: Sans-serif for readability</li>
+<li>Large display headings (2-2.4rem) with generous line-height</li>
+</ul>
+<p><strong>Color Palette:</strong></p>
+<ul>
+<li>Primary: Off-white/cream backgrounds</li>
+<li>Accent: Mustard yellow/chartreuse (~#FFD700 range)</li>
+<li>Text: Near-black</li>
+<li>Minimal color usage = luxury feel</li>
+<li>Yellow accent draws eyes to CTAs and statistics</li>
+</ul>
+<p><strong>Image Style:</strong></p>
+<ul>
+<li>Professional spa/studio interiors and therapists</li>
+<li>Soft, warm lighting</li>
+<li>Blur/backdrop filter effects</li>
+<li>Consistent aspect ratios (2:3 vertical, 16:9 landscape)</li>
+</ul>
+<p><strong>CTA Strategy:</strong></p>
+<ul>
+<li>5-7 CTAs per viewport</li>
+<li>&quot;Book a Treatment&quot; (Fresha booking integration)</li>
+<li>&quot;Discover More&quot; per treatment type</li>
+<li>Solid high-contrast buttons</li>
+<li>Action/wellness language (&quot;Discover,&quot; &quot;Explore&quot;)</li>
+</ul>
+<p><strong>Footer:</strong></p>
+<ul>
+<li>Multi-column: Treatment menu, Studio contacts, Perks, Company info, Social</li>
+<li>5 social platforms</li>
+<li>Newsletter signup</li>
+<li>Legal links</li>
+</ul>
+<p><strong>What Makes This Layout Distinctive:</strong><br />
+The deliberate use of a single mustard-yellow accent color against an otherwise neutral palette is masterful — it creates a recognizable brand signature without overwhelming the calm wellness aesthetic. The blur effects on background images convey the feeling of steam and relaxation through design alone.</p>
+<hr />
+<h3><a id="alice-mackintosh%E2%80%94-https-www-alicemackintosh-com" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Alice Mackintosh — <a href="https://www.alicemackintosh.com">https://www.alicemackintosh.com</a></h3>
+<p><strong>Overall Aesthetic:</strong> Minimalist luxury wellness personal brand. Aspirational yet approachable. Expert positioning with lifestyle warmth.</p>
+<p><strong>Platform:</strong> Squarespace</p>
+<p><strong>Navigation:</strong></p>
+<ul>
+<li>Style: Fixed header with clean horizontal menu</li>
+<li>Items: About (subfolders), Services, Shop, Contact</li>
+<li>CTA: &quot;Work with me&quot; button (primary)</li>
+<li>Icons: Instagram, Facebook, Cart</li>
+</ul>
+<p><strong>Hero Section:</strong></p>
+<ul>
+<li>Type: Full-width image with centered text overlay</li>
+<li>Text: &quot;Welcome, I'm Alice&quot; with credentials tagline</li>
+<li>Image: Professional lifestyle photography in natural setting</li>
+<li>CTA: &quot;Read more&quot; link</li>
+</ul>
+<p><strong>Homepage Section Order:</strong></p>
+<ol>
+<li>Hero with introduction</li>
+<li>&quot;As Seen In&quot; media logo carousel</li>
+<li>Nutritional Therapy service overview</li>
+<li>Skin Regeneration service overview</li>
+<li>&quot;More From Alice&quot; content grid (Cookbook, Supplements, Podcast)</li>
+<li>Testimonials (4 named quotes)</li>
+<li>Marquee banner for supplement line</li>
+<li>Equi London Supplements showcase</li>
+<li>Instagram gallery feed (4 posts)</li>
+</ol>
+<p><strong>Grid &amp; Layout:</strong></p>
+<ul>
+<li>24-column asymmetric grid</li>
+<li>Staggered content blocks</li>
+<li>Alternating image/text placement</li>
+<li>Responsive viewport-relative calculations</li>
+</ul>
+<p><strong>Typography:</strong></p>
+<ul>
+<li>Headlines: Clean sans-serif with generous spacing</li>
+<li>Body: Standard web-safe sans-serif</li>
+<li>Large display headings (1.5rem+)</li>
+<li>Generous letter-spacing and line-height</li>
+</ul>
+<p><strong>Color Palette:</strong></p>
+<ul>
+<li>Primary: Off-white/cream</li>
+<li>Accent: Soft blush/rose (~#F5E6E0)</li>
+<li>Text: Deep charcoal (~#1A1A1A)</li>
+<li>Supporting: Warm earth tones, muted sage in illustrations</li>
+<li>Photography provides color; palette stays neutral</li>
+</ul>
+<p><strong>Image Style:</strong></p>
+<ul>
+<li>Lifestyle photography with warm, natural lighting</li>
+<li>Women in wellness contexts, candid moments</li>
+<li>Product photography for supplements/cookbook</li>
+<li>Consistent soft-focus aesthetic</li>
+</ul>
+<p><strong>CTA Strategy:</strong></p>
+<ul>
+<li>&quot;Work with me&quot; (primary, consistent)</li>
+<li>&quot;Read more,&quot; &quot;Shop,&quot; &quot;Listen&quot; (secondary, contextual)</li>
+<li>Social media promotion for organic reach</li>
+<li>E-commerce integration (Equi London, Amazon)</li>
+<li>Testimonials and media logos build credibility before conversion</li>
+</ul>
+<p><strong>Footer:</strong></p>
+<ul>
+<li>GDPR, Terms, Contact info with phone and London address</li>
+<li>Social media links</li>
+<li>Squarespace standard footer</li>
+</ul>
+<p><strong>What Makes This Layout Distinctive:</strong><br />
+The &quot;As Seen In&quot; media logo carousel immediately after the hero is a power credibility move — it transforms the site from &quot;nutritionist website&quot; to &quot;trusted expert platform&quot; within the first scroll. The integration of commerce (supplements, cookbook) alongside services creates multiple revenue touchpoints without feeling like a sales page.</p>
+<hr />
+<h2><a id="comparison-table" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Comparison Table</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>State of Mind KC</th>
+<th>Jaree Basgall</th>
+<th>Shifting Tides</th>
+<th>Minaa B</th>
+<th>Wholeness Collective</th>
+<th>The Practice</th>
+<th>Mission Therapie</th>
+<th>Bathhouse</th>
+<th>MASAJ</th>
+<th>Alice Mackintosh</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hero Type</strong></td>
+<td>Text-only, stacked headlines</td>
+<td>Split (image + text)</td>
+<td>Full-width image + overlay</td>
+<td>Split (image + text)</td>
+<td>Full-width image + overlay</td>
+<td>Full-screen image + spaced type</td>
+<td>Full-screen slider + overlay</td>
+<td>Full-bleed image + massive type</td>
+<td>Full-width text + blur bg</td>
+<td>Full-width image + overlay</td>
+</tr>
+<tr>
+<td><strong>Nav Style</strong></td>
+<td>Sticky horizontal</td>
+<td>Transparent + blur</td>
+<td>Fixed horizontal</td>
+<td>Sticky horizontal</td>
+<td>Fixed horizontal</td>
+<td>Fixed horizontal</td>
+<td>Sticky horizontal</td>
+<td>Fixed + translucent blur</td>
+<td>Fixed minimal</td>
+<td>Fixed horizontal</td>
+</tr>
+<tr>
+<td><strong>Nav CTA</strong></td>
+<td>&quot;Book Now&quot; link</td>
+<td>Client Portal link</td>
+<td>Booking button</td>
+<td>&quot;Get in Touch&quot; link</td>
+<td>Cart icon only</td>
+<td>&quot;LET'S TALK&quot; button</td>
+<td>&quot;BOEK EEN CONSULT&quot; button</td>
+<td>Cart icon</td>
+<td>&quot;BOOK A TREATMENT&quot; button</td>
+<td>&quot;Work with me&quot; button</td>
+</tr>
+<tr>
+<td><strong>Homepage Sections</strong></td>
+<td>12</td>
+<td>7</td>
+<td>6</td>
+<td>8</td>
+<td>8 (numbered)</td>
+<td>8</td>
+<td>9</td>
+<td>8</td>
+<td>10</td>
+<td>9</td>
+</tr>
+<tr>
+<td><strong>Grid Pattern</strong></td>
+<td>Mixed 1-2 col</td>
+<td>Alternating 2-col</td>
+<td>2-3 col standard</td>
+<td>Asymmetric 24-col</td>
+<td>Numbered sections</td>
+<td>Asymmetric + overlapping</td>
+<td>Alternating 1-2-4 col</td>
+<td>2-3 col + full-bleed</td>
+<td>Asymmetric offset</td>
+<td>Asymmetric staggered</td>
+</tr>
+<tr>
+<td><strong>Layout Feel</strong></td>
+<td>Lifestyle editorial</td>
+<td>Organic/flowing</td>
+<td>Symmetric/template</td>
+<td>Magazine editorial</td>
+<td>Guided/sequential</td>
+<td>Bold/asymmetric</td>
+<td>European minimal</td>
+<td>Immersive luxury</td>
+<td>Contemporary luxury</td>
+<td>Aspirational lifestyle</td>
+</tr>
+<tr>
+<td><strong>Typography</strong></td>
+<td>All-caps sans-serif</td>
+<td>Geometric sans</td>
+<td>System sans</td>
+<td>Large sans-serif</td>
+<td>Serif + sans pairing</td>
+<td>Spaced display type</td>
+<td>Elegant serif + sans</td>
+<td>Dramatic sans-serif</td>
+<td>Clean sans-serif</td>
+<td>Clean sans-serif</td>
+</tr>
+<tr>
+<td><strong>Heading Font</strong></td>
+<td>Sans-serif</td>
+<td>Sans-serif</td>
+<td>Sans-serif</td>
+<td>Sans-serif</td>
+<td>Serif</td>
+<td>Sans (letter-spaced)</td>
+<td>Light serif (SangBleu)</td>
+<td>GT America</td>
+<td>Sans-serif</td>
+<td>Sans-serif</td>
+</tr>
+<tr>
+<td><strong>Image Treatment</strong></td>
+<td>Full-bleed lifestyle</td>
+<td>Full-bleed natural</td>
+<td>Full-bleed + overlay</td>
+<td>Split/grid editorial</td>
+<td>Overlays + profiles</td>
+<td>Candid + SVG shapes</td>
+<td>Grayscale hero, warm body</td>
+<td>Moody atmospheric</td>
+<td>Blur effects, warm</td>
+<td>Lifestyle, soft-focus</td>
+</tr>
+<tr>
+<td><strong>CTA Count</strong></td>
+<td>8+</td>
+<td>3-4</td>
+<td>3-5</td>
+<td>6+</td>
+<td>8+ (subtle)</td>
+<td>8+</td>
+<td>7+</td>
+<td>8+</td>
+<td>5-7 per viewport</td>
+<td>5-6</td>
+</tr>
+<tr>
+<td><strong>CTA Style</strong></td>
+<td>ALL CAPS text links</td>
+<td>Arrow text links</td>
+<td>Filled buttons</td>
+<td>Underlined text links</td>
+<td>&quot;Learn More&quot; labels</td>
+<td>Arrow text links</td>
+<td>Filled brown buttons</td>
+<td>White on dark</td>
+<td>Solid contrast buttons</td>
+<td>&quot;Work with me&quot; button</td>
+</tr>
+<tr>
+<td><strong>Overall Aesthetic</strong></td>
+<td>Warm feminine lifestyle</td>
+<td>Holistic healing</td>
+<td>Professional standard</td>
+<td>Editorial personal brand</td>
+<td>Minimalist wellness</td>
+<td>Bold conversational</td>
+<td>Elegant European</td>
+<td>Dark luxury</td>
+<td>Contemporary luxury</td>
+<td>Aspirational expert</td>
+</tr>
+<tr>
+<td><strong>Background</strong></td>
+<td>Cream/off-white</td>
+<td>Cream/off-white</td>
+<td>Light neutral</td>
+<td>Off-white + sage</td>
+<td>Cream (~#F5F5F5)</td>
+<td>White + beige accents</td>
+<td>White + warm overlays</td>
+<td>Near-black</td>
+<td>Off-white + yellow accent</td>
+<td>Off-white + blush</td>
+</tr>
+<tr>
+<td><strong>Platform</strong></td>
+<td>Wix</td>
+<td>Squarespace</td>
+<td>Wix</td>
+<td>Squarespace</td>
+<td>Squarespace</td>
+<td>Squarespace</td>
+<td>WordPress</td>
+<td>Squarespace</td>
+<td>Squarespace</td>
+<td>Squarespace</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2><a id="layout-pattern-recommendations" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Layout Pattern Recommendations</h2>
+<p>Based on this research, here are 4 distinct layout approaches for Dr. Jennifer Wilson's boutique therapy practice in St. Augustine Beach, FL. Brand colors: sage green (#4A5D4A), cream (#F9F6F0), gold (#C4A265) with lotus logo.</p>
+<hr />
+<h3><a id="1-the-coastal-editorial" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. &quot;The Coastal Editorial&quot;</h3>
+<p><strong>Draws from:</strong> Minaa B (asymmetric grid), The Practice (marquee band), Mission Therapie (serif typography)</p>
+<p><strong>Hero:</strong> Split layout — professional portrait of Dr. Wilson on the left (60% width, full-height, warm-toned), headline and CTA on the right (40%) over cream background. Headline in elegant serif (Cormorant Garamond or similar): &quot;Healing Starts with Feeling Safe.&quot; Gold accent on the CTA button. Subtle scroll-reveal animation.</p>
+<p><strong>Homepage Section Order:</strong></p>
+<ol>
+<li>Split hero (photo + headline + dual CTAs)</li>
+<li>Scrolling marquee band listing specialties: TRAUMA RECOVERY | ANXIETY | EATING DISORDERS | COUPLES THERAPY | EMDR — in gold on sage green background</li>
+<li>Welcome text section (centered, generous whitespace)</li>
+<li>3-column service cards (white on cream, sage green icons, gold &quot;Learn more&quot; links)</li>
+<li>About teaser (asymmetric — text left at 55%, circular photo right at 45%)</li>
+<li>Trust badges row (credentials, years of experience, court-qualified expert — icon + text)</li>
+<li>Testimonial section (large pull quote in serif, sage green left border)</li>
+<li>Full-width sage green CTA band (&quot;Ready to Start?&quot; + gold booking button)</li>
+<li>Footer</li>
+</ol>
+<p><strong>Grid/Column Strategy:</strong> 12-column asymmetric grid. Never perfectly centered — content blocks offset 1-2 columns for editorial rhythm. Alternating 60/40 and 40/60 splits. Generous 80-100px vertical spacing between sections.</p>
+<p><strong>Nav Style:</strong> Transparent on hero, white sticky with subtle shadow on scroll. Logo (lotus + &quot;Dr. Jennifer Wilson&quot;) left, 4 nav items + gold &quot;Book Consultation&quot; pill button right.</p>
+<p><strong>Audience Signal:</strong> &quot;Premium private practice with editorial sophistication — this therapist is an expert who takes her craft and her brand seriously.&quot; Signals competence and confidence without clinical coldness.</p>
+<hr />
+<h3><a id="2-the-boutique-sanctuary" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. &quot;The Boutique Sanctuary&quot;</h3>
+<p><strong>Draws from:</strong> Wholeness Collective (numbered sections, calm restraint), Jaree Basgall (organic flow, transparent nav), Mission Therapie (warm earth tones, treatment process)</p>
+<p><strong>Hero:</strong> Full-width atmospheric image (beach/ocean at golden hour as placeholder) with cream overlay at 0.85 opacity. Centered text: small gold eyebrow &quot;Dr. Jennifer Wilson, PhD, LCSW | St. Augustine Beach,&quot; large serif headline &quot;Compassionate Therapy for Women Ready to Heal,&quot; cream CTA button with sage green text.</p>
+<p><strong>Homepage Section Order:</strong></p>
+<ol>
+<li>Full-width atmospheric hero with centered text</li>
+<li>Welcome section with warm intro text (max-width 700px centered)</li>
+<li>Numbered journey sections (01 Services | 02 About | 03 Approach) — each with alternating image/text layout</li>
+<li>Full-width sage green band with &quot;What Makes This Practice Different&quot; (gold checkmarks + white text)</li>
+<li>Testimonial cards (3-up, white on cream, gold decorative quote marks)</li>
+<li>Insurance &amp; booking info strip (simple, reassuring)</li>
+<li>Final CTA section (cream bg, sage green &quot;Book&quot; button with gold hover)</li>
+<li>Minimal footer</li>
+</ol>
+<p><strong>Grid/Column Strategy:</strong> Single-column centered for text-heavy sections (max-width 800px). 2-column alternating for numbered sections. Full-width color bands for emphasis. The numbered section approach (01, 02, 03) creates guided navigation that reduces anxiety — important for therapy-seekers.</p>
+<p><strong>Nav Style:</strong> Transparent over hero image, transitions to cream sticky header on scroll. Minimal — logo + 4 items + gold outline &quot;Book&quot; button. Hamburger on mobile with elegant slide-out panel.</p>
+<p><strong>Audience Signal:</strong> &quot;This is a safe, calm space designed for you. The therapist values your experience from the first click.&quot; The numbered sections say &quot;I'll guide you&quot; without being patronizing. Signals warmth, safety, and intentionality.</p>
+<hr />
+<h3><a id="3-the-modern-wellness-studio" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. &quot;The Modern Wellness Studio&quot;</h3>
+<p><strong>Draws from:</strong> MASAJ (single accent color strategy, blur effects), Bathhouse (bold typography, immersive feel), State of Mind KC (lifestyle personal brand energy)</p>
+<p><strong>Hero:</strong> Large sage green background section. Bold centered white headline: &quot;Trauma &amp; Anxiety Therapy for Women in St. Augustine.&quot; Below: subtle gold divider line, then cream subtext. Terracotta/gold CTA button (&quot;Book Free Consultation&quot;). No background image — the bold color IS the statement.</p>
+<p><strong>Homepage Section Order:</strong></p>
+<ol>
+<li>Bold sage green hero (text-only, centered, powerful)</li>
+<li>2-column intro: small circular headshot of Dr. Wilson + warm welcome paragraph on cream background</li>
+<li>4-card service grid: white cards on cream, sage green top-border accent, gold &quot;Learn More&quot; links</li>
+<li>Full-width image section (placeholder: therapy office or beach scene)</li>
+<li>&quot;Your Healing Journey&quot; — 3-step numbered process (like Mission Therapie's approach section)</li>
+<li>Pull-quote testimonial (large serif italic in sage green, gold quotation marks)</li>
+<li>Credentials strip (logo badges, certifications — horizontal scroll on mobile)</li>
+<li>Gold background CTA band (&quot;Ready to Start?&quot;)</li>
+<li>Footer (dark sage green bg, cream text)</li>
+</ol>
+<p><strong>Grid/Column Strategy:</strong> Bold use of full-width color blocks — sage green, cream, white, and gold sections create strong geometric rhythm (inspired by the Modern Sage branch but more sophisticated). 4-column service grid, 3-column process steps, single-column text sections. Clean geometric feel with 16px border-radius on cards.</p>
+<p><strong>Nav Style:</strong> White sticky header. Sage green logo text. Gold &quot;Book Consultation&quot; pill button. Clean and minimal — the colored sections do the visual heavy lifting.</p>
+<p><strong>Audience Signal:</strong> &quot;Contemporary, confident, grounded. This practice is modern and established.&quot; The bold color blocking says &quot;I'm not afraid to take up space&quot; — which subtly communicates to anxious clients that they're in capable hands. Feels like a wellness studio, not a medical office.</p>
+<hr />
+<h3><a id="4-the-magazine" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. &quot;The Magazine&quot;</h3>
+<p><strong>Draws from:</strong> Alice Mackintosh (credibility-first flow, media logos), Minaa B (editorial grid, personal brand), The Practice (conversational CTAs, tabbed content)</p>
+<p><strong>Hero:</strong> Asymmetric split — Dr. Wilson's photo bleeds to the left edge (no margin), editorial-style with warm processing. Right side: stacked text on cream with generous padding. Small gold label: &quot;St. Augustine Beach, FL.&quot; Large serif headline: &quot;You Don't Have to Carry This Alone.&quot; Body text in clean sans-serif. Two CTAs: filled gold &quot;Book Consultation&quot; + outlined sage &quot;Check Insurance.&quot;</p>
+<p><strong>Homepage Section Order:</strong></p>
+<ol>
+<li>Asymmetric hero (photo bleeds left, text right)</li>
+<li>&quot;Featured In&quot; / &quot;Trusted By&quot; credential bar (if applicable — professional affiliations, court qualification badge, license logos)</li>
+<li>&quot;How I Can Help&quot; — 2-column editorial layout alternating image side: Trauma (photo right), Anxiety (photo left), Eating Disorders (photo right), Couples (photo left)</li>
+<li>About teaser with pull quote in large serif italic (&quot;I became a therapist because I believe everyone deserves a safe space to heal.&quot;)</li>
+<li>Tabbed content section: Individual | Couples | Family (click to reveal content — reduces page length)</li>
+<li>Testimonials with decorative gold quotation marks</li>
+<li>FAQ accordion (common questions, saves page real estate)</li>
+<li>Sage green CTA band with gold button</li>
+<li>Footer</li>
+</ol>
+<p><strong>Grid/Column Strategy:</strong> The alternating 2-column editorial flow (image left/text right, then swap) is the signature pattern — it creates the magazine-page-turning rhythm. 60/40 splits. Content maxes at 1100px. Generous whitespace (100px+ between sections). Every section tells a micro-story.</p>
+<p><strong>Nav Style:</strong> Cream sticky header. Sage green text. &quot;Dr. Jennifer Wilson&quot; in small serif left, navigation in sans-serif center, gold &quot;Book&quot; button right. Thin gold bottom-border on nav. Elegant, editorial.</p>
+<p><strong>Audience Signal:</strong> &quot;This therapist is credentialed, published, and serious — but also warm and human.&quot; The editorial layout subconsciously signals authority (magazine = expert) while the warm photography and conversational copy maintain approachability. Perfect for the affluent St. Augustine woman who researches carefully before committing.</p>
+<hr />
+<h2><a id="key-takeaways-across-all-research" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Key Takeaways Across All Research</h2>
+<ol>
+<li><strong>Every premium therapy site uses Squarespace.</strong> It's the clear platform winner for this market segment.</li>
+<li><strong>Serif fonts signal premium</strong> — the most sophisticated sites (Mission Therapie, Wholeness Collective, The Practice) all use serif headings paired with sans-serif body.</li>
+<li><strong>Asymmetric grids separate boutique from template</strong> — the premium sites deliberately offset content blocks rather than centering everything.</li>
+<li><strong>Aggressive CTAs backfire in therapy</strong> — the most effective sites use conversational language (&quot;Let's talk,&quot; &quot;Learn more&quot;) rather than urgency (&quot;Book NOW!&quot;).</li>
+<li><strong>Full-width color bands create section rhythm</strong> without needing excessive imagery.</li>
+<li><strong>Numbered/guided sections reduce decision anxiety</strong> — particularly effective for therapy sites where visitors are already stressed.</li>
+<li><strong>The hero makes or breaks the first impression</strong> — split heroes and bold typography outperform generic stock photo overlays.</li>
+<li><strong>Dark/moody works for luxury spa, NOT for therapy</strong> — Bathhouse's dark mode is aspirational reference but wrong for a therapist's trust-building needs.</li>
+</ol>
+<hr />
+<h2><a id="high-five-design-co%E2%80%94-squarespace-template-analysis" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>High Five Design Co. — Squarespace Template Analysis</h2>
+<p>Source: <a href="https://www.highfivedesign.co/website-templates-for-therapists">https://www.highfivedesign.co/website-templates-for-therapists</a></p>
+<p>These are Squarespace templates designed specifically for therapists and coaches by High Five Design Co. All include a Website CopyKit, Launch Your Site Email Series, and therapist-centered design. Each has a live demo (password: <code>demo</code>).</p>
+<h3><a id="template-overview-table" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Template Overview Table</h3>
+<table>
+<thead>
+<tr>
+<th>Template</th>
+<th>Price</th>
+<th>Demo URL</th>
+<th>Aesthetic</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Haven</strong> (NEW)</td>
+<td>$300</td>
+<td><a href="https://h5haven-demo.squarespace.com/?password=demo">Demo</a></td>
+<td>Clean, modern, bold headlines</td>
+<td>Budget-friendly, professional start</td>
+</tr>
+<tr>
+<td><strong>Liminaire</strong></td>
+<td>$495</td>
+<td><a href="https://h5liminaire-demo.squarespace.com/?password=demo">Demo</a></td>
+<td>Editorial, sophisticated, moody sage</td>
+<td>Premium positioning, editorial brands</td>
+</tr>
+<tr>
+<td><strong>Kindred</strong></td>
+<td>$455</td>
+<td><a href="https://h5kindred-demo.squarespace.com/?password=demo">Demo</a></td>
+<td>Vintage charm, playful serif, striped accents</td>
+<td>Millennial/Gen-Z targeting, warm personality</td>
+</tr>
+<tr>
+<td><strong>Square Peg</strong></td>
+<td>$495</td>
+<td><a href="https://h5squarepeg-demo.squarespace.com/?password=demo">Demo</a></td>
+<td>Playful, quirky, zigzag layout</td>
+<td>Creative/unconventional practices</td>
+</tr>
+<tr>
+<td><strong>Clarity</strong></td>
+<td>$440</td>
+<td><a href="https://h5clarity-demo.squarespace.com/?password=demo">Demo</a></td>
+<td>Bright, refreshing, soothing colors</td>
+<td>Warm, accessible, positive practices</td>
+</tr>
+<tr>
+<td><strong>Astral</strong></td>
+<td>$180</td>
+<td><a href="https://h5astral-demo.squarespace.com/?password=demo">Demo</a></td>
+<td>Serene, moody, single-page</td>
+<td>Minimal presence, solo practitioners</td>
+</tr>
+<tr>
+<td><strong>Radiant Roots</strong></td>
+<td>$400</td>
+<td><a href="https://h5radiantroots-demo.squarespace.com/?password=demo">Demo</a></td>
+<td>Warm earth tones, spacious, clean</td>
+<td>Somatic/holistic, women-focused</td>
+</tr>
+<tr>
+<td><strong>Awake</strong></td>
+<td>$400</td>
+<td><a href="https://h5awake-demo.squarespace.com/?password=demo">Demo</a></td>
+<td>Serene, minimalistic, white space</td>
+<td>Calm, conversion-focused practices</td>
+</tr>
+<tr>
+<td><strong>Inner Peace</strong></td>
+<td>$400</td>
+<td><a href="https://h5innerpeace-demo.squarespace.com/?password=demo">Demo</a></td>
+<td>Soft, rounded shapes, arched frames</td>
+<td>Gentle, calming, serene brands</td>
+</tr>
+<tr>
+<td><strong>Audacious</strong></td>
+<td>$495</td>
+<td><a href="https://h5audacious-demo1.squarespace.com/?password=demo">Demo</a></td>
+<td>Bold, energetic, vibrant</td>
+<td>Confident, dynamic practices</td>
+</tr>
+<tr>
+<td><strong>Vitality</strong></td>
+<td>$440</td>
+<td><a href="https://h5vitality-demo.squarespace.com/?password=demo">Demo</a></td>
+<td>Vibrant, wavy shapes, empowering</td>
+<td>Wellness coaches, upbeat energy</td>
+</tr>
+<tr>
+<td><strong>All the Feels</strong></td>
+<td>$495</td>
+<td><a href="https://h5allthefeels-demo.squarespace.com/?password=demo">Demo</a></td>
+<td>Moody, botanical, slanted dividers</td>
+<td>Family therapy, dark/grounded aesthetic</td>
+</tr>
+<tr>
+<td><strong>Synergy</strong></td>
+<td>$440</td>
+<td><a href="https://h5synergy-demo.squarespace.com/?password=demo">Demo</a></td>
+<td>Bright, editorial lines, color blocks</td>
+<td>Cheerful, multi-color practices</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3><a id="deep-analysis-top-5-most-relevant-templates-for-dr-wilson" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deep Analysis: Top 5 Most Relevant Templates for Dr. Wilson</h3>
+<h4><a id="1-liminaire%E2%80%94-strongest-match" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Liminaire — STRONGEST MATCH</h4>
+<p><strong>Demo:</strong> <a href="https://h5liminaire-demo.squarespace.com/?password=demo">https://h5liminaire-demo.squarespace.com/?password=demo</a></p>
+<p><strong>Overall Aesthetic:</strong> Editorial sophistication meets therapeutic warmth. The most premium-feeling template in the collection. Dark sage olive hero with refined serif typography. Feels like a high-end wellness brand, not a therapy template.</p>
+<p><strong>Navigation:</strong></p>
+<ul>
+<li>Style: Clean fixed horizontal header, logo centered</li>
+<li>Items: 6 (About, Offerings, Events, Blog, Resources, Get Started)</li>
+<li>CTA: &quot;Get Started&quot; as text link in nav (not a button — understated)</li>
+<li>Mobile: Hamburger</li>
+</ul>
+<p><strong>Hero Section:</strong></p>
+<ul>
+<li>Type: Split — large therapist portrait (right, cropped square) with dark olive-sage background (left)</li>
+<li>Text: Name &quot;ANYA MONROE&quot; in large display serif, tagline in italic serif below</li>
+<li>CTA: None in hero — relies on scroll engagement</li>
+<li>Image: Professional portrait, close-cropped, editorial quality</li>
+</ul>
+<p><strong>Homepage Section Order:</strong></p>
+<ol>
+<li>Split hero (dark sage bg + portrait)</li>
+<li>Practice name etymology + welcome text (centered, white bg)</li>
+<li>Location/modality strip (&quot;Serving Adults in San Francisco, CA — In-Person and Online&quot;) — sage green band</li>
+<li>About teaser with portrait + bio (&quot;I'm Anya&quot;) — overlapping image treatment</li>
+<li>Numbered specializations (01, 02, 03) — 3-column with client quotes</li>
+<li>More Offerings section (Clinical Consultation, Workshops) — dark sage bg with image/text pairs</li>
+<li>Blog preview carousel</li>
+<li>Final CTA (&quot;Ready to Step Forward?&quot;) — dark sage bg</li>
+<li>Footer (4-column: tagline, social, links, contact)</li>
+</ol>
+<p><strong>Grid &amp; Layout:</strong></p>
+<ul>
+<li>Asymmetric throughout — nothing is predictably centered</li>
+<li>Overlapping image/text blocks create editorial depth</li>
+<li>Dark sage sections alternate with white sections for strong rhythm</li>
+<li>Generous vertical spacing between sections</li>
+<li>Content blocks often offset within the grid</li>
+</ul>
+<p><strong>Typography:</strong></p>
+<ul>
+<li>Headlines: Elegant serif with dramatic size (hero name is massive display scale)</li>
+<li>Body: Clean sans-serif</li>
+<li>Italic serif for taglines and emphasis</li>
+<li>Numbered specializations (01, 02, 03) use large display serif numbers</li>
+<li>Letter-spacing on section labels</li>
+</ul>
+<p><strong>Color Palette:</strong></p>
+<ul>
+<li>Primary: Dark olive/sage green (~#4A5544) for hero, CTA sections, footer</li>
+<li>Secondary: White for body sections</li>
+<li>Text: Near-black on white sections, white on sage sections</li>
+<li>Accent: None — the restraint IS the design</li>
+<li>Overall: Dark + white high-contrast, incredibly sophisticated</li>
+</ul>
+<p><strong>Image Style:</strong></p>
+<ul>
+<li>Professional editorial portrait — close-cropped, warm tones</li>
+<li>Images overlap section boundaries (breaking the grid)</li>
+<li>Blog post images in horizontal scroll carousel</li>
+<li>Minimal — only 3-4 images on the entire homepage</li>
+</ul>
+<p><strong>CTA Strategy:</strong></p>
+<ul>
+<li>Very subtle — &quot;Read My Story&quot; button, &quot;Get Started&quot; link, &quot;Learn More&quot; arrows</li>
+<li>No aggressive booking language</li>
+<li>Low-pressure tone throughout</li>
+<li>Only ~4 CTAs total on homepage</li>
+</ul>
+<p><strong>Footer:</strong></p>
+<ul>
+<li>4-column: Brand tagline + social icons + nav links + contact info</li>
+<li>Phone number, address, email</li>
+<li>Design credit to High Five Design Co.</li>
+</ul>
+<p><strong>What Makes This Layout Distinctive:</strong><br />
+The dark sage hero section is the standout — it immediately signals &quot;this is not a generic therapy site.&quot; The numbered specializations (01, 02, 03) with client quotes create guided discovery. The extreme restraint (minimal CTAs, minimal images, maximum whitespace) communicates confidence and premium positioning. <strong>This template's color palette literally matches Dr. Wilson's brand (sage green).</strong> Of all 13 templates, this one would require the least adaptation to fit the Dr. Wilson brand.</p>
+<hr />
+<h4><a id="2-radiant-roots%E2%80%94-second-strongest-match" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Radiant Roots — SECOND STRONGEST MATCH</h4>
+<p><strong>Demo:</strong> <a href="https://h5radiantroots-demo.squarespace.com/?password=demo">https://h5radiantroots-demo.squarespace.com/?password=demo</a></p>
+<p><strong>Overall Aesthetic:</strong> Warm, earthy sophistication. Taupe/mauve palette with spacious layout. Feels like a high-end women's wellness retreat.</p>
+<p><strong>Navigation:</strong></p>
+<ul>
+<li>Style: Fixed, centered logo with nav items flanking, CTA button right</li>
+<li>Items: 5 (About, Services, Resources, Blog, Get Started)</li>
+<li>CTA: &quot;Get Started&quot; as filled button — prominent</li>
+</ul>
+<p><strong>Hero Section:</strong></p>
+<ul>
+<li>Type: Full-width warm taupe/mauve background with left-aligned text stack</li>
+<li>Text: Eyebrow &quot;MOURGHAN ELARA, MSW&quot; + large serif headline &quot;Where Your Healing Journey Begins&quot; + subheading + location</li>
+<li>Image: No hero image — pure typographic statement</li>
+<li>CTA: None in hero</li>
+</ul>
+<p><strong>Homepage Section Order:</strong></p>
+<ol>
+<li>Taupe-background typographic hero</li>
+<li>&quot;Discover Your Radiant Self&quot; — white section, centered intro text</li>
+<li>About teaser — 2-column (square photo + bio text) with &quot;Learn More About Me&quot; CTA</li>
+<li>&quot;What I Do&quot; — 3-column service grid with image thumbnails and descriptions</li>
+<li>Session modality strip (in-person + virtual emphasis)</li>
+<li>Final CTA (&quot;Ready to heal?&quot;) — dark taupe background</li>
+<li>Minimal footer</li>
+</ol>
+<p><strong>Grid &amp; Layout:</strong></p>
+<ul>
+<li>Clean, centered layout — less asymmetric than Liminaire</li>
+<li>Generous whitespace throughout</li>
+<li>Full-width colored sections alternate with white</li>
+<li>About section uses classic 2-column photo/text split</li>
+<li>Service grid is 3-column with consistent card sizing</li>
+</ul>
+<p><strong>Typography:</strong></p>
+<ul>
+<li>Headlines: Elegant serif — &quot;Where Your Healing Journey Begins&quot; with generous sizing</li>
+<li>Body: Clean sans-serif with generous line-height</li>
+<li>Italic accents for location/modality text</li>
+<li>Script-like quality in some headings</li>
+</ul>
+<p><strong>Color Palette:</strong></p>
+<ul>
+<li>Primary: Warm taupe/mauve (~#A89890) for hero and CTA backgrounds</li>
+<li>Secondary: White for body sections</li>
+<li>Text: Dark charcoal on white, white on taupe</li>
+<li>Accent: Rose-mauve undertones</li>
+<li>Overall: Warm, earthy, sophisticated</li>
+</ul>
+<p><strong>Image Style:</strong></p>
+<ul>
+<li>Single professional portrait — warm tones, natural light</li>
+<li>Service thumbnails are small squares with warm filters</li>
+<li>Full-width atmospheric image below services</li>
+<li>Minimal imagery overall — relies on color and type</li>
+</ul>
+<p><strong>CTA Strategy:</strong></p>
+<ul>
+<li>3 CTAs total: &quot;Get Started&quot; nav button, &quot;Learn More About Me&quot;, &quot;I'm Ready!&quot;</li>
+<li>Very low-pressure language</li>
+<li>&quot;I'm Ready!&quot; final CTA has warm energy</li>
+</ul>
+<p><strong>What Makes This Layout Distinctive:</strong><br />
+The warm taupe/mauve color sections create a cocoon feeling — wrapping the visitor in warmth before any clinical information appears. The text-only hero is bold but welcoming. The short, focused page (only 6-7 sections) respects the visitor's time and attention, which is critical for stressed therapy seekers.</p>
+<hr />
+<h4><a id="3-haven%E2%80%94-best-value" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Haven — BEST VALUE</h4>
+<p><strong>Demo:</strong> <a href="https://h5haven-demo.squarespace.com/?password=demo">https://h5haven-demo.squarespace.com/?password=demo</a></p>
+<p><strong>Overall Aesthetic:</strong> Clean, modern, approachable. Split hero with contrasting color blocks. Yellow CTA accent adds warmth to a professional foundation.</p>
+<p><strong>Navigation:</strong></p>
+<ul>
+<li>Style: Fixed, social icons top-left, logo centered, nav below, &quot;Get Started&quot; CTA button right</li>
+<li>Items: 4 (About, Offerings, Blog, Get Started)</li>
+<li>CTA: &quot;Get Started&quot; in filled dark button — prominent</li>
+</ul>
+<p><strong>Hero Section:</strong></p>
+<ul>
+<li>Type: Split — lifestyle photo left (woman walking, cropped), text right on light background</li>
+<li>Text: Large serif &quot;Redefine Your Future, One Step at a Time.&quot; + subtext + CTA</li>
+<li>CTA: &quot;Schedule a Free Consultation&quot; in dark filled button</li>
+<li>Image: Full-bleed lifestyle photo, editorial crop</li>
+</ul>
+<p><strong>Homepage Section Order:</strong></p>
+<ol>
+<li>Split hero (photo left, text + CTA right)</li>
+<li>Location strip (yellow/gold band with italic text)</li>
+<li>2-column empathy section (&quot;Feel stuck in a loop of 'what ifs'?&quot; + text + overlapping portrait)</li>
+<li>About teaser on cream/blush background (&quot;Hi I'm Billie&quot; + portrait + bio)</li>
+<li>Offerings — 3-column cards with descriptions + &quot;Learn More&quot; CTAs</li>
+<li>Modality strip (yellow band — &quot;in-person and telehealth&quot;)</li>
+<li>Final CTA section (&quot;Your next chapter is waiting&quot; + &quot;Book a Free Consultation&quot; button)</li>
+<li>3-column footer area: Blog (Read) + Newsletter (Subscribe) + Social (Connect)</li>
+<li>Footer with address, social, links</li>
+</ol>
+<p><strong>Grid &amp; Layout:</strong></p>
+<ul>
+<li>Alternating 2-column splits and full-width bands</li>
+<li>Yellow/gold accent bands create strong section breaks</li>
+<li>Overlapping portrait images on text sections</li>
+<li>About section uses asymmetric cream block</li>
+<li>Clean contained grid with generous gutters</li>
+</ul>
+<p><strong>Typography:</strong></p>
+<ul>
+<li>Headlines: Modern serif, medium-weight, approachable</li>
+<li>Body: Clean sans-serif</li>
+<li>Italic serif for accent strips</li>
+<li>Good size hierarchy without being dramatic</li>
+</ul>
+<p><strong>Color Palette:</strong></p>
+<ul>
+<li>Primary: White backgrounds</li>
+<li>Secondary: Cream/blush for about section</li>
+<li>Accent: Warm yellow/gold (~#E8B84D) for strips and CTA button</li>
+<li>Dark: Near-black for text, nav, some sections</li>
+<li>Overall: Clean with warm gold pops</li>
+</ul>
+<p><strong>Image Style:</strong></p>
+<ul>
+<li>Lifestyle photos — candid, warm-toned, relatable</li>
+<li>Close-cropped portraits overlapping section boundaries</li>
+<li>Editorial crops (not full portraits — artful framing)</li>
+</ul>
+<p><strong>CTA Strategy:</strong></p>
+<ul>
+<li>5+ CTAs: &quot;Schedule a Free Consultation,&quot; &quot;Learn More About Me,&quot; &quot;Learn More&quot; (3x), &quot;Book a Free Consultation&quot;</li>
+<li>Gold-accent buttons are warm and inviting</li>
+<li>Conversational language</li>
+</ul>
+<p><strong>What Makes This Layout Distinctive:</strong><br />
+At $300, this is the best value template. The yellow/gold accent bands create strong visual rhythm without complexity. The overlapping portrait treatment adds editorial flair to what's otherwise a clean, approachable layout. The 3-part footer (Read/Subscribe/Connect) is smart — it provides multiple engagement pathways without overwhelming. The gold accent color maps directly to Dr. Wilson's brand gold (#C4A265).</p>
+<hr />
+<h4><a id="4-all-the-feels%E2%80%94-boldest-option" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. All the Feels — BOLDEST OPTION</h4>
+<p><strong>Demo:</strong> <a href="https://h5allthefeels-demo.squarespace.com/?password=demo">https://h5allthefeels-demo.squarespace.com/?password=demo</a></p>
+<p><strong>Overall Aesthetic:</strong> Dark, moody, grounded. Sage green + charcoal + cream with botanical accents. Bold and confident — stands out dramatically from typical therapy sites.</p>
+<p><strong>Navigation:</strong></p>
+<ul>
+<li>Style: Fixed, logo left (branded wordmark), nav right, &quot;Get Started&quot; as final item</li>
+<li>Items: 5 (About, Services, Learn, Events, Get Started)</li>
+<li>CTA: &quot;Get Started&quot; text link</li>
+</ul>
+<p><strong>Hero Section:</strong></p>
+<ul>
+<li>Type: Dark charcoal background with italic serif headline centered, circular portrait below, flanked by text</li>
+<li>Text: &quot;<em>together</em> we thrive&quot; in elegant serif italic + location</li>
+<li>Image: Circular portrait centered</li>
+<li>CTA: Below hero in body text</li>
+</ul>
+<p><strong>Homepage Section Order:</strong></p>
+<ol>
+<li>Dark hero with italic serif headline + circular portrait</li>
+<li>&quot;Real Solutions for Real Families&quot; — light section with botanical leaf illustration</li>
+<li>Diagonal/slanted section dividers (sage green → cream → charcoal, creating dynamic angles)</li>
+<li>Offerings section with asymmetric image/text pairs</li>
+<li>ADHD/Autism assessments section</li>
+<li>&quot;Begin Today&quot; CTA section with bold headline</li>
+<li>Blog preview</li>
+<li>Footer</li>
+</ol>
+<p><strong>Grid &amp; Layout:</strong></p>
+<ul>
+<li>SLANTED SECTION DIVIDERS — the signature feature. Sections don't end in straight horizontal lines but in dramatic angles, creating movement</li>
+<li>Botanical line illustrations (leaves, stems) as decorative elements</li>
+<li>Circular photo treatments</li>
+<li>Dark sections alternate with light</li>
+<li>Full-width with contained text blocks</li>
+</ul>
+<p><strong>Typography:</strong></p>
+<ul>
+<li>Headlines: Elegant serif with italic emphasis (&quot;<em>together</em> we thrive&quot;)</li>
+<li>Body: Clean sans-serif</li>
+<li>Mix of script-like italic and bold serif</li>
+<li>Dramatic size contrast</li>
+</ul>
+<p><strong>Color Palette:</strong></p>
+<ul>
+<li>Primary: Dark charcoal/near-black (~#2D3128) for hero and accent sections</li>
+<li>Secondary: Sage green (~#7C8C6E) for diagonal bands</li>
+<li>Tertiary: Warm cream (~#E8DFD0) for light sections</li>
+<li>Botanical: Light sage line illustrations</li>
+<li>Overall: Dark, grounded, nature-inspired</li>
+</ul>
+<p><strong>Image Style:</strong></p>
+<ul>
+<li>Circular portrait (signature treatment)</li>
+<li>Botanical line illustrations (CSS/SVG — sage-toned)</li>
+<li>Diagonal crops following the slanted dividers</li>
+<li>Warm, natural photography</li>
+</ul>
+<p><strong>CTA Strategy:</strong></p>
+<ul>
+<li>4-5 CTAs: &quot;Get Started,&quot; &quot;Learn more,&quot; &quot;Book Now&quot;</li>
+<li>Bold &quot;Begin Today&quot; section with large headline</li>
+<li>Mix of text links and filled buttons</li>
+</ul>
+<p><strong>What Makes This Layout Distinctive:</strong><br />
+The slanted diagonal section dividers are unlike anything else in this collection — they create dynamic visual movement that prevents the &quot;endless scroll of rectangles&quot; problem. The botanical illustrations add organic warmth to the bold dark palette. The sage green + cream + charcoal palette is remarkably close to Dr. Wilson's brand. This template would create the most visually striking site of any option here, but it skews bold/edgy rather than warm/inviting.</p>
+<hr />
+<h4><a id="5-kindred%E2%80%94-most-personality" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. Kindred — MOST PERSONALITY</h4>
+<p><strong>Demo:</strong> <a href="https://h5kindred-demo.squarespace.com/?password=demo">https://h5kindred-demo.squarespace.com/?password=demo</a></p>
+<p><strong>Overall Aesthetic:</strong> Vintage-modern with playful warmth. Soft stripes, scalloped dividers, pink/yellow/cream palette. Editorial typography with personality.</p>
+<p><strong>Navigation:</strong></p>
+<ul>
+<li>Style: Fixed, serif logo left, nav items right, &quot;Book Now&quot; button in gold/yellow</li>
+<li>Items: 5 (About, Offerings, Blog, Resources, Book Now)</li>
+<li>CTA: &quot;Book Now&quot; in filled warm button</li>
+</ul>
+<p><strong>Hero Section:</strong></p>
+<ul>
+<li>Type: Split — overlapping photos left (lifestyle + portrait), text right</li>
+<li>Text: Large serif &quot;You don't have to have it all figured out.&quot; + italic subtext</li>
+<li>Images: Multiple overlapping photos with striped background treatment</li>
+<li>CTA: None in hero — scroll to engage</li>
+</ul>
+<p><strong>Homepage Section Order:</strong></p>
+<ol>
+<li>Split hero with overlapping photos + text</li>
+<li>&quot;What we can work on together&quot; — numbered services (01, 02, 03) with circular images above</li>
+<li>Full-width striped band with centered quote</li>
+<li>About teaser — circular portrait + bio</li>
+<li>Scrolling marquee (&quot;Now Accepting New Clients&quot; repeating)</li>
+<li>&quot;A little different on purpose&quot; text block + CTA</li>
+<li>Final CTA (&quot;Let's talk.&quot;)</li>
+<li>2-column: Free Downloads + Blog carousel</li>
+<li>Footer with newsletter signup + Instagram feed</li>
+</ol>
+<p><strong>Grid &amp; Layout:</strong></p>
+<ul>
+<li>Playful striped backgrounds (pink + cream)</li>
+<li>Scalloped/wavy section dividers</li>
+<li>Overlapping images in hero</li>
+<li>Circular portraits</li>
+<li>3-column numbered specializations</li>
+<li>Marquee scrolling text band</li>
+</ul>
+<p><strong>Typography:</strong></p>
+<ul>
+<li>Headlines: Bold serif with personality (almost editorial headline style)</li>
+<li>Body: Clean sans-serif</li>
+<li>Numbered sections (01, 02, 03) in large gold display</li>
+<li>Strong italic usage throughout</li>
+</ul>
+<p><strong>Color Palette:</strong></p>
+<ul>
+<li>Primary: Soft pink/blush (~#F5D5C8) for stripes and accents</li>
+<li>Secondary: Warm cream (#FFF8ED)</li>
+<li>Accent: Gold/yellow (~#DBA539) for numbers, CTAs</li>
+<li>Text: Dark charcoal</li>
+<li>Overall: Warm, feminine, playful</li>
+</ul>
+<p><strong>Image Style:</strong></p>
+<ul>
+<li>Circular portraits</li>
+<li>Overlapping lifestyle photos with colored backgrounds</li>
+<li>Warm, candid, relatable</li>
+<li>Striped pattern backgrounds as image frames</li>
+</ul>
+<p><strong>CTA Strategy:</strong></p>
+<ul>
+<li>5+ CTAs: &quot;Book Now&quot; nav, &quot;Learn More About Me,&quot; &quot;Book Now&quot; body, &quot;Get Started,&quot; &quot;Get the Freebies&quot;</li>
+<li>Gold-accented buttons</li>
+<li>Conversational: &quot;Let's talk,&quot; &quot;Book Now&quot;</li>
+</ul>
+<p><strong>What Makes This Layout Distinctive:</strong><br />
+The striped backgrounds and scalloped dividers create instant personality — this site would never be mistaken for a generic template. The overlapping photo treatment in the hero creates depth. The scrolling marquee text band (&quot;Now Accepting New Clients&quot;) is both functional and decorative. However, this template skews younger/more playful than Dr. Wilson's premium positioning may warrant.</p>
+<hr />
+<h3><a id="template-comparison-top-5-for-dr-wilson" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Template Comparison: Top 5 for Dr. Wilson</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Liminaire</th>
+<th>Radiant Roots</th>
+<th>Haven</th>
+<th>All the Feels</th>
+<th>Kindred</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Price</strong></td>
+<td>$495</td>
+<td>$400</td>
+<td>$300</td>
+<td>$495</td>
+<td>$455</td>
+</tr>
+<tr>
+<td><strong>Hero</strong></td>
+<td>Split (sage bg + portrait)</td>
+<td>Text-only on taupe</td>
+<td>Split (photo + text)</td>
+<td>Dark bg + circular portrait</td>
+<td>Overlapping photos + text</td>
+</tr>
+<tr>
+<td><strong>Palette Match</strong></td>
+<td>Sage = exact match</td>
+<td>Warm but different</td>
+<td>Gold = exact match</td>
+<td>Sage + charcoal = close</td>
+<td>Pink/gold = partial</td>
+</tr>
+<tr>
+<td><strong>Sections</strong></td>
+<td>9</td>
+<td>7</td>
+<td>9</td>
+<td>8</td>
+<td>9</td>
+</tr>
+<tr>
+<td><strong>Typography</strong></td>
+<td>Elegant serif</td>
+<td>Warm serif</td>
+<td>Modern serif</td>
+<td>Italic serif</td>
+<td>Bold serif</td>
+</tr>
+<tr>
+<td><strong>Layout Feel</strong></td>
+<td>Editorial luxury</td>
+<td>Warm cocoon</td>
+<td>Clean professional</td>
+<td>Bold/grounded</td>
+<td>Playful personality</td>
+</tr>
+<tr>
+<td><strong>Unique Feature</strong></td>
+<td>Dark sage hero, numbered specs</td>
+<td>Taupe color bands</td>
+<td>Gold accent strips</td>
+<td>Slanted dividers</td>
+<td>Striped backgrounds</td>
+</tr>
+<tr>
+<td><strong>Premium Signal</strong></td>
+<td>Highest</td>
+<td>High</td>
+<td>Medium-high</td>
+<td>High (edgy)</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><strong>Warmth</strong></td>
+<td>Medium-high</td>
+<td>Highest</td>
+<td>High</td>
+<td>Medium</td>
+<td>Highest</td>
+</tr>
+<tr>
+<td><strong>Brand Fit</strong></td>
+<td>Best match (sage + editorial)</td>
+<td>Good (warm, women-focused)</td>
+<td>Good (gold accent)</td>
+<td>Good (sage, bold)</td>
+<td>Moderate (too playful?)</td>
+</tr>
+</tbody>
+</table>
+<h3><a id="recommendation-for-dr-wilson" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recommendation for Dr. Wilson</h3>
+<p><strong>Primary pick: Liminaire</strong> — The sage green palette is a near-exact match for the brand (#4A5D4A). The editorial sophistication signals premium without feeling clinical. The numbered specializations map perfectly to her service areas. The restrained CTA approach fits a therapist who wants to invite rather than sell.</p>
+<p><strong>Runner-up: Haven</strong> — If budget matters, Haven at $300 delivers 80% of the impact at 60% of the price. The gold accent bands map to the brand gold (#C4A265). Clean enough to customize without fighting the template's personality.</p>
+<p><strong>Dark horse: All the Feels</strong> — If the client wants to make a bold statement that stops the scroll, the slanted dividers and botanical accents create a genuinely unique presence. The sage palette matches well, but the dark/moody tone may not match the &quot;safe and warm&quot; positioning needed for trauma therapy.</p>
+<hr />
+<p><em>Research conducted March 2026. All sites analyzed in their state as of that date.</em></p>
+</div></div></body></html>

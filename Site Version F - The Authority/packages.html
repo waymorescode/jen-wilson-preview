@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+    <meta name="description" content="Intensive therapy packages: 4, 6, or 12-week focused transformation programs with Dr. Jennifer Wilson.">
+    <title>Packages | Conscious Practice Therapy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .packages-intro {
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            text-align: center;
+        }
+
+        .packages-intro h2 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .packages-intro p {
+            font-size: 1.05rem;
+            color: var(--charcoal);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .package-card {
+            background-color: var(--white);
+            border: 2px solid #E8E8E8;
+            border-radius: 8px;
+            padding: 2.5rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .package-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .package-card h3 {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .package-subtitle {
+            font-size: 0.9rem;
+            color: var(--accent);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .package-description {
+            font-size: 0.95rem;
+            color: var(--charcoal);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .package-card ul {
+            list-style: none;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: var(--charcoal);
+            line-height: 1.8;
+        }
+
+        .package-card ul li {
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .package-card ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .package-cta {
+            display: inline-block;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .package-cta:hover {
+            color: var(--accent);
+        }
+
+        .whats-included {
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 1px solid #E8E8E8;
+        }
+
+        .whats-included h2 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .included-item h4 {
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .included-item p {
+            font-size: 0.95rem;
+            color: var(--charcoal);
+            line-height: 1.7;
+        }
+
+        .why-limited {
+            margin-top: 3rem;
+            padding-top: 3rem;
+            border-top: 1px solid #E8E8E8;
+        }
+
+        .why-limited h2 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .why-limited p {
+            font-size: 1rem;
+            color: var(--charcoal);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .included-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ========================================
+     NAVIGATION
+     ======================================== -->
+<nav>
+    <div class="nav-container">
+        <div class="nav-brand">
+            <a href="index.html">
+                <img src="images/lotus-logo.svg" alt="" class="logo-icon">
+                <div class="nav-brand-text">
+                    <div class="nav-brand-main">Conscious Practice Therapy</div>
+                    <div class="nav-brand-sub">Dr. Jennifer Wilson, PhD, LCSW</div>
+                </div>
+            </a>
+        </div>
+
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="expect.html">What to Expect</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="investment.html">Investment</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="contact.html" class="nav-cta">Schedule a Consultation</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ========================================
+     HERO SECTION
+     ======================================== -->
+<section class="hero">
+    <h1>Packages</h1>
+    <p class="subtitle">Intensive, focused work for specific life moments</p>
+</section>
+
+<!-- ========================================
+     PAGE CONTENT
+     ======================================== -->
+<section class="page-content">
+    <div class="content-container">
+        <!-- Intro -->
+        <div class="packages-intro">
+            <h2>Structured Pathways for Transformation</h2>
+            <p>For some, weekly therapy over months or years is the right path. For others, a focused, intensive experience works better—especially when you're navigating a specific life moment and want depth and momentum.</p>
+            <p>These packages are designed for limited enrollment, high-touch care, and real transformation in a defined timeframe.</p>
+        </div>
+
+        <!-- Package Cards -->
+        <div class="packages-grid">
+            <div class="package-card">
+                <h3>Emotional Wellness Transformation</h3>
+                <p class="package-subtitle">4, 6, or 12 weeks</p>
+                <p class="package-description">For the accomplished person who's been managing anxiety, overwhelm, or emotional disconnection. You're ready to understand what's underneath the surface and build new ways of being.</p>
+                <ul>
+                    <li>Intensive weekly or twice-weekly sessions</li>
+                    <li>Personalized tools and practices</li>
+                    <li>Support between sessions</li>
+                    <li>Comprehensive assessment and direction-setting</li>
+                </ul>
+                <a href="contact.html" class="package-cta">Inquire &rarr;</a>
+            </div>
+
+            <div class="package-card">
+                <h3>Relationship Reboot</h3>
+                <p class="package-subtitle">6 or 12 weeks</p>
+                <p class="package-description">For couples ready to rebuild connection or navigate a specific challenge. Whether you're struggling with conflict, distance, or a major life transition, this package creates space for real conversation and deeper understanding.</p>
+                <ul>
+                    <li>Structured couples sessions</li>
+                    <li>Communication skill-building</li>
+                    <li>Conflict navigation tools</li>
+                    <li>Reconnection practices</li>
+                </ul>
+                <a href="contact.html" class="package-cta">Inquire &rarr;</a>
+            </div>
+
+            <div class="package-card">
+                <h3>Good Mama Reset</h3>
+                <p class="package-subtitle">6 or 12 weeks</p>
+                <p class="package-description">For mothers navigating the complexity of motherhood—managing identity, boundary-setting, perfectionism, relationship impact, and the question of who you are beyond being "Mom."</p>
+                <ul>
+                    <li>Exploration of identity and worth</li>
+                    <li>Practical tools for overwhelm</li>
+                    <li>Boundary work</li>
+                    <li>Self-compassion and presence practice</li>
+                </ul>
+                <a href="contact.html" class="package-cta">Inquire &rarr;</a>
+            </div>
+
+            <div class="package-card">
+                <h3>Midlife Reset</h3>
+                <p class="package-subtitle">6 or 12 weeks</p>
+                <p class="package-description">For those in midlife wondering: Is this all there is? You've built a good life, but something feels incomplete. This package creates space to examine what matters, reimagine possibilities, and reclaim yourself.</p>
+                <ul>
+                    <li>Values clarification</li>
+                    <li>Purpose exploration</li>
+                    <li>Identity work beyond roles</li>
+                    <li>Decision-making support</li>
+                </ul>
+                <a href="contact.html" class="package-cta">Inquire &rarr;</a>
+            </div>
+
+            <div class="package-card">
+                <h3>Empty Nest Recalibration</h3>
+                <p class="package-subtitle">6 or 12 weeks</p>
+                <p class="package-description">For parents navigating the transition as your children launch. You're grieving the loss of a role, rediscovering your partnership, and asking who you are without the daily demands of parenting.</p>
+                <ul>
+                    <li>Transition and identity work</li>
+                    <li>Partnership strengthening</li>
+                    <li>New chapter exploration</li>
+                    <li>Loss and grief processing</li>
+                </ul>
+                <a href="contact.html" class="package-cta">Inquire &rarr;</a>
+            </div>
+        </div>
+
+        <!-- What's Included -->
+        <div class="whats-included">
+            <h2>What's Included in Every Package</h2>
+
+            <div class="included-grid">
+                <div class="included-item">
+                    <h4>Intensive Sessions</h4>
+                    <p>Weekly or twice-weekly sessions, depending on the package. These aren't rushed—they're designed for depth and momentum.</p>
+                </div>
+                <div class="included-item">
+                    <h4>Personalized Approach</h4>
+                    <p>We build a roadmap together. The package is shaped around your specific goals and timeline, not a one-size-fits-all model.</p>
+                </div>
+                <div class="included-item">
+                    <h4>Support Between Sessions</h4>
+                    <p>Email access for pressing matters between sessions. This matters—the work continues in your life, not just in the room.</p>
+                </div>
+                <div class="included-item">
+                    <h4>Tools and Practices</h4>
+                    <p>You learn practical, evidence-based tools—mindfulness, somatic practices, communication skills—that you can use long after the package ends.</p>
+                </div>
+                <div class="included-item">
+                    <h4>Integration Sessions</h4>
+                    <p>The final 1-2 sessions focus on consolidating what you've learned and planning how to sustain this work after the package concludes.</p>
+                </div>
+                <div class="included-item">
+                    <h4>Limited Enrollment</h4>
+                    <p>I keep my caseload small and accept a limited number of package clients at a time. This ensures you get my best, most focused attention.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Limited Enrollment -->
+        <div class="why-limited">
+            <h2>Why Limited Enrollment?</h2>
+            <p>Real transformation requires presence and depth. When I take on an intensive package, I'm committing significant energy to your care—not just your sessions, but the thinking I do about your case between sessions, the attention to detail, the willingness to adjust the pace based on what you need.</p>
+            <p>This means I can only take on a limited number of packages at any given time. If you're drawn to this work, let's talk about timing and fit during your consultation. Sometimes the right moment is now. Sometimes it's when a slot opens up in the coming months.</p>
+        </div>
+
+        <!-- CTA -->
+        <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid #E8E8E8; text-align: center;">
+            <h2 style="font-family: var(--font-serif); font-size: 2rem; font-weight: 600; color: var(--primary); margin-bottom: 1.5rem;">Ready to commit to the work?</h2>
+            <p style="font-size: 1.05rem; color: var(--charcoal); line-height: 1.8; margin-bottom: 2rem;">Let's explore which package might be the right fit for where you are.</p>
+            <a href="contact.html" class="cta-button">Schedule a Consultation</a>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     FOOTER
+     ======================================== -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="expect.html">What to Expect</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="investment.html">Investment</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Resources</h3>
+            <ul>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="contact.html">Book</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <ul>
+                <li><a href="mailto:hello@consciouspracticetherapy.com">hello@consciouspracticetherapy.com</a></li>
+                <li>St. Augustine Beach, FL</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Conscious Practice Therapy. All rights reserved. | Private pay + Superbill.</p>
+    </div>
+</footer>
+
+<!-- Mobile Sticky CTA -->
+<div class="mobile-sticky-cta">
+    <a href="contact.html" class="btn-sticky">Schedule a Consultation</a>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

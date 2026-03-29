@@ -3,225 +3,685 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
-    <meta name="description" content="Trauma therapy for women, children & families in St. Augustine. Dr. Jennifer Wilson, PhD, LCSW offers compassionate, evidence-based support for anxiety, depression, eating disorders, and trauma recovery.">
-    <title>Dr. Jennifer Wilson | Dr. Jennifer Wilson | Trauma Therapy St. Augustine</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Conscious Practice — Site Version Gallery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sage: #2D3D2D;
+            --sage-light: #3E5040;
+            --accent: #7A7A6E;
+            --cream: #F4F3F0;
+            --charcoal: #2A2A2A;
+            --white: #FFFFFF;
+            --border: #E0DED8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--charcoal);
+            background-color: var(--cream);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background-color: var(--sage);
+            color: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .header p {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.75);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .header .subtitle {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 1rem;
+        }
+
+        /* Instructions */
+        .instructions {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1.5rem 2rem;
+            background: var(--white);
+            border-left: 3px solid var(--sage);
+            font-size: 0.95rem;
+            color: var(--charcoal);
+            line-height: 1.7;
+        }
+
+        .instructions strong { color: var(--sage); }
+
+        /* Filter Tabs */
+        .filter-bar {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            padding: 0 2rem;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.25rem;
+            border: 1px solid var(--border);
+            background: var(--white);
+            color: var(--charcoal);
+            font-family: 'Lato', sans-serif;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            letter-spacing: 0.5px;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--sage);
+            color: var(--sage);
+        }
+
+        .filter-btn.active {
+            background: var(--sage);
+            color: var(--white);
+            border-color: var(--sage);
+        }
+
+        /* Gallery Grid */
+        .gallery {
+            max-width: 1200px;
+            margin: 1.5rem auto 4rem;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Version Card */
+        .card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+
+        .card-preview {
+            width: 100%;
+            height: 220px;
+            border: none;
+            pointer-events: none;
+            overflow: hidden;
+            position: relative;
+            background: var(--cream);
+        }
+
+        .card-preview iframe {
+            width: 1440px;
+            height: 900px;
+            border: none;
+            transform: scale(0.236);
+            transform-origin: top left;
+            pointer-events: none;
+        }
+
+        .card-body {
+            padding: 1.25rem 1.5rem;
+        }
+
+        .card-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent);
+            margin-bottom: 0.25rem;
+        }
+
+        .card-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 0.5rem;
+        }
+
+        .card-desc {
+            font-size: 0.85rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .card-tags {
+            display: flex;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            font-size: 0.7rem;
+            padding: 0.2rem 0.6rem;
+            background: var(--cream);
+            color: var(--accent);
+            letter-spacing: 0.5px;
+        }
+
+        .tag.brand-full { background: var(--sage); color: var(--white); }
+        .tag.brand-short { background: var(--accent); color: var(--white); }
+
+        .card-actions {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .btn-open {
+            flex: 1;
+            display: block;
+            text-align: center;
+            padding: 0.7rem 1rem;
+            background: var(--sage);
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: background 0.2s ease;
+        }
+
+        .btn-open:hover { background: var(--sage-light); }
+
+        .btn-preview {
+            flex: 1;
+            display: block;
+            text-align: center;
+            padding: 0.7rem 1rem;
+            background: transparent;
+            color: var(--sage);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            border: 1px solid var(--sage);
+            transition: all 0.2s ease;
+        }
+
+        .btn-preview:hover {
+            background: var(--sage);
+            color: var(--white);
+        }
+
+        /* Fullscreen Preview Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.85);
+            z-index: 9999;
+            padding: 1.5rem;
+        }
+
+        .modal-overlay.active { display: flex; flex-direction: column; }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            background: var(--charcoal);
+            color: var(--white);
+        }
+
+        .modal-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .modal-nav {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .modal-nav button {
+            background: rgba(255,255,255,0.15);
+            border: none;
+            color: var(--white);
+            padding: 0.4rem 1rem;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-family: 'Lato', sans-serif;
+            transition: background 0.2s;
+        }
+
+        .modal-nav button:hover { background: rgba(255,255,255,0.3); }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.25rem 0.75rem;
+            line-height: 1;
+        }
+
+        .modal-close:hover { color: #ff6b6b; }
+
+        .modal-body {
+            flex: 1;
+            background: var(--white);
+        }
+
+        .modal-body iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.8rem; }
+            .gallery { grid-template-columns: 1fr; }
+            .card-preview iframe { transform: scale(0.22); }
+            .filter-bar { justify-content: center; }
+        }
+
+        /* Hidden utility */
+        .hidden { display: none !important; }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="index.html">
-                    <span class="logo-text">Dr. Jennifer Wilson</span>
-                    <span class="logo-subtitle">PhD, LCSW</span>
-                </a>
-            </div>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="expect.html">What to Expect</a></li>
-                <li><a href="packages.html">Wellness Packages</a></li>
-                <li><a href="investment.html">Investment</a></li>
-                <li><a href="community.html">Community</a></li>
-                <li><a href="contact.html" class="btn-nav">Book Consultation</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Trauma & Anxiety Therapy for Women in St. Augustine</h1>
-            <p class="subheading">Find peace and healing with compassionate, evidence-based support from an experienced trauma specialist.</p>
-            <div class="cta-buttons">
-                <a href="contact.html#book" class="btn-primary">Book Free Consultation</a>
-                <a href="insurance.html" class="btn-secondary">Check Insurance Coverage</a>
-            </div>
-            <p class="credentials">PhD, LCSW | 20+ Years Experience | Court-Qualified Expert</p>
-        </div>
-    </section>
+<div class="header">
+    <div class="subtitle">Website Redesign</div>
+    <h1>Conscious Practice — Version Gallery</h1>
+    <p>Click through each version below to explore layouts, content, and branding options. Each version is a fully built multi-page site.</p>
+</div>
 
-    <!-- Welcome Section -->
-    <section class="welcome-section">
-        <div class="container">
-            <h2>Welcome. I'm Dr. Jennifer Wilson.</h2>
-            <div class="welcome-content">
-                <p>If you're lying awake at 2 AM with racing thoughts, struggling to keep it all together while anxiety eats away at you, or carrying the weight of past trauma that still affects your daily life—you've found the right place.</p>
-                
-                <p>I specialize in helping women and families in St. Augustine heal from anxiety, depression, eating disorders, and trauma. With over 20 years of experience and advanced training in EMDR and trauma-informed care, I provide a safe space where healing becomes possible.</p>
-                
-                <p>Whether you're a mother juggling endless responsibilities, a professional woman battling perfectionism, or someone working to heal from past wounds, I'm here to support your journey toward peace and wholeness.</p>
-                
-                <a href="about.html" class="link-arrow">Learn More About My Approach →</a>
-            </div>
-        </div>
-    </section>
+<div class="instructions">
+    <strong>How to use this page:</strong> Each card below is a different layout and brand variant. Click <strong>"Open Full Site"</strong> to open the version in a new tab where you can browse all pages. Click <strong>"Quick Preview"</strong> to see it right here in a lightbox. Use the filters to narrow by brand name or layout style. Take notes on what you like from each — we can mix and match elements.
+</div>
 
-    <!-- Services Overview -->
-    <section class="services-overview">
-        <div class="container">
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🌿</div>
-                    <h3>Trauma & PTSD Recovery</h3>
-                    <p>Specialized support for healing past trauma, including sexual trauma, childhood abuse, and PTSD. Using EMDR and trauma-informed approaches.</p>
-                    <a href="trauma-therapy.html" class="link-arrow">Learn More →</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">🌊</div>
-                    <h3>Anxiety & Depression</h3>
-                    <p>Evidence-based treatment for anxiety, panic, depression, and overwhelming stress. Find relief and develop lasting coping strategies.</p>
-                    <a href="anxiety-therapy.html" class="link-arrow">Learn More →</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">💙</div>
-                    <h3>Eating Disorders</h3>
-                    <p>Compassionate support for anorexia, bulimia, binge eating, and body image concerns. Address root causes, not just symptoms.</p>
-                    <a href="eating-disorders.html" class="link-arrow">Learn More →</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">🤝</div>
-                    <h3>Couples & Family</h3>
-                    <p>Strengthen relationships, improve communication, and navigate life transitions together. Creating healthier family dynamics.</p>
-                    <a href="couples-therapy.html" class="link-arrow">Learn More →</a>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All Versions (12)</button>
+    <button class="filter-btn" data-filter="cpt">Conscious Practice Therapy (6)</button>
+    <button class="filter-btn" data-filter="cp">Conscious Practice (6)</button>
+    <button class="filter-btn" data-filter="hero-photo">Photo Hero (E, F)</button>
+    <button class="filter-btn" data-filter="hero-bg">Background Hero (A, B, C, D)</button>
+</div>
 
-    <!-- Why Choose Section -->
-    <section class="why-choose">
-        <div class="container">
-            <h2>What Makes This Practice Different</h2>
-            <div class="features-grid">
-                <div class="feature">
-                    <span class="checkmark">✓</span>
-                    <p>20+ Years Specializing in Trauma Recovery</p>
-                </div>
-                <div class="feature">
-                    <span class="checkmark">✓</span>
-                    <p>Court-Qualified Expert in Trauma Cases</p>
-                </div>
-                <div class="feature">
-                    <span class="checkmark">✓</span>
-                    <p>Evidence-Based Methods (EMDR, CBT)</p>
-                </div>
-                <div class="feature">
-                    <span class="checkmark">✓</span>
-                    <p>Most Insurance Accepted via Headway</p>
-                </div>
-                <div class="feature">
-                    <span class="checkmark">✓</span>
-                    <p>Convenient St. Augustine Location</p>
-                </div>
-                <div class="feature">
-                    <span class="checkmark">✓</span>
-                    <p>Telehealth Options Available</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="gallery" id="gallery">
 
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <h2>Client Experiences</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial">
-                    <p class="quote">"Dr. Wilson helped me work through trauma I'd been carrying for years. Her compassionate approach made me feel safe to finally heal."</p>
-                    <p class="author">- Sarah, St. Augustine</p>
-                </div>
-                
-                <div class="testimonial">
-                    <p class="quote">"After struggling with anxiety and perfectionism my whole life, I finally found someone who understood. I'm a different person now."</p>
-                    <p class="author">- M.K., Mother of Two</p>
-                </div>
-                
-                <div class="testimonial">
-                    <p class="quote">"The eating disorder that controlled my life for a decade no longer has power over me. Dr. Wilson saved my life."</p>
-                    <p class="author">- Anonymous</p>
-                </div>
+    <!-- VERSION A -->
+    <div class="card" data-brand="cpt" data-hero="hero-bg">
+        <div class="card-preview">
+            <iframe src="Site Version A - The Friend/index.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+        </div>
+        <div class="card-body">
+            <div class="card-label">Version A</div>
+            <div class="card-title">The Friend</div>
+            <div class="card-desc">Warm, literary tone. Background image hero with overlay. Narrative-driven copy. The most approachable feel.</div>
+            <div class="card-tags">
+                <span class="tag brand-full">Conscious Practice Therapy</span>
+                <span class="tag">Warm</span>
+                <span class="tag">Narrative</span>
+            </div>
+            <div class="card-actions">
+                <a href="Site Version A - The Friend/index.html" target="_blank" class="btn-open">Open Full Site</a>
+                <a href="#" class="btn-preview" onclick="openPreview('Site Version A - The Friend/index.html', 'A — The Friend'); return false;">Quick Preview</a>
             </div>
         </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <h2>Ready to Start Your Healing Journey?</h2>
-            <p>Book a free 15-minute consultation to discuss your needs and see if we're a good fit.</p>
-            <div class="cta-buttons">
-                <a href="contact.html#book" class="btn-primary">Book Free Consultation</a>
-                <a href="insurance.html" class="btn-secondary">Check Insurance via Headway</a>
-            </div>
-            <p class="contact-info">Questions? Call <a href="tel:5617014984">(561) 701-4984</a></p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-column">
-                <h4>Main Links</h4>
-                <ul>
-                    <li><a href="about.html">About Dr. Wilson</a></li>
-                    <li><a href="services.html">Therapy Services</a></li>
-                    <li><a href="insurance.html">Insurance & Rates</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-column">
-                <h4>Professional Services</h4>
-                <ul>
-                    <li><a href="professional-services.html">Clinical Supervision</a></li>
-                    <li><a href="professional-services.html#nonprofits">For Nonprofits</a></li>
-                    <li><a href="professional-services.html#training">Training & Consultation</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-column">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Service</a></li>
-                    <li><a href="good-faith-estimate.html">Good Faith Estimate</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-column">
-                <h4>Connect</h4>
-                <ul>
-                    <li><a href="tel:5617014984">Phone: (561) 701-4984</a></li>
-                    <li><a href="mailto:jennifer@consciouspracticetherapy.com">jennifer@consciouspracticetherapy.com</a></li>
-                    <li>St. Augustine, FL</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 Dr. Jennifer Wilson | Dr. Jennifer Wilson, PhD, LCSW</p>
-        </div>
-    </footer>
-
-    <script src="js/main.js"></script>
-    <div class="mobile-sticky-cta">
-        <a href="contact.html#book" class="btn-sticky">Book Free Consultation</a>
     </div>
+
+    <!-- VERSION A2 -->
+    <div class="card" data-brand="cp" data-hero="hero-bg">
+        <div class="card-preview">
+            <iframe src="Site Version A2 - The Friend (CP)/index.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+        </div>
+        <div class="card-body">
+            <div class="card-label">Version A2</div>
+            <div class="card-title">The Friend (CP)</div>
+            <div class="card-desc">Same warm layout as A, branded as "Conscious Practice" — shorter, cleaner name.</div>
+            <div class="card-tags">
+                <span class="tag brand-short">Conscious Practice</span>
+                <span class="tag">Warm</span>
+                <span class="tag">Narrative</span>
+            </div>
+            <div class="card-actions">
+                <a href="Site Version A2 - The Friend (CP)/index.html" target="_blank" class="btn-open">Open Full Site</a>
+                <a href="#" class="btn-preview" onclick="openPreview('Site Version A2 - The Friend (CP)/index.html', 'A2 — The Friend (CP)'); return false;">Quick Preview</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- VERSION B -->
+    <div class="card" data-brand="cpt" data-hero="hero-bg">
+        <div class="card-preview">
+            <iframe src="Site Version B - The Poet/index.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+        </div>
+        <div class="card-body">
+            <div class="card-label">Version B</div>
+            <div class="card-title">The Poet</div>
+            <div class="card-desc">Evocative, editorial feel. Poetic copy with a contemplative pace. Sage tones with gold warmth.</div>
+            <div class="card-tags">
+                <span class="tag brand-full">Conscious Practice Therapy</span>
+                <span class="tag">Editorial</span>
+                <span class="tag">Poetic</span>
+            </div>
+            <div class="card-actions">
+                <a href="Site Version B - The Poet/index.html" target="_blank" class="btn-open">Open Full Site</a>
+                <a href="#" class="btn-preview" onclick="openPreview('Site Version B - The Poet/index.html', 'B — The Poet'); return false;">Quick Preview</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- VERSION B2 -->
+    <div class="card" data-brand="cp" data-hero="hero-bg">
+        <div class="card-preview">
+            <iframe src="Site Version B2 - The Poet (CP)/index.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+        </div>
+        <div class="card-body">
+            <div class="card-label">Version B2</div>
+            <div class="card-title">The Poet (CP)</div>
+            <div class="card-desc">Same editorial layout as B, branded as "Conscious Practice."</div>
+            <div class="card-tags">
+                <span class="tag brand-short">Conscious Practice</span>
+                <span class="tag">Editorial</span>
+                <span class="tag">Poetic</span>
+            </div>
+            <div class="card-actions">
+                <a href="Site Version B2 - The Poet (CP)/index.html" target="_blank" class="btn-open">Open Full Site</a>
+                <a href="#" class="btn-preview" onclick="openPreview('Site Version B2 - The Poet (CP)/index.html', 'B2 — The Poet (CP)'); return false;">Quick Preview</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- VERSION C -->
+    <div class="card" data-brand="cpt" data-hero="hero-bg">
+        <div class="card-preview">
+            <iframe src="Site Version C - The Editor/index.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+        </div>
+        <div class="card-body">
+            <div class="card-label">Version C</div>
+            <div class="card-title">The Editor</div>
+            <div class="card-desc">Clean, magazine-inspired layout. Strong editorial structure with clear hierarchy. Deep sage palette.</div>
+            <div class="card-tags">
+                <span class="tag brand-full">Conscious Practice Therapy</span>
+                <span class="tag">Clean</span>
+                <span class="tag">Editorial</span>
+            </div>
+            <div class="card-actions">
+                <a href="Site Version C - The Editor/index.html" target="_blank" class="btn-open">Open Full Site</a>
+                <a href="#" class="btn-preview" onclick="openPreview('Site Version C - The Editor/index.html', 'C — The Editor'); return false;">Quick Preview</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- VERSION C2 -->
+    <div class="card" data-brand="cp" data-hero="hero-bg">
+        <div class="card-preview">
+            <iframe src="Site Version C2 - The Editor (CP)/index.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+        </div>
+        <div class="card-body">
+            <div class="card-label">Version C2</div>
+            <div class="card-title">The Editor (CP)</div>
+            <div class="card-desc">Same editorial layout as C, branded as "Conscious Practice."</div>
+            <div class="card-tags">
+                <span class="tag brand-short">Conscious Practice</span>
+                <span class="tag">Clean</span>
+                <span class="tag">Editorial</span>
+            </div>
+            <div class="card-actions">
+                <a href="Site Version C2 - The Editor (CP)/index.html" target="_blank" class="btn-open">Open Full Site</a>
+                <a href="#" class="btn-preview" onclick="openPreview('Site Version C2 - The Editor (CP)/index.html', 'C2 — The Editor (CP)'); return false;">Quick Preview</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- VERSION D -->
+    <div class="card" data-brand="cpt" data-hero="hero-bg">
+        <div class="card-preview">
+            <iframe src="Site Version D - The Advisor/index.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+        </div>
+        <div class="card-body">
+            <div class="card-label">Version D</div>
+            <div class="card-title">The Advisor</div>
+            <div class="card-desc">Authoritative, structured feel. Professional advisor energy. Sage with overlay gradient hero.</div>
+            <div class="card-tags">
+                <span class="tag brand-full">Conscious Practice Therapy</span>
+                <span class="tag">Authority</span>
+                <span class="tag">Structured</span>
+            </div>
+            <div class="card-actions">
+                <a href="Site Version D - The Advisor/index.html" target="_blank" class="btn-open">Open Full Site</a>
+                <a href="#" class="btn-preview" onclick="openPreview('Site Version D - The Advisor/index.html', 'D — The Advisor'); return false;">Quick Preview</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- VERSION D2 -->
+    <div class="card" data-brand="cp" data-hero="hero-bg">
+        <div class="card-preview">
+            <iframe src="Site Version D2 - The Advisor (CP)/index.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+        </div>
+        <div class="card-body">
+            <div class="card-label">Version D2</div>
+            <div class="card-title">The Advisor (CP)</div>
+            <div class="card-desc">Same authoritative layout as D, branded as "Conscious Practice."</div>
+            <div class="card-tags">
+                <span class="tag brand-short">Conscious Practice</span>
+                <span class="tag">Authority</span>
+                <span class="tag">Structured</span>
+            </div>
+            <div class="card-actions">
+                <a href="Site Version D2 - The Advisor (CP)/index.html" target="_blank" class="btn-open">Open Full Site</a>
+                <a href="#" class="btn-preview" onclick="openPreview('Site Version D2 - The Advisor (CP)/index.html', 'D2 — The Advisor (CP)'); return false;">Quick Preview</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- VERSION E -->
+    <div class="card" data-brand="cpt" data-hero="hero-photo">
+        <div class="card-preview">
+            <iframe src="Site Version E - The Split/index.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+        </div>
+        <div class="card-body">
+            <div class="card-label">Version E</div>
+            <div class="card-title">The Split</div>
+            <div class="card-desc">Split-screen hero — text left, Dr. Wilson's photo right. Inspired by jareebasgall.com. The therapist IS the hero.</div>
+            <div class="card-tags">
+                <span class="tag brand-full">Conscious Practice Therapy</span>
+                <span class="tag">Photo Hero</span>
+                <span class="tag">Split Layout</span>
+            </div>
+            <div class="card-actions">
+                <a href="Site Version E - The Split/index.html" target="_blank" class="btn-open">Open Full Site</a>
+                <a href="#" class="btn-preview" onclick="openPreview('Site Version E - The Split/index.html', 'E — The Split'); return false;">Quick Preview</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- VERSION E2 -->
+    <div class="card" data-brand="cp" data-hero="hero-photo">
+        <div class="card-preview">
+            <iframe src="Site Version E2 - The Split (CP)/index.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+        </div>
+        <div class="card-body">
+            <div class="card-label">Version E2</div>
+            <div class="card-title">The Split (CP)</div>
+            <div class="card-desc">Same split-screen layout as E, branded as "Conscious Practice."</div>
+            <div class="card-tags">
+                <span class="tag brand-short">Conscious Practice</span>
+                <span class="tag">Photo Hero</span>
+                <span class="tag">Split Layout</span>
+            </div>
+            <div class="card-actions">
+                <a href="Site Version E2 - The Split (CP)/index.html" target="_blank" class="btn-open">Open Full Site</a>
+                <a href="#" class="btn-preview" onclick="openPreview('Site Version E2 - The Split (CP)/index.html', 'E2 — The Split (CP)'); return false;">Quick Preview</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- VERSION F -->
+    <div class="card" data-brand="cpt" data-hero="hero-photo">
+        <div class="card-preview">
+            <iframe src="Site Version F - The Authority/index.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+        </div>
+        <div class="card-body">
+            <div class="card-label">Version F</div>
+            <div class="card-title">The Authority</div>
+            <div class="card-desc">Photo + overlapping credentials card. Inspired by stateofmindkc.com. Strongest expert-authority positioning.</div>
+            <div class="card-tags">
+                <span class="tag brand-full">Conscious Practice Therapy</span>
+                <span class="tag">Photo Hero</span>
+                <span class="tag">Card Overlay</span>
+            </div>
+            <div class="card-actions">
+                <a href="Site Version F - The Authority/index.html" target="_blank" class="btn-open">Open Full Site</a>
+                <a href="#" class="btn-preview" onclick="openPreview('Site Version F - The Authority/index.html', 'F — The Authority'); return false;">Quick Preview</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- VERSION F2 -->
+    <div class="card" data-brand="cp" data-hero="hero-photo">
+        <div class="card-preview">
+            <iframe src="Site Version F2 - The Authority (CP)/index.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+        </div>
+        <div class="card-body">
+            <div class="card-label">Version F2</div>
+            <div class="card-title">The Authority (CP)</div>
+            <div class="card-desc">Same authority layout as F, branded as "Conscious Practice."</div>
+            <div class="card-tags">
+                <span class="tag brand-short">Conscious Practice</span>
+                <span class="tag">Photo Hero</span>
+                <span class="tag">Card Overlay</span>
+            </div>
+            <div class="card-actions">
+                <a href="Site Version F2 - The Authority (CP)/index.html" target="_blank" class="btn-open">Open Full Site</a>
+                <a href="#" class="btn-preview" onclick="openPreview('Site Version F2 - The Authority (CP)/index.html', 'F2 — The Authority (CP)'); return false;">Quick Preview</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Fullscreen Preview Modal -->
+<div class="modal-overlay" id="previewModal">
+    <div class="modal-header">
+        <span class="modal-title" id="modalTitle"></span>
+        <div class="modal-nav">
+            <button onclick="prevVersion()">Prev</button>
+            <button onclick="nextVersion()">Next</button>
+            <button class="modal-close" onclick="closePreview()">&times;</button>
+        </div>
+    </div>
+    <div class="modal-body">
+        <iframe id="modalIframe" src=""></iframe>
+    </div>
+</div>
+
+<script>
+    // Filter logic
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.card');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const filter = btn.dataset.filter;
+
+            cards.forEach(card => {
+                if (filter === 'all') {
+                    card.classList.remove('hidden');
+                } else if (filter === 'cpt' || filter === 'cp') {
+                    card.classList.toggle('hidden', card.dataset.brand !== filter);
+                } else {
+                    card.classList.toggle('hidden', card.dataset.hero !== filter);
+                }
+            });
+        });
+    });
+
+    // Preview modal
+    const versions = [
+        { url: 'Site Version A - The Friend/index.html', title: 'A — The Friend' },
+        { url: 'Site Version A2 - The Friend (CP)/index.html', title: 'A2 — The Friend (CP)' },
+        { url: 'Site Version B - The Poet/index.html', title: 'B — The Poet' },
+        { url: 'Site Version B2 - The Poet (CP)/index.html', title: 'B2 — The Poet (CP)' },
+        { url: 'Site Version C - The Editor/index.html', title: 'C — The Editor' },
+        { url: 'Site Version C2 - The Editor (CP)/index.html', title: 'C2 — The Editor (CP)' },
+        { url: 'Site Version D - The Advisor/index.html', title: 'D — The Advisor' },
+        { url: 'Site Version D2 - The Advisor (CP)/index.html', title: 'D2 — The Advisor (CP)' },
+        { url: 'Site Version E - The Split/index.html', title: 'E — The Split' },
+        { url: 'Site Version E2 - The Split (CP)/index.html', title: 'E2 — The Split (CP)' },
+        { url: 'Site Version F - The Authority/index.html', title: 'F — The Authority' },
+        { url: 'Site Version F2 - The Authority (CP)/index.html', title: 'F2 — The Authority (CP)' },
+    ];
+
+    let currentIndex = 0;
+
+    function openPreview(url, title) {
+        currentIndex = versions.findIndex(v => v.url === url);
+        document.getElementById('modalTitle').textContent = title;
+        document.getElementById('modalIframe').src = url;
+        document.getElementById('previewModal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closePreview() {
+        document.getElementById('previewModal').classList.remove('active');
+        document.getElementById('modalIframe').src = '';
+        document.body.style.overflow = '';
+    }
+
+    function nextVersion() {
+        currentIndex = (currentIndex + 1) % versions.length;
+        const v = versions[currentIndex];
+        document.getElementById('modalTitle').textContent = v.title;
+        document.getElementById('modalIframe').src = v.url;
+    }
+
+    function prevVersion() {
+        currentIndex = (currentIndex - 1 + versions.length) % versions.length;
+        const v = versions[currentIndex];
+        document.getElementById('modalTitle').textContent = v.title;
+        document.getElementById('modalIframe').src = v.url;
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (!document.getElementById('previewModal').classList.contains('active')) return;
+        if (e.key === 'Escape') closePreview();
+        if (e.key === 'ArrowRight') nextVersion();
+        if (e.key === 'ArrowLeft') prevVersion();
+    });
+</script>
 
 </body>
 </html>

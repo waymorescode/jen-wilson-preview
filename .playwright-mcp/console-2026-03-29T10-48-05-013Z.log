@@ -1,0 +1,9 @@
+[     770ms] [WARNING] yui: NOT loaded: squarespace-cldr_resource_pack @ https://assets.squarespace.com/universal/scripts-compressed/common-vendors-stable-fbd854d40b0804b7-min.en-US.js:7
+[     770ms] [WARNING] yui: NOT loaded: squarespace-common_vendors_stable @ https://assets.squarespace.com/universal/scripts-compressed/common-vendors-stable-fbd854d40b0804b7-min.en-US.js:7
+[     770ms] [WARNING] yui: NOT loaded: squarespace-common_vendors @ https://assets.squarespace.com/universal/scripts-compressed/common-vendors-stable-fbd854d40b0804b7-min.en-US.js:7
+[     771ms] [WARNING] yui: NOT loaded: squarespace-user_account_core @ https://assets.squarespace.com/universal/scripts-compressed/common-vendors-stable-fbd854d40b0804b7-min.en-US.js:7
+[     771ms] [WARNING] yui: NOT loaded: squarespace-performance @ https://assets.squarespace.com/universal/scripts-compressed/common-vendors-stable-fbd854d40b0804b7-min.en-US.js:7
+[     889ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://h5kindred-demo.squarespace.com/api/1/website-component-definitions:0
+[     890ms] [ERROR] Unhandled Promise rejection: Request failed with status code 401 ; Zone: <root> ; Task: null ; Value: t AxiosError: Request failed with status code 401
+    at t (https://assets.squarespace.com/universal/scripts-compressed/common-vendors-c8ddb8817b25c64e-min.en-US.js:20:773)
+    at XMLHttpRequest.Tt (https://assets.squarespace.com/universal/scripts-compressed/common-vendors-c8ddb8817b25c64e-min.en-US.js:16:30599) @ https://assets.squarespace.com/universal/scripts-compressed/99599-65ddd1ac2a24dcc1-min.en-US.js:26
