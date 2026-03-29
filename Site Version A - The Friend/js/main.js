@@ -1,5 +1,47 @@
+// ============================================
+// TAGLINE ROTATION SYSTEM
+// Cycles through pre-set taglines on the homepage hero
+// ============================================
+const TAGLINES = [
+    "Therapy for people who look fine\u2014but are ready to feel better.",
+    "A space to slow down, heal deeply, and reconnect with the most grounded version of yourself.",
+    "Helping driven individuals heal, regulate, and realign\u2014so they can live and lead with intention.",
+    "Where clinical expertise meets conscious living\u2014therapy designed for deep healing and lasting change.",
+    "In the quiet between who we appear to be and who we long to become.",
+    "Integrative, trauma-informed therapy for individuals ready to move from survival to intentional, empowered living.",
+    "Trauma-informed therapy that helps high-functioning individuals heal deeply, live consciously, and lead with clarity."
+];
+
+function initTaglineRotation() {
+    const heroH1 = document.querySelector('[data-tagline-rotate]');
+    if (!heroH1) return;
+
+    // Mark the element for CSS transitions
+    heroH1.style.transition = 'opacity 0.6s ease';
+
+    // Pick a random starting tagline (different from the default)
+    let currentIndex = 0;
+
+    function rotateTagline() {
+        // Fade out
+        heroH1.style.opacity = '0';
+
+        setTimeout(() => {
+            currentIndex = (currentIndex + 1) % TAGLINES.length;
+            heroH1.textContent = TAGLINES[currentIndex];
+            // Fade in
+            heroH1.style.opacity = '1';
+        }, 600);
+    }
+
+    // Rotate every 8 seconds
+    setInterval(rotateTagline, 8000);
+}
+
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize tagline rotation on homepage
+    initTaglineRotation();
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const dropdowns = document.querySelectorAll('.dropdown');
