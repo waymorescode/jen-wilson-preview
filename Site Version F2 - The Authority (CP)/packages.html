@@ -43,9 +43,27 @@
             background-color: var(--white);
             border: 2px solid #E8E8E8;
             border-radius: 8px;
-            padding: 2.5rem;
+            padding: 0;
             position: relative;
             transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .package-card-body {
+            padding: 2rem 2.5rem 2.5rem;
+        }
+
+        .package-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .package-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 30%;
         }
 
         .package-card:hover {
@@ -239,68 +257,93 @@
         <!-- Package Cards -->
         <div class="packages-grid">
             <div class="package-card">
-                <h3>Emotional Wellness Transformation</h3>
-                <p class="package-subtitle">4 weeks</p>
-                <p class="package-description">You're doing okay, but you're also done with 'okay.' Something needs to shift — maybe anxiety that shows up at work, or a sadness you can't quite explain, or just a flatness that you're tired of living with.</p>
-                <ul>
-                    <li>Intensive weekly or twice-weekly sessions</li>
-                    <li>Personalized tools and practices</li>
-                    <li>Support between sessions</li>
-                    <li>Comprehensive assessment and direction-setting</li>
-                </ul>
-                <a href="contact.html" class="package-cta">Inquire &rarr;</a>
+                <div class="package-image">
+                    <img src="images/hero-woman.jpg" alt="Woman in golden light">
+                </div>
+                <div class="package-card-body">
+                    <h3>Emotional Wellness Transformation</h3>
+                    <p class="package-subtitle">4 weeks</p>
+                    <p class="package-description">You're doing okay, but you're also done with 'okay.' Something needs to shift — maybe anxiety that shows up at work, or a sadness you can't quite explain, or just a flatness that you're tired of living with.</p>
+                    <ul>
+                        <li>Intensive weekly or twice-weekly sessions</li>
+                        <li>Personalized tools and practices</li>
+                        <li>Support between sessions</li>
+                        <li>Comprehensive assessment and direction-setting</li>
+                    </ul>
+                    <a href="contact.html" class="package-cta">Inquire &rarr;</a>
+                </div>
             </div>
 
             <div class="package-card">
-                <h3>Relationship Recalibration</h3>
-                <p class="package-subtitle">6 weeks</p>
-                <p class="package-description">For couples or individuals who feel like the relationship is running on a script that stopped working. We get into the real dynamics — the patterns, the avoidance, the thing you keep fighting about that isn't really the thing.</p>
-                <ul>
-                    <li>Structured couples sessions</li>
-                    <li>Communication skill-building</li>
-                    <li>Conflict navigation tools</li>
-                    <li>Reconnection practices</li>
-                </ul>
-                <a href="contact.html" class="package-cta">Inquire &rarr;</a>
+                <div class="package-image">
+                    <img src="images/woman-laughing.jpg" alt="Woman laughing outdoors">
+                </div>
+                <div class="package-card-body">
+                    <h3>Relationship Recalibration</h3>
+                    <p class="package-subtitle">6 weeks</p>
+                    <p class="package-description">For couples or individuals who feel like the relationship is running on a script that stopped working. We get into the real dynamics — the patterns, the avoidance, the thing you keep fighting about that isn't really the thing.</p>
+                    <ul>
+                        <li>Structured couples sessions</li>
+                        <li>Communication skill-building</li>
+                        <li>Conflict navigation tools</li>
+                        <li>Reconnection practices</li>
+                    </ul>
+                    <a href="contact.html" class="package-cta">Inquire &rarr;</a>
+                </div>
             </div>
 
             <div class="package-card">
-                <h3>The Good Mama Reset</h3>
-                <p class="package-subtitle">6 weeks</p>
-                <p class="package-description">You're a mom. Good job, you're doing it. But you're also running on fumes. This is about reclaiming yourself while you're still fully parenting. It's not about 'better work-life balance.' It's about understanding what you actually need.</p>
-                <ul>
-                    <li>Exploration of identity and worth</li>
-                    <li>Practical tools for overwhelm</li>
-                    <li>Boundary work</li>
-                    <li>Self-compassion and presence practice</li>
-                </ul>
-                <a href="contact.html" class="package-cta">Inquire &rarr;</a>
+                <div class="package-image">
+                    <img src="images/therapy.jpeg" alt="Wellness and self-care">
+                </div>
+                <div class="package-card-body">
+                    <h3>The Good Mama Reset</h3>
+                    <p class="package-subtitle">6 weeks</p>
+                    <p class="package-description">You're a mom. Good job, you're doing it. But you're also running on fumes. This is about reclaiming yourself while you're still fully parenting. It's not about 'better work-life balance.' It's about understanding what you actually need.</p>
+                    <ul>
+                        <li>Exploration of identity and worth</li>
+                        <li>Practical tools for overwhelm</li>
+                        <li>Boundary work</li>
+                        <li>Self-compassion and presence practice</li>
+                    </ul>
+                    <a href="contact.html" class="package-cta">Inquire &rarr;</a>
+                </div>
             </div>
 
             <div class="package-card">
-                <h3>The Identity Edit</h3>
-                <p class="package-subtitle">12 weeks</p>
-                <p class="package-description">For people in the middle of asking 'Who am I now?' — after a transition, a loss, a shift that changed the shape of your life. This package goes deep. It's not a quick fix. It's a thoughtful, supported process of becoming who you actually are.</p>
-                <ul>
-                    <li>Values clarification</li>
-                    <li>Purpose exploration</li>
-                    <li>Identity work beyond roles</li>
-                    <li>Decision-making support</li>
-                </ul>
-                <a href="contact.html" class="package-cta">Inquire &rarr;</a>
+                <div class="package-image">
+                    <img src="images/mature-woman.jpg" alt="Confident woman embracing new chapter">
+                </div>
+                <div class="package-card-body">
+                    <h3>The Identity Edit</h3>
+                    <p class="package-subtitle">12 weeks</p>
+                    <p class="package-description">For people in the middle of asking 'Who am I now?' — after a transition, a loss, a shift that changed the shape of your life. This package goes deep. It's not a quick fix. It's a thoughtful, supported process of becoming who you actually are.</p>
+                    <ul>
+                        <li>Values clarification</li>
+                        <li>Purpose exploration</li>
+                        <li>Identity work beyond roles</li>
+                        <li>Decision-making support</li>
+                    </ul>
+                    <a href="contact.html" class="package-cta">Inquire &rarr;</a>
+                </div>
             </div>
 
             <div class="package-card">
-                <h3>The Leadership Reset</h3>
-                <p class="package-subtitle">4 weeks</p>
-                <p class="package-description">For people who lead — at work, in families, in their communities — and are starting to feel the cost. We work on presence, boundaries, decision fatigue, and what it means to lead from a grounded place.</p>
-                <ul>
-                    <li>Transition and identity work</li>
-                    <li>Partnership strengthening</li>
-                    <li>New chapter exploration</li>
-                    <li>Loss and grief processing</li>
-                </ul>
-                <a href="contact.html" class="package-cta">Inquire &rarr;</a>
+                <div class="package-image">
+                    <img src="images/couple-beach.jpg" alt="Looking toward the horizon">
+                </div>
+                <div class="package-card-body">
+                    <h3>The Leadership Reset</h3>
+                    <p class="package-subtitle">4 weeks</p>
+                    <p class="package-description">For people who lead — at work, in families, in their communities — and are starting to feel the cost. We work on presence, boundaries, decision fatigue, and what it means to lead from a grounded place.</p>
+                    <ul>
+                        <li>Transition and identity work</li>
+                        <li>Partnership strengthening</li>
+                        <li>New chapter exploration</li>
+                        <li>Loss and grief processing</li>
+                    </ul>
+                    <a href="contact.html" class="package-cta">Inquire &rarr;</a>
+                </div>
             </div>
         </div>
 
