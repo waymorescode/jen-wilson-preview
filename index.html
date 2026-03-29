@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conscious Practice — Site Version Gallery</title>
+    <title>Conscious Practice — Site Options</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -16,6 +16,7 @@
             --charcoal: #2A2A2A;
             --white: #FFFFFF;
             --border: #E0DED8;
+            --gold: #B8860B;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -27,17 +28,16 @@
             line-height: 1.6;
         }
 
-        /* Header */
         .header {
             background-color: var(--sage);
             color: var(--white);
-            padding: 3rem 2rem;
+            padding: 3rem 2rem 2.5rem;
             text-align: center;
         }
 
         .header h1 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2.5rem;
+            font-size: 2.4rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
             letter-spacing: -0.5px;
@@ -45,213 +45,180 @@
 
         .header p {
             font-size: 1rem;
-            color: rgba(255,255,255,0.75);
-            max-width: 600px;
+            color: rgba(255,255,255,0.7);
+            max-width: 550px;
             margin: 0 auto;
         }
 
-        .header .subtitle {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: rgba(255,255,255,0.5);
-            margin-bottom: 1rem;
-        }
-
-        /* Instructions */
-        .instructions {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 1.5rem 2rem;
-            background: var(--white);
-            border-left: 3px solid var(--sage);
-            font-size: 0.95rem;
-            color: var(--charcoal);
-            line-height: 1.7;
-        }
-
-        .instructions strong { color: var(--sage); }
-
-        /* Filter Tabs */
-        .filter-bar {
-            max-width: 1200px;
-            margin: 2rem auto 0;
-            padding: 0 2rem;
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            padding: 0.5rem 1.25rem;
-            border: 1px solid var(--border);
-            background: var(--white);
-            color: var(--charcoal);
-            font-family: 'Lato', sans-serif;
-            font-size: 0.85rem;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            letter-spacing: 0.5px;
-        }
-
-        .filter-btn:hover {
-            border-color: var(--sage);
-            color: var(--sage);
-        }
-
-        .filter-btn.active {
-            background: var(--sage);
-            color: var(--white);
-            border-color: var(--sage);
-        }
-
-        /* Gallery Grid */
-        .gallery {
-            max-width: 1200px;
-            margin: 1.5rem auto 4rem;
-            padding: 0 2rem;
+        .options {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 2rem 4rem;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
         }
 
-        /* Version Card */
-        .card {
+        @media (max-width: 768px) {
+            .options { grid-template-columns: 1fr; padding: 2rem 1rem 3rem; }
+            .header h1 { font-size: 1.8rem; }
+        }
+
+        .option-card {
             background: var(--white);
-            border: 1px solid var(--border);
+            border-radius: 12px;
             overflow: hidden;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        .option-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
         }
 
-        .card-preview {
+        .preview-wrapper {
             width: 100%;
-            height: 220px;
-            border: none;
-            pointer-events: none;
+            height: 340px;
             overflow: hidden;
             position: relative;
-            background: var(--cream);
+            background: #f0efec;
+            border-bottom: 1px solid var(--border);
         }
 
-        .card-preview iframe {
+        .preview-wrapper iframe {
             width: 1440px;
             height: 900px;
             border: none;
-            transform: scale(0.236);
+            transform: scale(0.37);
             transform-origin: top left;
             pointer-events: none;
         }
 
         .card-body {
-            padding: 1.25rem 1.5rem;
+            padding: 1.8rem 2rem 2rem;
         }
 
-        .card-label {
+        .version-label {
+            display: inline-block;
             font-size: 0.7rem;
-            text-transform: uppercase;
+            font-weight: 700;
             letter-spacing: 1.5px;
-            color: var(--accent);
-            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+            color: var(--sage);
+            background: rgba(45,61,45,0.08);
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-bottom: 0.8rem;
         }
 
-        .card-title {
+        .card-body h2 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             font-weight: 600;
             color: var(--charcoal);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.6rem;
         }
 
-        .card-desc {
-            font-size: 0.85rem;
+        .card-body p {
+            font-size: 0.95rem;
             color: var(--accent);
-            margin-bottom: 1rem;
-            line-height: 1.5;
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
         }
 
-        .card-tags {
+        .tags {
             display: flex;
-            gap: 0.4rem;
             flex-wrap: wrap;
-            margin-bottom: 1rem;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
         }
 
         .tag {
-            font-size: 0.7rem;
-            padding: 0.2rem 0.6rem;
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 20px;
             background: var(--cream);
             color: var(--accent);
-            letter-spacing: 0.5px;
+            border: 1px solid var(--border);
         }
-
-        .tag.brand-full { background: var(--sage); color: var(--white); }
-        .tag.brand-short { background: var(--accent); color: var(--white); }
 
         .card-actions {
             display: flex;
             gap: 0.75rem;
         }
 
-        .btn-open {
-            flex: 1;
-            display: block;
-            text-align: center;
-            padding: 0.7rem 1rem;
-            background: var(--sage);
-            color: var(--white);
-            text-decoration: none;
+        .btn {
+            display: inline-block;
+            padding: 0.7rem 1.4rem;
+            border-radius: 6px;
             font-size: 0.85rem;
             font-weight: 600;
-            letter-spacing: 0.5px;
-            transition: background 0.2s ease;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            text-align: center;
+            flex: 1;
         }
 
-        .btn-open:hover { background: var(--sage-light); }
+        .btn-primary {
+            background-color: var(--sage);
+            color: var(--white);
+        }
 
-        .btn-preview {
-            flex: 1;
-            display: block;
-            text-align: center;
-            padding: 0.7rem 1rem;
+        .btn-primary:hover {
+            background-color: var(--sage-light);
+        }
+
+        .btn-secondary {
             background: transparent;
             color: var(--sage);
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            border: 1px solid var(--sage);
-            transition: all 0.2s ease;
+            border: 1.5px solid var(--sage);
         }
 
-        .btn-preview:hover {
-            background: var(--sage);
+        .btn-secondary:hover {
+            background-color: var(--sage);
             color: var(--white);
         }
 
-        /* Fullscreen Preview Modal */
+        /* Fullscreen Modal */
         .modal-overlay {
             display: none;
             position: fixed;
             top: 0; left: 0; right: 0; bottom: 0;
             background: rgba(0,0,0,0.85);
-            z-index: 9999;
-            padding: 1.5rem;
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
         }
 
-        .modal-overlay.active { display: flex; flex-direction: column; }
+        .modal-overlay.active { display: flex; }
+
+        .modal-content {
+            width: 92vw;
+            height: 88vh;
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .modal-content iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
 
         .modal-header {
+            position: absolute;
+            top: 0; left: 0; right: 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0.75rem 1rem;
-            background: var(--charcoal);
-            color: var(--white);
+            padding: 1rem 1.5rem;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--border);
+            z-index: 10;
         }
 
         .modal-title {
@@ -266,324 +233,91 @@
             align-items: center;
         }
 
-        .modal-nav button {
-            background: rgba(255,255,255,0.15);
-            border: none;
-            color: var(--white);
+        .modal-btn {
+            background: var(--cream);
+            border: 1px solid var(--border);
             padding: 0.4rem 1rem;
+            border-radius: 6px;
             cursor: pointer;
             font-size: 0.85rem;
             font-family: 'Lato', sans-serif;
-            transition: background 0.2s;
+            transition: all 0.15s ease;
         }
 
-        .modal-nav button:hover { background: rgba(255,255,255,0.3); }
+        .modal-btn:hover { background: var(--sage); color: var(--white); border-color: var(--sage); }
 
         .modal-close {
             background: none;
             border: none;
-            color: var(--white);
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             cursor: pointer;
-            padding: 0.25rem 0.75rem;
+            color: var(--charcoal);
+            padding: 0.2rem 0.5rem;
             line-height: 1;
         }
 
-        .modal-close:hover { color: #ff6b6b; }
+        .modal-close:hover { color: var(--sage); }
 
-        .modal-body {
-            flex: 1;
-            background: var(--white);
+        .note {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            padding: 0 2rem;
+            font-size: 0.9rem;
+            color: var(--accent);
+            font-style: italic;
         }
-
-        .modal-body iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header h1 { font-size: 1.8rem; }
-            .gallery { grid-template-columns: 1fr; }
-            .card-preview iframe { transform: scale(0.22); }
-            .filter-bar { justify-content: center; }
-        }
-
-        /* Hidden utility */
-        .hidden { display: none !important; }
     </style>
 </head>
 <body>
 
 <div class="header">
-    <div class="subtitle">Website Redesign</div>
-    <h1>Conscious Practice — Version Gallery</h1>
-    <p>Click through each version below to explore layouts, content, and branding options. Each version is a fully built multi-page site.</p>
+    <h1>Conscious Practice — Two Layout Options</h1>
+    <p>Same voice, same content, two different visual approaches. Click through and see which one feels right.</p>
 </div>
 
-<div class="instructions">
-    <strong>How to use this page:</strong> Each card below is a different layout and brand variant. Click <strong>"Open Full Site"</strong> to open the version in a new tab where you can browse all pages. Click <strong>"Quick Preview"</strong> to see it right here in a lightbox. Use the filters to narrow by brand name or layout style. Take notes on what you like from each — we can mix and match elements.
-</div>
+<p class="note">Both versions use the "Conscious Practice" branding and your authentic voice throughout. The only difference is the layout and visual style.</p>
 
-<div class="filter-bar">
-    <button class="filter-btn active" data-filter="all">All Versions (12)</button>
-    <button class="filter-btn" data-filter="cpt">Conscious Practice Therapy (6)</button>
-    <button class="filter-btn" data-filter="cp">Conscious Practice (6)</button>
-    <button class="filter-btn" data-filter="hero-photo">Photo Hero (E, F)</button>
-    <button class="filter-btn" data-filter="hero-bg">Background Hero (A, B, C, D)</button>
-</div>
+<div class="options">
 
-<div class="gallery" id="gallery">
-
-    <!-- VERSION A -->
-    <div class="card" data-brand="cpt" data-hero="hero-bg">
-        <div class="card-preview">
-            <iframe src="Site Version A - The Friend/index.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+    <!-- Option A2 -->
+    <div class="option-card">
+        <div class="preview-wrapper">
+            <iframe src="Site Version A2 - The Friend (CP)/index.html" loading="lazy"></iframe>
         </div>
         <div class="card-body">
-            <div class="card-label">Version A</div>
-            <div class="card-title">The Friend</div>
-            <div class="card-desc">Warm, literary tone. Background image hero with overlay. Narrative-driven copy. The most approachable feel.</div>
-            <div class="card-tags">
-                <span class="tag brand-full">Conscious Practice Therapy</span>
-                <span class="tag">Warm</span>
-                <span class="tag">Narrative</span>
+            <span class="version-label">Option A</span>
+            <h2>The Friend</h2>
+            <p>Full-width hero image with text overlay. Warm, open, approachable. Feels like an invitation into a space that already knows you.</p>
+            <div class="tags">
+                <span class="tag">Full-Width Hero</span>
+                <span class="tag">Warm & Open</span>
+                <span class="tag">Inviting</span>
             </div>
             <div class="card-actions">
-                <a href="Site Version A - The Friend/index.html" target="_blank" class="btn-open">Open Full Site</a>
-                <a href="#" class="btn-preview" onclick="openPreview('Site Version A - The Friend/index.html', 'A — The Friend'); return false;">Quick Preview</a>
+                <a href="Site Version A2 - The Friend (CP)/index.html" class="btn btn-primary" target="_blank">Open Full Site</a>
+                <button class="btn btn-secondary" onclick="openPreview('Site Version A2 - The Friend (CP)/index.html', 'Option A — The Friend')">Quick Preview</button>
             </div>
         </div>
     </div>
 
-    <!-- VERSION A2 -->
-    <div class="card" data-brand="cp" data-hero="hero-bg">
-        <div class="card-preview">
-            <iframe src="Site Version A2 - The Friend (CP)/index.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+    <!-- Option F2 -->
+    <div class="option-card">
+        <div class="preview-wrapper">
+            <iframe src="Site Version F2 - The Authority (CP)/index.html" loading="lazy"></iframe>
         </div>
         <div class="card-body">
-            <div class="card-label">Version A2</div>
-            <div class="card-title">The Friend (CP)</div>
-            <div class="card-desc">Same warm layout as A, branded as "Conscious Practice" — shorter, cleaner name.</div>
-            <div class="card-tags">
-                <span class="tag brand-short">Conscious Practice</span>
-                <span class="tag">Warm</span>
-                <span class="tag">Narrative</span>
-            </div>
-            <div class="card-actions">
-                <a href="Site Version A2 - The Friend (CP)/index.html" target="_blank" class="btn-open">Open Full Site</a>
-                <a href="#" class="btn-preview" onclick="openPreview('Site Version A2 - The Friend (CP)/index.html', 'A2 — The Friend (CP)'); return false;">Quick Preview</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- VERSION B -->
-    <div class="card" data-brand="cpt" data-hero="hero-bg">
-        <div class="card-preview">
-            <iframe src="Site Version B - The Poet/index.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
-        </div>
-        <div class="card-body">
-            <div class="card-label">Version B</div>
-            <div class="card-title">The Poet</div>
-            <div class="card-desc">Evocative, editorial feel. Poetic copy with a contemplative pace. Sage tones with gold warmth.</div>
-            <div class="card-tags">
-                <span class="tag brand-full">Conscious Practice Therapy</span>
+            <span class="version-label">Option F</span>
+            <h2>The Authority</h2>
+            <p>Portrait photo with credentials card overlay. Confident, grounded, editorial. Feels like meeting someone you immediately trust.</p>
+            <div class="tags">
+                <span class="tag">Photo + Card Layout</span>
                 <span class="tag">Editorial</span>
-                <span class="tag">Poetic</span>
+                <span class="tag">Grounded</span>
             </div>
             <div class="card-actions">
-                <a href="Site Version B - The Poet/index.html" target="_blank" class="btn-open">Open Full Site</a>
-                <a href="#" class="btn-preview" onclick="openPreview('Site Version B - The Poet/index.html', 'B — The Poet'); return false;">Quick Preview</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- VERSION B2 -->
-    <div class="card" data-brand="cp" data-hero="hero-bg">
-        <div class="card-preview">
-            <iframe src="Site Version B2 - The Poet (CP)/index.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
-        </div>
-        <div class="card-body">
-            <div class="card-label">Version B2</div>
-            <div class="card-title">The Poet (CP)</div>
-            <div class="card-desc">Same editorial layout as B, branded as "Conscious Practice."</div>
-            <div class="card-tags">
-                <span class="tag brand-short">Conscious Practice</span>
-                <span class="tag">Editorial</span>
-                <span class="tag">Poetic</span>
-            </div>
-            <div class="card-actions">
-                <a href="Site Version B2 - The Poet (CP)/index.html" target="_blank" class="btn-open">Open Full Site</a>
-                <a href="#" class="btn-preview" onclick="openPreview('Site Version B2 - The Poet (CP)/index.html', 'B2 — The Poet (CP)'); return false;">Quick Preview</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- VERSION C -->
-    <div class="card" data-brand="cpt" data-hero="hero-bg">
-        <div class="card-preview">
-            <iframe src="Site Version C - The Editor/index.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
-        </div>
-        <div class="card-body">
-            <div class="card-label">Version C</div>
-            <div class="card-title">The Editor</div>
-            <div class="card-desc">Clean, magazine-inspired layout. Strong editorial structure with clear hierarchy. Deep sage palette.</div>
-            <div class="card-tags">
-                <span class="tag brand-full">Conscious Practice Therapy</span>
-                <span class="tag">Clean</span>
-                <span class="tag">Editorial</span>
-            </div>
-            <div class="card-actions">
-                <a href="Site Version C - The Editor/index.html" target="_blank" class="btn-open">Open Full Site</a>
-                <a href="#" class="btn-preview" onclick="openPreview('Site Version C - The Editor/index.html', 'C — The Editor'); return false;">Quick Preview</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- VERSION C2 -->
-    <div class="card" data-brand="cp" data-hero="hero-bg">
-        <div class="card-preview">
-            <iframe src="Site Version C2 - The Editor (CP)/index.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
-        </div>
-        <div class="card-body">
-            <div class="card-label">Version C2</div>
-            <div class="card-title">The Editor (CP)</div>
-            <div class="card-desc">Same editorial layout as C, branded as "Conscious Practice."</div>
-            <div class="card-tags">
-                <span class="tag brand-short">Conscious Practice</span>
-                <span class="tag">Clean</span>
-                <span class="tag">Editorial</span>
-            </div>
-            <div class="card-actions">
-                <a href="Site Version C2 - The Editor (CP)/index.html" target="_blank" class="btn-open">Open Full Site</a>
-                <a href="#" class="btn-preview" onclick="openPreview('Site Version C2 - The Editor (CP)/index.html', 'C2 — The Editor (CP)'); return false;">Quick Preview</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- VERSION D -->
-    <div class="card" data-brand="cpt" data-hero="hero-bg">
-        <div class="card-preview">
-            <iframe src="Site Version D - The Advisor/index.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
-        </div>
-        <div class="card-body">
-            <div class="card-label">Version D</div>
-            <div class="card-title">The Advisor</div>
-            <div class="card-desc">Authoritative, structured feel. Professional advisor energy. Sage with overlay gradient hero.</div>
-            <div class="card-tags">
-                <span class="tag brand-full">Conscious Practice Therapy</span>
-                <span class="tag">Authority</span>
-                <span class="tag">Structured</span>
-            </div>
-            <div class="card-actions">
-                <a href="Site Version D - The Advisor/index.html" target="_blank" class="btn-open">Open Full Site</a>
-                <a href="#" class="btn-preview" onclick="openPreview('Site Version D - The Advisor/index.html', 'D — The Advisor'); return false;">Quick Preview</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- VERSION D2 -->
-    <div class="card" data-brand="cp" data-hero="hero-bg">
-        <div class="card-preview">
-            <iframe src="Site Version D2 - The Advisor (CP)/index.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
-        </div>
-        <div class="card-body">
-            <div class="card-label">Version D2</div>
-            <div class="card-title">The Advisor (CP)</div>
-            <div class="card-desc">Same authoritative layout as D, branded as "Conscious Practice."</div>
-            <div class="card-tags">
-                <span class="tag brand-short">Conscious Practice</span>
-                <span class="tag">Authority</span>
-                <span class="tag">Structured</span>
-            </div>
-            <div class="card-actions">
-                <a href="Site Version D2 - The Advisor (CP)/index.html" target="_blank" class="btn-open">Open Full Site</a>
-                <a href="#" class="btn-preview" onclick="openPreview('Site Version D2 - The Advisor (CP)/index.html', 'D2 — The Advisor (CP)'); return false;">Quick Preview</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- VERSION E -->
-    <div class="card" data-brand="cpt" data-hero="hero-photo">
-        <div class="card-preview">
-            <iframe src="Site Version E - The Split/index.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
-        </div>
-        <div class="card-body">
-            <div class="card-label">Version E</div>
-            <div class="card-title">The Split</div>
-            <div class="card-desc">Split-screen hero — text left, Dr. Wilson's photo right. Inspired by jareebasgall.com. The therapist IS the hero.</div>
-            <div class="card-tags">
-                <span class="tag brand-full">Conscious Practice Therapy</span>
-                <span class="tag">Photo Hero</span>
-                <span class="tag">Split Layout</span>
-            </div>
-            <div class="card-actions">
-                <a href="Site Version E - The Split/index.html" target="_blank" class="btn-open">Open Full Site</a>
-                <a href="#" class="btn-preview" onclick="openPreview('Site Version E - The Split/index.html', 'E — The Split'); return false;">Quick Preview</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- VERSION E2 -->
-    <div class="card" data-brand="cp" data-hero="hero-photo">
-        <div class="card-preview">
-            <iframe src="Site Version E2 - The Split (CP)/index.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
-        </div>
-        <div class="card-body">
-            <div class="card-label">Version E2</div>
-            <div class="card-title">The Split (CP)</div>
-            <div class="card-desc">Same split-screen layout as E, branded as "Conscious Practice."</div>
-            <div class="card-tags">
-                <span class="tag brand-short">Conscious Practice</span>
-                <span class="tag">Photo Hero</span>
-                <span class="tag">Split Layout</span>
-            </div>
-            <div class="card-actions">
-                <a href="Site Version E2 - The Split (CP)/index.html" target="_blank" class="btn-open">Open Full Site</a>
-                <a href="#" class="btn-preview" onclick="openPreview('Site Version E2 - The Split (CP)/index.html', 'E2 — The Split (CP)'); return false;">Quick Preview</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- VERSION F -->
-    <div class="card" data-brand="cpt" data-hero="hero-photo">
-        <div class="card-preview">
-            <iframe src="Site Version F - The Authority/index.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
-        </div>
-        <div class="card-body">
-            <div class="card-label">Version F</div>
-            <div class="card-title">The Authority</div>
-            <div class="card-desc">Photo + overlapping credentials card. Inspired by stateofmindkc.com. Strongest expert-authority positioning.</div>
-            <div class="card-tags">
-                <span class="tag brand-full">Conscious Practice Therapy</span>
-                <span class="tag">Photo Hero</span>
-                <span class="tag">Card Overlay</span>
-            </div>
-            <div class="card-actions">
-                <a href="Site Version F - The Authority/index.html" target="_blank" class="btn-open">Open Full Site</a>
-                <a href="#" class="btn-preview" onclick="openPreview('Site Version F - The Authority/index.html', 'F — The Authority'); return false;">Quick Preview</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- VERSION F2 -->
-    <div class="card" data-brand="cp" data-hero="hero-photo">
-        <div class="card-preview">
-            <iframe src="Site Version F2 - The Authority (CP)/index.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
-        </div>
-        <div class="card-body">
-            <div class="card-label">Version F2</div>
-            <div class="card-title">The Authority (CP)</div>
-            <div class="card-desc">Same authority layout as F, branded as "Conscious Practice."</div>
-            <div class="card-tags">
-                <span class="tag brand-short">Conscious Practice</span>
-                <span class="tag">Photo Hero</span>
-                <span class="tag">Card Overlay</span>
-            </div>
-            <div class="card-actions">
-                <a href="Site Version F2 - The Authority (CP)/index.html" target="_blank" class="btn-open">Open Full Site</a>
-                <a href="#" class="btn-preview" onclick="openPreview('Site Version F2 - The Authority (CP)/index.html', 'F2 — The Authority (CP)'); return false;">Quick Preview</a>
+                <a href="Site Version F2 - The Authority (CP)/index.html" class="btn btn-primary" target="_blank">Open Full Site</a>
+                <button class="btn btn-secondary" onclick="openPreview('Site Version F2 - The Authority (CP)/index.html', 'Option F — The Authority')">Quick Preview</button>
             </div>
         </div>
     </div>
@@ -592,64 +326,29 @@
 
 <!-- Fullscreen Preview Modal -->
 <div class="modal-overlay" id="previewModal">
-    <div class="modal-header">
-        <span class="modal-title" id="modalTitle"></span>
-        <div class="modal-nav">
-            <button onclick="prevVersion()">Prev</button>
-            <button onclick="nextVersion()">Next</button>
-            <button class="modal-close" onclick="closePreview()">&times;</button>
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="modal-title" id="modalTitle"></span>
+            <div class="modal-nav">
+                <button class="modal-btn" onclick="switchVersion()">Switch to Other Version</button>
+                <button class="modal-close" onclick="closePreview()">&times;</button>
+            </div>
         </div>
-    </div>
-    <div class="modal-body">
         <iframe id="modalIframe" src=""></iframe>
     </div>
 </div>
 
 <script>
-    // Filter logic
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const cards = document.querySelectorAll('.card');
-
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            filterBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            const filter = btn.dataset.filter;
-
-            cards.forEach(card => {
-                if (filter === 'all') {
-                    card.classList.remove('hidden');
-                } else if (filter === 'cpt' || filter === 'cp') {
-                    card.classList.toggle('hidden', card.dataset.brand !== filter);
-                } else {
-                    card.classList.toggle('hidden', card.dataset.hero !== filter);
-                }
-            });
-        });
-    });
-
-    // Preview modal
     const versions = [
-        { url: 'Site Version A - The Friend/index.html', title: 'A — The Friend' },
-        { url: 'Site Version A2 - The Friend (CP)/index.html', title: 'A2 — The Friend (CP)' },
-        { url: 'Site Version B - The Poet/index.html', title: 'B — The Poet' },
-        { url: 'Site Version B2 - The Poet (CP)/index.html', title: 'B2 — The Poet (CP)' },
-        { url: 'Site Version C - The Editor/index.html', title: 'C — The Editor' },
-        { url: 'Site Version C2 - The Editor (CP)/index.html', title: 'C2 — The Editor (CP)' },
-        { url: 'Site Version D - The Advisor/index.html', title: 'D — The Advisor' },
-        { url: 'Site Version D2 - The Advisor (CP)/index.html', title: 'D2 — The Advisor (CP)' },
-        { url: 'Site Version E - The Split/index.html', title: 'E — The Split' },
-        { url: 'Site Version E2 - The Split (CP)/index.html', title: 'E2 — The Split (CP)' },
-        { url: 'Site Version F - The Authority/index.html', title: 'F — The Authority' },
-        { url: 'Site Version F2 - The Authority (CP)/index.html', title: 'F2 — The Authority (CP)' },
+        { url: 'Site Version A2 - The Friend (CP)/index.html', title: 'Option A — The Friend' },
+        { url: 'Site Version F2 - The Authority (CP)/index.html', title: 'Option F — The Authority' }
     ];
-
     let currentIndex = 0;
 
     function openPreview(url, title) {
         currentIndex = versions.findIndex(v => v.url === url);
-        document.getElementById('modalTitle').textContent = title;
         document.getElementById('modalIframe').src = url;
+        document.getElementById('modalTitle').textContent = title;
         document.getElementById('previewModal').classList.add('active');
         document.body.style.overflow = 'hidden';
     }
@@ -660,26 +359,21 @@
         document.body.style.overflow = '';
     }
 
-    function nextVersion() {
+    function switchVersion() {
         currentIndex = (currentIndex + 1) % versions.length;
         const v = versions[currentIndex];
-        document.getElementById('modalTitle').textContent = v.title;
         document.getElementById('modalIframe').src = v.url;
+        document.getElementById('modalTitle').textContent = v.title;
     }
 
-    function prevVersion() {
-        currentIndex = (currentIndex - 1 + versions.length) % versions.length;
-        const v = versions[currentIndex];
-        document.getElementById('modalTitle').textContent = v.title;
-        document.getElementById('modalIframe').src = v.url;
-    }
-
-    // Keyboard navigation
     document.addEventListener('keydown', (e) => {
         if (!document.getElementById('previewModal').classList.contains('active')) return;
         if (e.key === 'Escape') closePreview();
-        if (e.key === 'ArrowRight') nextVersion();
-        if (e.key === 'ArrowLeft') prevVersion();
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') switchVersion();
+    });
+
+    document.getElementById('previewModal').addEventListener('click', (e) => {
+        if (e.target === document.getElementById('previewModal')) closePreview();
     });
 </script>
 
