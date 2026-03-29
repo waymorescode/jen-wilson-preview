@@ -167,14 +167,16 @@ section {
     display: flex;
     list-style: none;
     align-items: center;
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
 }
 
 .nav-menu a {
     color: var(--text-charcoal);
     font-weight: 400;
+    font-size: 0.9rem;
     padding: var(--spacing-xs) 0;
     position: relative;
+    white-space: nowrap;
 }
 
 .nav-menu a:hover,
