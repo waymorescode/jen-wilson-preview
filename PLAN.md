@@ -2,6 +2,9 @@
 
 Based on client feedback received 2026-04-01.
 
+## SOW Alignment Check
+All 16 items verified against SOW (Wilson_V1_Statement_of_Work.docx). Items 1-11, 13-15 clearly in scope. Items 12 (Giving Back) and 16 (Testimonials) are minor additions within existing pages — kept as quick wins. No new pages or features beyond the 8-page SOW scope.
+
 ## Phase 1: Structural Changes (all 3 versions)
 
 ### 1. Rename "Packages" → "Intensives"
