@@ -32,11 +32,14 @@ All 16 items verified against SOW (Wilson_V1_Statement_of_Work.docx). Items 1-11
 - See CLAUDE.md for exact approved copy
 - Update about.html (A2, F2) and about section (G2)
 
-### 5. Fix credentials everywhere
-- Remove "5,000+ clinical hours" references
-- Remove PhD focus area descriptions
-- Use "PhD, LCSW" only until she confirms updated numbers
-- Remove trust bars that cite specific hour counts
+### 5. Update credentials everywhere
+- Remove "5,000+ clinical hours" references — replace with expertise statements
+- Remove PhD focus area descriptions (was incorrect)
+- Use approved credential language:
+  - Hero/card: "Dr. Jennifer Wilson, PhD, LCSW — 20+ years. Clinical expertise, empathic listening, deep breaths, real transformation."
+  - Trust bar/about: "Court-recognized forensic clinician specializing in clinical assessment and trauma treatment."
+  - Supporting: "Recognized as an expert in forensic and clinical work." / "Extensive clinical training and expertise in treating trauma."
+- Update Areas of Focus list: Life Transitions, Relationship Patterns, Identity & Purpose, Parenting, Couples, Anxiety & Overwhelm
 
 ## Phase 3: Copy & Voice
 

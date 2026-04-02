@@ -45,11 +45,29 @@
 - "Private pay options allow for enhanced confidentiality and discretion for your care, personalized, flexible sessions tailored to your needs and pace, and direct access with continuity under clear, transparent fees."
 - "What you're investing in is real presence and nearly twenty years of clinical depth — a nurturing space where transformation happens. Fees support consistent, attentive care, skilled guidance, and the time needed for lasting change."
 
-## Credentials — NEEDS UPDATE
-- Remove "5,000+ clinical hours" — she has way more than that now
-- PhD description is incorrect (not in human development) — awaiting corrected language from Jenn
-- For now: use "PhD, LCSW" without specifying the PhD focus area
-- Do NOT cite specific hour counts until she provides updated numbers
+## Credentials — Client-Approved Language
+
+### Hero/Card Credentials:
+"Dr. Jennifer Wilson, PhD, LCSW — 20+ years. Clinical expertise, empathic listening, deep breaths, real transformation."
+
+### Areas of Focus:
+- Life Transitions
+- Relationship Patterns
+- Identity & Purpose
+- Parenting
+- Couples
+- Anxiety & Overwhelm
+
+### Credential Statements (use in about page, trust bars, etc.):
+- "Court-recognized forensic clinician specializing in clinical assessment and trauma treatment."
+- "Recognized as an expert in forensic and clinical work."
+- "Extensive clinical training and expertise in treating trauma."
+
+### Rules:
+- Do NOT cite specific hour counts (no "5,000+ hours" etc.)
+- Do NOT specify PhD focus area (the old description was incorrect)
+- Use "PhD, LCSW" as the credential shorthand
+- Lead with expertise and recognition, not hour counts
 
 ## What She Loves
 - Images of women on the package/intensive cards
