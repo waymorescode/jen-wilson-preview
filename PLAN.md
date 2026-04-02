@@ -105,19 +105,19 @@ All 16 items verified against SOW (Wilson_V1_Statement_of_Work.docx). Items 1-11
 
 | # | Task | Status |
 |---|------|--------|
-| 1 | Rename Packages → Intensives | Not started |
-| 2 | Remove 4-week option | Not started |
-| 3 | Add intensive pricing | Not started |
-| 4 | Replace bio copy | Not started |
-| 5 | Fix credentials | Not started |
-| 6 | Update fees copy | Not started |
-| 7 | Warm up intensives + what you get | Not started |
-| 8 | Affirmative voice audit | Not started |
-| 9 | Tagline placement | Not started |
-| 10 | Swap in real photos | Not started |
-| 11 | What You Get on cards | Not started |
-| 12 | Giving Back section | Not started |
-| 13 | Consolidate services page | Not started |
-| 14 | SimplePractice placeholder | Not started |
-| 15 | Fix FAQ voice | Not started |
-| 16 | Testimonial section | Not started |
+| 1 | Rename Packages → Intensives | Done |
+| 2 | Remove 4-week option | Done |
+| 3 | Add intensive pricing | Done |
+| 4 | Replace bio copy | Done |
+| 5 | Update credentials | Done |
+| 6 | Update fees copy | Done |
+| 7 | Warm up intensives + what you get | Done |
+| 8 | Affirmative voice audit | Done |
+| 9 | Tagline placement | Done |
+| 10 | Swap in real photos | Blocked — need to process her Aragon headshots |
+| 11 | What You Get on cards | Done (merged with #7) |
+| 12 | Giving Back section | Done |
+| 13 | Consolidate services page | Done (A2 services.html removed in Phase 1) |
+| 14 | SimplePractice placeholder | Done |
+| 15 | Fix FAQ voice | Done |
+| 16 | Testimonial section | Done |
