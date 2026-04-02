@@ -1338,6 +1338,58 @@ section {
     flex-direction: column;
 }
 
+/* ===================================
+   Giving Back Callout
+   =================================== */
+
+.giving-back {
+    background-color: var(--light-sage);
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+}
+
+.giving-back-text {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--primary-sage);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* ===================================
+   Testimonial Highlight
+   =================================== */
+
+.testimonial-highlight {
+    background-color: var(--secondary-cream);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.testimonial-highlight blockquote {
+    max-width: 700px;
+    margin: 0 auto;
+    border: none;
+    padding: 0;
+}
+
+.testimonial-highlight blockquote p {
+    font-family: var(--heading-font);
+    font-style: italic;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: var(--text-charcoal);
+    margin-bottom: var(--spacing-md);
+}
+
+.testimonial-highlight blockquote cite {
+    font-style: normal;
+    font-size: 1rem;
+    color: var(--primary-sage);
+    font-weight: 500;
+}
+
 /* Hero lotus watermark */
 .hero-with-lotus {
     position: relative;
