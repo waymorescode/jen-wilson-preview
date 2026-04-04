@@ -32,25 +32,34 @@
             margin-bottom: 1rem;
         }
 
+        /* ---- Expandable Card Grid ---- */
         .intensives-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
             margin: 3rem 0;
+            align-items: start;
         }
 
         .package-card {
             background-color: var(--white);
-            border: 2px solid #E8E8E8;
-            border-radius: 8px;
+            border: 1px solid #E8E8E8;
+            border-radius: 12px;
             padding: 0;
             position: relative;
-            transition: all 0.3s ease;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
             overflow: hidden;
         }
 
-        .package-card-body {
-            padding: 2rem 2.5rem 2.5rem;
+        .package-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .package-card.card-expanded {
+            border-color: var(--primary);
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
         }
 
         .package-image {
@@ -64,76 +73,163 @@
             height: 100%;
             object-fit: cover;
             object-position: center 30%;
+            transition: transform 0.4s ease;
         }
 
-        .package-card:hover {
-            border-color: var(--primary);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        .package-card:hover .package-image img {
+            transform: scale(1.03);
+        }
+
+        .package-card-body {
+            padding: 1.5rem 1.75rem 1.75rem;
         }
 
         .package-card h3 {
             font-family: var(--font-serif);
-            font-size: 1.4rem;
+            font-size: 1.35rem;
             font-weight: 600;
             color: var(--primary);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
 
-        .package-subtitle {
+        .package-tagline {
+            font-family: var(--font-serif);
+            font-size: 1rem;
+            font-style: italic;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .package-price {
             font-size: 0.9rem;
+            color: var(--charcoal);
+            margin-bottom: 1.25rem;
+            font-weight: 500;
+        }
+
+        .btn-learn-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 0.6rem 1.75rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 0.3px;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-learn-more:hover {
+            background-color: var(--accent);
+        }
+
+        .btn-learn-more .arrow {
+            display: inline-block;
+            transition: transform 0.3s ease;
+            font-size: 0.9rem;
+            line-height: 1;
+        }
+
+        .package-card.card-expanded .btn-learn-more .arrow {
+            transform: rotate(180deg);
+        }
+
+        /* ---- Expandable Details ---- */
+        .package-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+
+        .package-card.card-expanded .package-details {
+            max-height: 2000px;
+        }
+
+        .package-details-inner {
+            padding: 0 1.75rem 1.75rem;
+            border-top: 1px solid #E8E8E8;
+            margin-top: 0.25rem;
+            padding-top: 1.5rem;
+        }
+
+        .package-details .detail-duration {
+            font-size: 0.8rem;
             color: var(--accent);
             font-weight: 600;
             letter-spacing: 0.5px;
-            margin-bottom: 0.5rem;
             text-transform: uppercase;
+            margin-bottom: 0.4rem;
         }
 
-        .package-pricing {
+        .package-details .detail-pricing {
             font-size: 0.95rem;
             color: var(--primary);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
+            font-weight: 600;
         }
 
-        .package-description {
+        .package-details .detail-description {
             font-size: 0.95rem;
             color: var(--charcoal);
             line-height: 1.7;
             margin-bottom: 1.5rem;
         }
 
-        .package-card ul {
+        .package-details .detail-section-label {
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+            margin-top: 1.25rem;
+        }
+
+        .package-details ul {
             list-style: none;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             font-size: 0.9rem;
             color: var(--charcoal);
             line-height: 1.8;
+            padding: 0;
         }
 
-        .package-card ul li {
-            margin-bottom: 0.75rem;
+        .package-details ul li {
+            margin-bottom: 0.5rem;
             padding-left: 1.5rem;
             position: relative;
         }
 
-        .package-card ul li:before {
-            content: "✓";
+        .package-details ul li:before {
+            content: "\2713";
             position: absolute;
             left: 0;
             color: var(--accent);
             font-weight: 700;
         }
 
-        .package-cta {
+        .package-details .detail-cta {
             display: inline-block;
-            color: var(--primary);
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 0.85rem 2.25rem;
+            border-radius: 4px;
             text-decoration: none;
             font-weight: 600;
+            font-size: 0.95rem;
+            transition: background-color 0.3s ease;
             margin-top: 1rem;
-            transition: color 0.3s ease;
         }
 
-        .package-cta:hover {
-            color: var(--accent);
+        .package-details .detail-cta:hover {
+            background-color: var(--accent);
+            color: var(--white);
         }
 
         .whats-included {
@@ -260,142 +356,194 @@
             <p>Enrollment is seasonal. That means we open it up, fill a small number of spots, and close it. That's intentional — it keeps the work focused and real.</p>
         </div>
 
-        <!-- Package Cards -->
+        <!-- Expandable Intensive Cards -->
         <div class="intensives-grid">
+
+            <!-- Card 1: Emotional Wellness Transformation -->
             <div class="package-card">
                 <div class="package-image">
                     <img src="images/hero-woman.jpg" alt="Woman in golden light">
                 </div>
                 <div class="package-card-body">
                     <h3>Emotional Wellness Transformation</h3>
-                    <p class="package-subtitle">6 weeks</p>
-                    <p class="package-pricing"><strong>6 weeks: $1,800 | 12 weeks: $3,200</strong></p>
-                    <p class="package-description">You're doing okay, but you're also done with 'okay.' Something needs to shift — maybe anxiety that shows up at work, or a sadness you can't quite explain, or just a flatness that you're tired of living with.</p>
-                    <ul>
-                        <li>Intensive weekly or twice-weekly sessions</li>
-                        <li>Personalized tools and practices</li>
-                        <li>Support between sessions</li>
-                        <li>Comprehensive assessment and direction-setting</li>
-                    </ul>
-                    <p class="package-subtitle" style="margin-top: 1rem;">What You Get</p>
-                    <ul>
-                        <li>Twice-weekly sessions with clear therapeutic goals</li>
-                        <li>Between-session support via email</li>
-                        <li>Personalized tools, breathwork, and mindfulness practices</li>
-                        <li>Integration sessions to sustain your progress</li>
-                        <li>Written reflections and takeaways from our work</li>
-                    </ul>
-                    <a href="contact.html" class="package-cta">Inquire &rarr;</a>
+                    <p class="package-tagline">Reclaim your inner calm</p>                    <button class="btn-learn-more" onclick="toggleCard(this)" aria-expanded="false">
+                        <span class="btn-label">Learn More</span>
+                        <span class="arrow">&#9662;</span>
+                    </button>
+                </div>
+                <div class="package-details">
+                    <div class="package-details-inner">
+                        <p class="detail-duration">6 or 12 weeks</p>
+                        <p class="detail-pricing">6 weeks: $1,800 &nbsp;|&nbsp; 12 weeks: $3,200</p>
+                        <p class="detail-description">You're doing okay, but you're also done with 'okay.' Something needs to shift — maybe anxiety that shows up at work, or a sadness you can't quite explain, or just a flatness that you're tired of living with.</p>
+                        <p class="detail-section-label">Includes</p>
+                        <ul>
+                            <li>Intensive weekly or twice-weekly sessions</li>
+                            <li>Personalized tools and practices</li>
+                            <li>Support between sessions</li>
+                            <li>Comprehensive assessment and direction-setting</li>
+                        </ul>
+                        <p class="detail-section-label">What You Get</p>
+                        <ul>
+                            <li>Twice-weekly sessions with clear therapeutic goals</li>
+                            <li>Between-session support via email</li>
+                            <li>Personalized tools, breathwork, and mindfulness practices</li>
+                            <li>Integration sessions to sustain your progress</li>
+                            <li>Written reflections and takeaways from our work</li>
+                        </ul>
+                        <a href="contact.html" class="detail-cta">Inquire &rarr;</a>
+                    </div>
                 </div>
             </div>
 
+            <!-- Card 2: The Relationship Edit -->
             <div class="package-card">
                 <div class="package-image">
                     <img src="images/woman-laughing.jpg" alt="Woman laughing outdoors">
                 </div>
                 <div class="package-card-body">
                     <h3>The Relationship Edit</h3>
-                    <p class="package-subtitle">6 weeks</p>
-                    <p class="package-pricing"><strong>6 weeks: $1,800 | 12 weeks: $3,200</strong></p>
-                    <p class="package-description">For couples or individuals ready to rewrite the script in their relationship. We explore the real dynamics — the patterns, the avoidance, the deeper feelings beneath the surface — and build new ways of connecting.</p>
-                    <ul>
-                        <li>Structured couples sessions</li>
-                        <li>Communication skill-building</li>
-                        <li>Conflict navigation tools</li>
-                        <li>Reconnection practices</li>
-                    </ul>
-                    <p class="package-subtitle" style="margin-top: 1rem;">What You Get</p>
-                    <ul>
-                        <li>Twice-weekly sessions with clear therapeutic goals</li>
-                        <li>Between-session support via email</li>
-                        <li>Personalized tools, breathwork, and mindfulness practices</li>
-                        <li>Integration sessions to sustain your progress</li>
-                        <li>Written reflections and takeaways from our work</li>
-                    </ul>
-                    <a href="contact.html" class="package-cta">Inquire &rarr;</a>
+                    <p class="package-tagline">Transform how you connect</p>                    <button class="btn-learn-more" onclick="toggleCard(this)" aria-expanded="false">
+                        <span class="btn-label">Learn More</span>
+                        <span class="arrow">&#9662;</span>
+                    </button>
+                </div>
+                <div class="package-details">
+                    <div class="package-details-inner">
+                        <p class="detail-duration">6 or 12 weeks</p>
+                        <p class="detail-pricing">6 weeks: $1,800 &nbsp;|&nbsp; 12 weeks: $3,200</p>
+                        <p class="detail-description">For couples or individuals ready to rewrite the script in their relationship. We explore the real dynamics — the patterns, the avoidance, the deeper feelings beneath the surface — and build new ways of connecting.</p>
+                        <p class="detail-section-label">Includes</p>
+                        <ul>
+                            <li>Structured couples sessions</li>
+                            <li>Communication skill-building</li>
+                            <li>Conflict navigation tools</li>
+                            <li>Reconnection practices</li>
+                        </ul>
+                        <p class="detail-section-label">What You Get</p>
+                        <ul>
+                            <li>Twice-weekly sessions with clear therapeutic goals</li>
+                            <li>Between-session support via email</li>
+                            <li>Personalized tools, breathwork, and mindfulness practices</li>
+                            <li>Integration sessions to sustain your progress</li>
+                            <li>Written reflections and takeaways from our work</li>
+                        </ul>
+                        <a href="contact.html" class="detail-cta">Inquire &rarr;</a>
+                    </div>
                 </div>
             </div>
 
+            <!-- Card 3: The Good Mama Boost -->
             <div class="package-card">
                 <div class="package-image">
-                    <img src="images/therapy.jpeg" alt="Wellness and self-care">
+                    <img src="images/mama-child.jpg" alt="Mother and child sharing a warm moment together">
                 </div>
                 <div class="package-card-body">
                     <h3>The Good Mama Boost</h3>
-                    <p class="package-subtitle">6 weeks</p>
-                    <p class="package-pricing"><strong>6 weeks: $1,800 | 12 weeks: $3,200</strong></p>
-                    <p class="package-description">You're a mom. Good job, you're doing it. And you're also running on fumes. This is about reclaiming yourself while you're still fully parenting. It's about understanding what you actually need and finding joy in the balance.</p>
-                    <ul>
-                        <li>Exploration of identity and worth</li>
-                        <li>Practical tools for overwhelm</li>
-                        <li>Boundary work</li>
-                        <li>Self-compassion and presence practice</li>
-                    </ul>
-                    <p class="package-subtitle" style="margin-top: 1rem;">What You Get</p>
-                    <ul>
-                        <li>Twice-weekly sessions with clear therapeutic goals</li>
-                        <li>Between-session support via email</li>
-                        <li>Personalized tools, breathwork, and mindfulness practices</li>
-                        <li>Integration sessions to sustain your progress</li>
-                        <li>Written reflections and takeaways from our work</li>
-                    </ul>
-                    <a href="contact.html" class="package-cta">Inquire &rarr;</a>
+                    <p class="package-tagline">Motherhood, reimagined</p>                    <button class="btn-learn-more" onclick="toggleCard(this)" aria-expanded="false">
+                        <span class="btn-label">Learn More</span>
+                        <span class="arrow">&#9662;</span>
+                    </button>
+                </div>
+                <div class="package-details">
+                    <div class="package-details-inner">
+                        <p class="detail-duration">6 or 12 weeks</p>
+                        <p class="detail-pricing">6 weeks: $1,800 &nbsp;|&nbsp; 12 weeks: $3,200</p>
+                        <p class="detail-description">You're a mom. Good job, you're doing it. And you're also running on fumes. This is about reclaiming yourself while you're still fully parenting. It's about understanding what you actually need and finding joy in the balance.</p>
+                        <p class="detail-section-label">Includes</p>
+                        <ul>
+                            <li>Exploration of identity and worth</li>
+                            <li>Practical tools for overwhelm</li>
+                            <li>Boundary work</li>
+                            <li>Self-compassion and presence practice</li>
+                        </ul>
+                        <p class="detail-section-label">What You Get</p>
+                        <ul>
+                            <li>Twice-weekly sessions with clear therapeutic goals</li>
+                            <li>Between-session support via email</li>
+                            <li>Personalized tools, breathwork, and mindfulness practices</li>
+                            <li>Integration sessions to sustain your progress</li>
+                            <li>Written reflections and takeaways from our work</li>
+                        </ul>
+                        <a href="contact.html" class="detail-cta">Inquire &rarr;</a>
+                    </div>
                 </div>
             </div>
 
+            <!-- Card 4: The Midlife Reset -->
             <div class="package-card">
                 <div class="package-image">
                     <img src="images/mature-woman.jpg" alt="Confident woman embracing new chapter">
                 </div>
                 <div class="package-card-body">
                     <h3>The Midlife Reset</h3>
-                    <p class="package-subtitle">6 or 12 weeks</p>
-                    <p class="package-pricing"><strong>6 weeks: $1,800 | 12 weeks: $3,200</strong></p>
-                    <p class="package-description">Something's shifting. Maybe you're questioning choices you made ten years ago. Maybe you're wondering if there's more to your life than what you've built. Midlife is an awakening — a chance to rediscover purpose and joy.</p>
-                    <ul>
-                        <li>Values clarification</li>
-                        <li>Purpose exploration</li>
-                        <li>Identity work beyond roles</li>
-                        <li>New chapter planning</li>
-                    </ul>
-                    <p class="package-subtitle" style="margin-top: 1rem;">What You Get</p>
-                    <ul>
-                        <li>Twice-weekly sessions with clear therapeutic goals</li>
-                        <li>Between-session support via email</li>
-                        <li>Personalized tools, breathwork, and mindfulness practices</li>
-                        <li>Integration sessions to sustain your progress</li>
-                        <li>Written reflections and takeaways from our work</li>
-                    </ul>
-                    <a href="contact.html" class="package-cta">Inquire &rarr;</a>
+                    <p class="package-tagline">Your most powerful chapter</p>                    <button class="btn-learn-more" onclick="toggleCard(this)" aria-expanded="false">
+                        <span class="btn-label">Learn More</span>
+                        <span class="arrow">&#9662;</span>
+                    </button>
+                </div>
+                <div class="package-details">
+                    <div class="package-details-inner">
+                        <p class="detail-duration">6 or 12 weeks</p>
+                        <p class="detail-pricing">6 weeks: $1,800 &nbsp;|&nbsp; 12 weeks: $3,200</p>
+                        <p class="detail-description">Something's shifting. Maybe you're questioning choices you made ten years ago. Maybe you're wondering if there's more to your life than what you've built. Midlife is an awakening — a chance to rediscover purpose and joy.</p>
+                        <p class="detail-section-label">Includes</p>
+                        <ul>
+                            <li>Values clarification</li>
+                            <li>Purpose exploration</li>
+                            <li>Identity work beyond roles</li>
+                            <li>New chapter planning</li>
+                        </ul>
+                        <p class="detail-section-label">What You Get</p>
+                        <ul>
+                            <li>Twice-weekly sessions with clear therapeutic goals</li>
+                            <li>Between-session support via email</li>
+                            <li>Personalized tools, breathwork, and mindfulness practices</li>
+                            <li>Integration sessions to sustain your progress</li>
+                            <li>Written reflections and takeaways from our work</li>
+                        </ul>
+                        <a href="contact.html" class="detail-cta">Inquire &rarr;</a>
+                    </div>
                 </div>
             </div>
 
+            <!-- Card 5: The Empty Nest Discovery -->
             <div class="package-card">
                 <div class="package-image">
                     <img src="images/couple-beach.jpg" alt="Looking toward the horizon">
                 </div>
                 <div class="package-card-body">
                     <h3>The Empty Nest Discovery</h3>
-                    <p class="package-subtitle">6 weeks</p>
-                    <p class="package-pricing"><strong>6 weeks: $1,800 | 12 weeks: $3,200</strong></p>
-                    <p class="package-description">Your kid left. And yes, you're happy for them. And also — who are you now? What do you do with all this space and time? This is about embracing the next chapter with hope and purpose.</p>
-                    <ul>
-                        <li>Identity rediscovery</li>
-                        <li>Relationship recalibration</li>
-                        <li>New purpose exploration</li>
-                        <li>Freedom and fulfillment work</li>
-                    </ul>
-                    <p class="package-subtitle" style="margin-top: 1rem;">What You Get</p>
-                    <ul>
-                        <li>Twice-weekly sessions with clear therapeutic goals</li>
-                        <li>Between-session support via email</li>
-                        <li>Personalized tools, breathwork, and mindfulness practices</li>
-                        <li>Integration sessions to sustain your progress</li>
-                        <li>Written reflections and takeaways from our work</li>
-                    </ul>
-                    <a href="contact.html" class="package-cta">Inquire &rarr;</a>
+                    <p class="package-tagline">Rediscover you</p>                    <button class="btn-learn-more" onclick="toggleCard(this)" aria-expanded="false">
+                        <span class="btn-label">Learn More</span>
+                        <span class="arrow">&#9662;</span>
+                    </button>
+                </div>
+                <div class="package-details">
+                    <div class="package-details-inner">
+                        <p class="detail-duration">6 or 12 weeks</p>
+                        <p class="detail-pricing">6 weeks: $1,800 &nbsp;|&nbsp; 12 weeks: $3,200</p>
+                        <p class="detail-description">Your kid left. And yes, you're happy for them. And also — who are you now? What do you do with all this space and time? This is about embracing the next chapter with hope and purpose.</p>
+                        <p class="detail-section-label">Includes</p>
+                        <ul>
+                            <li>Identity rediscovery</li>
+                            <li>Relationship recalibration</li>
+                            <li>New purpose exploration</li>
+                            <li>Freedom and fulfillment work</li>
+                        </ul>
+                        <p class="detail-section-label">What You Get</p>
+                        <ul>
+                            <li>Twice-weekly sessions with clear therapeutic goals</li>
+                            <li>Between-session support via email</li>
+                            <li>Personalized tools, breathwork, and mindfulness practices</li>
+                            <li>Integration sessions to sustain your progress</li>
+                            <li>Written reflections and takeaways from our work</li>
+                        </ul>
+                        <a href="contact.html" class="detail-cta">Inquire &rarr;</a>
+                    </div>
                 </div>
             </div>
+
         </div>
 
         <!-- What's Included -->
@@ -486,6 +634,16 @@
 <div class="mobile-sticky-cta">
     <a href="contact.html" class="btn-sticky">Schedule a Consultation</a>
 </div>
+
+<script>
+function toggleCard(button) {
+    const card = button.closest('.package-card');
+    const label = button.querySelector('.btn-label');
+    const isExpanded = card.classList.toggle('card-expanded');
+    button.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+    label.textContent = isExpanded ? 'Show Less' : 'Learn More';
+}
+</script>
 
 <script src="js/main.js"></script>
 </body>
