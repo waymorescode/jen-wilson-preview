@@ -345,8 +345,36 @@ nav {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+}
+
+.other-services-list {
+  list-style: none;
+  padding: 0 2rem;
+  margin: 0 0 1rem;
+}
+
+.other-services-list li {
+  font-size: 0.95rem;
+  color: var(--charcoal);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.other-services-list li:last-child {
+  border-bottom: none;
+}
+
+.service-card-simple {
+  padding: 2rem 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-card-simple h3 {
+  padding: 0 2rem 0.5rem !important;
 }
 
 .service-card {
