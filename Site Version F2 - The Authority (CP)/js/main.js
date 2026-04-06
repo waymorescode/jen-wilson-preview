@@ -3,13 +3,10 @@
 // Cycles through pre-set taglines on the homepage hero
 // ============================================
 const TAGLINES = [
-    "Therapy for people who look fine\u2014but are ready to feel better.",
-    "A space to slow down, heal deeply, and reconnect with the most grounded version of yourself.",
-    "Helping driven individuals heal, regulate, and realign\u2014so they can live and lead with intention.",
-    "Where clinical expertise meets conscious living\u2014therapy designed for deep healing and lasting change.",
-    "In the quiet between who we appear to be and who we long to become.",
-    "Integrative, trauma-informed therapy for individuals ready to move from survival to intentional, empowered living.",
-    "Trauma-informed therapy that helps high-functioning individuals heal deeply, live consciously, and lead with clarity."
+    "Bridging clinical excellence with mindful, transformative healing.",
+    "Space to slow down, heal deeply, and reconnect with the most grounded version of yourself.",
+    "Holistic approach to therapy that heals the mind, body, and spirit.",
+    "Discover new relationship skills, find peaceful moments of introspection, release old wounds."
 ];
 
 function initTaglineRotation() {
