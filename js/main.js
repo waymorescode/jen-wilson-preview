@@ -1,5 +1,44 @@
+// ============================================
+// TAGLINE ROTATION SYSTEM
+// Cycles through pre-set taglines on the homepage hero
+// ============================================
+const TAGLINES = [
+    "Bridging clinical excellence with mindful, transformative healing.",
+    "Space to slow down, heal deeply, and reconnect with the most grounded version of yourself.",
+    "Holistic approach to therapy that heals the mind, body, and spirit.",
+    "Discover new relationship skills, find peaceful moments of introspection, release old wounds."
+];
+
+function initTaglineRotation() {
+    const heroH1 = document.querySelector('[data-tagline-rotate]');
+    if (!heroH1) return;
+
+    // Mark the element for CSS transitions
+    heroH1.style.transition = 'opacity 0.6s ease';
+
+    // Pick a random starting tagline (different from the default)
+    let currentIndex = 0;
+
+    function rotateTagline() {
+        // Fade out
+        heroH1.style.opacity = '0';
+
+        setTimeout(() => {
+            currentIndex = (currentIndex + 1) % TAGLINES.length;
+            heroH1.textContent = TAGLINES[currentIndex];
+            // Fade in
+            heroH1.style.opacity = '1';
+        }, 600);
+    }
+
+    // Rotate every 8 seconds
+    setInterval(rotateTagline, 8000);
+}
+
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize tagline rotation on homepage
+    initTaglineRotation();
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const dropdowns = document.querySelectorAll('.dropdown');
