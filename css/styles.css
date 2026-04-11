@@ -793,7 +793,6 @@ footer {
   right: 0;
   z-index: 999;
   background-color: var(--primary);
-  padding: 0.75rem 2rem;
   text-align: center;
 }
 
@@ -804,6 +803,9 @@ footer {
   letter-spacing: 0.5px;
   text-decoration: none;
   display: block;
+  padding: 1rem 2rem;
+  min-height: 48px;
+  box-sizing: border-box;
 }
 
 /* ============================================
@@ -875,7 +877,7 @@ footer {
   .footer-section { text-align: center; }
 
   .mobile-sticky-cta { display: block; }
-  body { padding-bottom: 50px; }
+  body { padding-bottom: 64px; }
 }
 
 /* ============================================

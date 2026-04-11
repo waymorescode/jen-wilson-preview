@@ -3,7 +3,7 @@
 // Cycles through pre-set taglines on the homepage hero
 // ============================================
 const TAGLINES = [
-    "Bridging clinical excellence with mindful, transformative healing.",
+    "Therapy for deeper well-being",
     "Space to slow down, heal deeply, and reconnect with the most grounded version of yourself.",
     "Holistic approach to therapy that heals the mind, body, and spirit.",
     "Discover new relationship skills, find peaceful moments of introspection, release old wounds."
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize tagline rotation on homepage
     initTaglineRotation();
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
+    const navMenu = document.querySelector('.nav-links');
     const dropdowns = document.querySelectorAll('.dropdown');
     
     // Toggle mobile menu
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(e) {
-        if (!e.target.closest('.navbar')) {
+        if (!e.target.closest('nav')) {
             navMenu.classList.remove('active');
             if (mobileMenuToggle) {
                 const spans = mobileMenuToggle.querySelectorAll('span');
