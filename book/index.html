@@ -10,6 +10,49 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Scoped hero override: beach-golden background for brand continuity with the Jane booking page -->
+    <style>
+        .hero.hero-beach {
+            position: relative;
+            background-image:
+                linear-gradient(135deg, rgba(20, 30, 20, 0.55) 0%, rgba(20, 30, 20, 0.30) 50%, rgba(20, 30, 20, 0.65) 100%),
+                url('../images/beach-golden.jpg');
+            background-size: cover;
+            background-position: center 60%;
+            background-repeat: no-repeat;
+            padding: 7rem 2rem 8rem;
+            min-height: 480px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero.hero-beach h1 {
+            color: #FFFFFF;
+            text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);
+            max-width: 820px;
+        }
+
+        .hero.hero-beach .subtitle {
+            color: rgba(255, 255, 255, 0.96);
+            text-shadow: 0 1px 14px rgba(0, 0, 0, 0.55);
+            max-width: 720px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 640px) {
+            .hero.hero-beach {
+                padding: 5rem 1.5rem 6rem;
+                min-height: 380px;
+            }
+            .hero.hero-beach h1 {
+                font-size: 2.25rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -47,9 +90,9 @@
 </nav>
 
 <!-- ========================================
-     HERO
+     HERO (beach-golden background for continuity with Jane booking page)
      ======================================== -->
-<section class="hero">
+<section class="hero hero-beach">
     <h1>A Warm Place to Begin</h1>
     <p class="subtitle">A complimentary fifteen-minute conversation &mdash; your first warm step toward care that meets you where you stand.</p>
 </section>
