@@ -64,7 +64,7 @@ I want Jane's support team to confirm in writing that the branding applies acros
 
 ## Moving forward together
 
-I think Jane is the right answer here, and I can build the `/book` landing page to work exactly like the examples above — in your full voice, carrying your warmth into the moment visitors first meet your practice. Unless you object, I'm going to move forward with this path and settle into Jane as your practice management software for now.
+I think Jane is the right answer here, and the `/book` landing page is already live — carrying your warmth into the moment visitors first meet your practice, exactly the way the example therapists above do. Unless you object, I'm going to move forward with this path and settle into Jane as your practice management software for now.
 
 The longer arc: as soon as the Waymore Better Logic Co. platform is ready, I'll migrate you over. The major differentiator of that platform is the technical ability to stay on *your* brand — your identity, your voice, your design language carrying through every client touchpoint, built from the ground up with your practice at the center of every design decision. It's *waymore better* to care about your brand than ours.
 
