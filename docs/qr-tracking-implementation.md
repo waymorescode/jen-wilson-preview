@@ -22,7 +22,7 @@ That page:
   2. Meta-refreshes (instant) to the destination URL
   3. JS fallback window.location.replace() in case meta-refresh fails
       ↓
-User lands on destination (SimplePractice, an intensive page, etc.)
+User lands on destination (Jane App, an intensive page, etc.)
 ```
 
 All scan data lives in Plausible, keyed by the `slug` custom property on a single `QR Scan` event. One event name, many props — keeps the dashboard clean.

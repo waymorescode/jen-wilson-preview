@@ -44,7 +44,7 @@ Intensives are structured 6 or 12-week therapy programs for specific life phases
 
 ## How to book
 
-Schedule a complimentary 15-minute consultation through the SimplePractice client portal at [jennifer-wilson6099.clientsecure.me](https://jennifer-wilson6099.clientsecure.me), or email [hello@drjenniferwilson.com](mailto:hello@drjenniferwilson.com). Every "Schedule a Consultation" button on the site opens the booking flow directly.
+Schedule a complimentary 15-minute consultation by visiting [drjenniferwilson.com/book](https://drjenniferwilson.com/book/) — a short warm landing page on her own site — which hands off to her Jane App booking portal at [drjenniferwilson.janeapp.com](https://drjenniferwilson.janeapp.com). Every "Schedule a Consultation" button on the site routes through `/book` first. Clients can also email [hello@drjenniferwilson.com](mailto:hello@drjenniferwilson.com) directly.
 
 ## Key pages
 

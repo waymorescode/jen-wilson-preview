@@ -27,7 +27,7 @@ Static HTML website for Dr. Jennifer Wilson, PhD, LCSW (Conscious Practice), a p
 - `css/styles.css` — all styles (single stylesheet)
 - `js/main.js` — tagline rotation, mobile menu toggle, smooth scroll, intersection observer animations
 - `images/` — photos and the lotus logo (SVG)
-- `logo-exports/` — PNG versions of the lotus logo for upload to third-party services (SimplePractice, Google Workspace, etc.)
+- `logo-exports/` — PNG versions of the lotus logo for upload to third-party services (Jane App, Google Workspace, etc.)
 
 ## Brand
 
@@ -40,16 +40,17 @@ Static HTML website for Dr. Jennifer Wilson, PhD, LCSW (Conscious Practice), a p
 
 ## Booking
 
-Every "Schedule a Consultation" button points to Dr. Wilson's SimplePractice client portal at `jennifer-wilson6099.clientsecure.me`, opening in a new tab. See `docs/email-02-simplepractice-SEND.md` for the current decision about whether to upgrade SP to Plus for the embedded widget experience.
+Every "Schedule a Consultation" button on the site routes through `/book/` — a warm branded landing page on her own domain that introduces the consultation call, then hands off to Jane App at `drjenniferwilson.janeapp.com`. Internal nav (same tab), keeping the visitor on her domain for the warm transition before the Jane-branded booking flow takes over. Jane carries her brand (forest/sage, lotus logo, photography) through every client-facing page — booking, portal, intake forms, invoices, and emails. See `docs/email-03-jane-correction-SEND.md` for the rationale.
 
 ## Key files for future work
 
 - `CLAUDE.md` — client voice rules, approved copy, intensive names, credentials language. Read before making any copy changes.
 - `llms.txt` — public-facing AI-agent-readable description of the practice (served at `drjenniferwilson.com/llms.txt`)
 - `CNAME` — custom domain config for GitHub Pages
-- `docs/email-02-simplepractice-SEND.md` — ready-to-send email with full booking platform decision (SP vs Jane App)
+- `docs/email-02-simplepractice-SEND.md` — archived: original platform decision email (Jane App vs SimplePractice)
+- `docs/email-03-jane-correction-SEND.md` — archived: follow-up with the Jane App decision and `/book` strategy
 - `docs/google-workspace-hipaa-recommendation.md` — notes for future email setup
-- `docs/2026-04-11-*.md` — archived SimplePractice support docs for reference
+- `docs/2026-04-11-*.md` — archived SimplePractice reference docs (pre-decision research)
 
 ## Dev notes
 

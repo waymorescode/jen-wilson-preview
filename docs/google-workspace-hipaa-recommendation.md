@@ -28,7 +28,7 @@ With a Business Standard or Business Plus plan and a signed BAA, the following G
 - **Google Vault** (Business Plus only) — retention, eDiscovery, and compliance archiving
 - **Gemini in Workspace** — AI assistance inside Gmail, Docs, and Drive, covered under the BAA
 
-Your existing clinical platform (SimplePractice) remains your EHR and continues handling session notes, billing, and the clinical BAA for that side of your practice. Google Workspace covers the communications and documents side.
+Your existing clinical platform (Jane App) remains your EHR and continues handling session notes, billing, and the clinical BAA for that side of your practice. Google Workspace covers the communications and documents side.
 
 ---
 
@@ -78,7 +78,7 @@ Business Plus adds Vault, which is valuable if you want formal retention policie
 
 - **You are still the covered entity.** Signing the BAA means Google takes responsibility for their side of the infrastructure. You remain responsible for how you use the tools, your workforce training (even if that workforce is just you), and your overall HIPAA risk assessment.
 - **Stay inside the covered services.** When you use Gmail, Drive, Calendar, and Meet under your Workspace account, you're covered. Pasting client information into a personal Gmail, a ChatGPT window, or a third-party app outside the BAA breaks that coverage.
-- **SimplePractice still handles clinical records.** This recommendation is for your administrative and communications backbone — email, scheduling, documents, and telehealth backup. Your clinical documentation stays in SimplePractice.
+- **Jane App still handles clinical records.** This recommendation is for your administrative and communications backbone — email, scheduling, documents, and telehealth backup. Your clinical documentation stays in Jane App.
 - **Prices and features can change.** The figures above reflect current published pricing and may shift. Confirm at checkout.
 
 ---
@@ -91,7 +91,7 @@ Business Plus adds Vault, which is valuable if you want formal retention policie
 | Monthly cost? | $14/month (~$168/year) |
 | Step up to Business Plus? | Yes, if you want Vault archiving ($22/month) |
 | What's covered? | Gmail, Drive, Docs, Calendar, Meet, Chat, Gemini in Workspace |
-| Does it replace SimplePractice? | No — the two complement each other |
+| Does it replace Jane App? | No — the two complement each other |
 | How long to set up? | About an hour, plus domain DNS verification |
 
 ---

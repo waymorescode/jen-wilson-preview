@@ -19,7 +19,7 @@ Rich
 
 ## What you'd get
 
-Every QR code you put out in the world points to a short URL on your own site — something like `drjenniferwilson.com/go/card` or `drjenniferwilson.com/go/window`. When someone scans it, their phone opens that URL, which quietly tracks the scan and then instantly forwards them to wherever you want — usually your SimplePractice booking page or a specific Intensive.
+Every QR code you put out in the world points to a short URL on your own site — something like `drjenniferwilson.com/go/card` or `drjenniferwilson.com/go/window`. When someone scans it, their phone opens that URL, which quietly tracks the scan and then instantly forwards them to wherever you want — usually your Jane App booking page or a specific Intensive.
 
 You get a single dashboard showing:
 
@@ -38,7 +38,7 @@ The workflow is built so you're in the driver's seat. Here's exactly how it flow
 
 ### 1. You tell me what you need
 
-A quick message to me: *"I'm making new business cards. I want a QR code that sends people to the SimplePractice booking page. Let's call it 'card' for tracking purposes."*
+A quick message to me: *"I'm making new business cards. I want a QR code that sends people to the Jane App booking page. Let's call it 'card' for tracking purposes."*
 
 That's all the information I need. Slug name, destination, done.
 
@@ -147,7 +147,7 @@ This is the kind of insight most therapists never have but really benefit from. 
 1. **A yes to Plausible at $9/month.** I can set up the free trial for you and you don't commit to the paid tier until you've seen it working.
 
 2. **Your first wishlist of QR codes.** Just tell me what you'd use them for and what each one should link to. Some common starting points, but you decide:
-   - Business cards → SimplePractice booking page
+   - Business cards → Jane App booking page
    - Office door/window sign → homepage or booking
    - Instagram bio link → homepage
    - Email signature → homepage
