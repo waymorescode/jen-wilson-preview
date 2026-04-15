@@ -9,7 +9,7 @@
 
 **Recommended plan: Google Workspace Business Standard — $14/user/month (~$168/year).**
 
-This gives you a professional email address on your own domain (e.g., `jennifer@drjenniferwilson.com`), a signed HIPAA Business Associate Agreement (BAA) with Google, and the core tools you already use every day — Gmail, Calendar, Drive, Docs, and Meet — all covered for working with client information.
+This gives you a professional email address on your own domain (`hello@drjenniferwilson.com`), a signed HIPAA Business Associate Agreement (BAA) with Google, and the core tools you already use every day — Gmail, Calendar, Drive, Docs, and Meet — all covered for working with client information.
 
 If you want the strongest compliance posture and extra peace of mind, step up to **Business Plus at $22/user/month (~$264/year)**. The added value there is Google Vault, which gives you retention, archiving, and audit trails an auditor would appreciate.
 
