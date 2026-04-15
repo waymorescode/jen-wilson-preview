@@ -40,20 +40,13 @@ This fixes the issue you hit when Jane sent a test confirmation containing Jenn'
 2. Click **Edit** on Jenn's location
 3. Scroll to the **Location Address & Map** section
 4. **Uncheck** the box labeled *"Display location address on your online booking site and emails"*
-5. Scroll further to the **Billing Information** section
-6. Toggle **off** *"Use my Location Address For Billing"*
-7. In the new fields that appear, fill in:
-   - Address / Line 1: `Telehealth — Florida` (or similar neutral label)
-   - City: Jenn's practice city (St. Augustine Beach or Jacksonville — whichever reads better on a superbill)
-   - State / Province: `FL`
-   - Postal: a practice-area ZIP (not the home ZIP)
-8. Click **Save**
+5. Click **Save**
 
 ### What this does
 
 - The Thanks for Booking email stops showing any address
 - The public booking site stops showing any address
-- Billing documents (superbills, receipts) still work because the Billing Information section now has its own non-home address to pull from
+- **Billing documents (superbills, receipts) are intentionally untouched** — they still pull the real location address, which is what insurance companies expect on a superbill for reimbursement. That address only appears on the financial documents a client actively downloads, never on the booking or email surface the general public sees.
 
 ### Verify
 
@@ -61,7 +54,10 @@ Do this verification after you finish Section 2, by making a real test booking a
 
 - [ ] Thanks for Booking email contains no street address
 - [ ] Public `drjenniferwilson.janeapp.com` page shows no street address
-- [ ] A test superbill/receipt pulls the `Telehealth — Florida` label, not the home address
+
+### If Jenn ever wants to hide the address from billing documents too
+
+This is a separate, bigger decision — not the concern today. The cleanest path when the time comes is for her to get a UPS Store mailbox or P.O. Box (~$15/mo) that becomes her real practice mailing address, and then use Jane's **Settings → Locations → Edit → Billing Information → "Use my Location Address For Billing"** toggle to point billing at the new address. That protects her home on superbills without risking insurance rejecting the document. Revisit this only if it becomes an actual concern.
 
 Guide: [How to Hide Your Location from Your Online Booking Site](https://jane.app/guide/online-booking/how-to-display-mobile-or-telehealth-services-in-online-booking)
 
