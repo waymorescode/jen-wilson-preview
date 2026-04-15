@@ -21,8 +21,8 @@
             background-size: cover;
             background-position: center 60%;
             background-repeat: no-repeat;
-            padding: 7rem 2rem 8rem;
-            min-height: 480px;
+            padding: 4rem 2rem 4.5rem;
+            min-height: 300px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -43,14 +43,20 @@
             font-size: 1.2rem;
         }
 
+        /* Tighten section vertical spacing so the Jane CTA is visible within the first 1.5 screens */
+        .approach-section { padding-top: 3rem; padding-bottom: 3rem; }
+        .cta-section { padding-top: 3rem; padding-bottom: 3rem; }
+
         @media (max-width: 640px) {
             .hero.hero-beach {
-                padding: 5rem 1.5rem 6rem;
-                min-height: 380px;
+                padding: 3rem 1.5rem 3.5rem;
+                min-height: 240px;
             }
             .hero.hero-beach h1 {
                 font-size: 2.25rem;
             }
+            .approach-section { padding-top: 2rem; padding-bottom: 2rem; }
+            .cta-section { padding-top: 2rem; padding-bottom: 2rem; }
         }
     </style>
 </head>
@@ -95,17 +101,6 @@
 <section class="hero hero-beach">
     <h1>A Warm Place to Begin</h1>
     <p class="subtitle">A complimentary fifteen-minute conversation &mdash; your first warm step toward care that meets you where you stand.</p>
-</section>
-
-<!-- ========================================
-     WELCOME / INTRO
-     ======================================== -->
-<section class="welcome-section">
-    <h2>Your first conversation with me</h2>
-
-    <p>Thank you for being here. This first conversation is yours &mdash; a gentle, unhurried meeting place where you can share what's bringing you in, hear how I work, and feel into whether we're aligned. Come exactly as you are, with whatever feels present for you today.</p>
-
-    <p>Some people arrive with a clear sense of what they're seeking. Others arrive with a feeling they're still learning to name. Both are welcome, and both are honored here.</p>
 </section>
 
 <!-- ========================================
