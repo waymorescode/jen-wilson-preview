@@ -76,7 +76,7 @@ Plausible will auto-surface the `slug` custom prop as a breakdown once the first
 
 ---
 
-## Per-slug setup (do this every time Jenn requests a new QR code)
+## Per-slug setup (do this every time Jen requests a new QR code)
 
 ### Directory layout
 
@@ -143,7 +143,7 @@ Create `go/<slug>/index.html` with this exact template. Replace `SLUG_NAME` and 
 1. Commit and push to GitHub Pages. Deploy usually completes in 30–90 seconds.
 2. Test the URL on your own phone: scan / visit, confirm you land on the destination, then check Plausible → Goals → QR Scan and confirm the slug appears.
 3. Update `qr-slug-registry.md` with the new entry.
-4. Reply to Jenn with the short URL.
+4. Reply to Jen with the short URL.
 
 ---
 
@@ -184,15 +184,15 @@ Create `go/<slug>/index.html` with this exact template. Replace `SLUG_NAME` and 
 
 ## Cost and ownership
 
-- **Plausible:** Jenn's own account, billed to her card. Rich has admin access for setup and troubleshooting.
-- **Per-slug work:** Included in the site engagement. No per-code fee to Jenn.
+- **Plausible:** Jen's own account, billed to her card. Rich has admin access for setup and troubleshooting.
+- **Per-slug work:** Included in the site engagement. No per-code fee to Jen.
 - **GitHub Pages hosting:** Free tier, already in use. No change.
 
 ---
 
 ## Open questions (resolve with client)
 
-1. Does Jenn approve the $9/mo Plausible subscription?
+1. Does Jen approve the $9/mo Plausible subscription?
 2. First batch of slugs — names and destinations?
 3. Self-generate QR images in Canva, or Rich delivers PNGs?
 4. Does she want a monthly email summary of scan data, or will she check the dashboard on her own?

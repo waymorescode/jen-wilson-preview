@@ -1,6 +1,6 @@
 # QR Code Tracking System — Proposal to Client
 
-**Status:** Sent to Jenn. Awaiting reply.
+**Status:** Sent to Jen. Awaiting reply.
 **Sent by:** Rich
 **Source of record:** this document (reconstructed from the email sent to the client).
 

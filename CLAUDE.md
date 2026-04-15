@@ -3,7 +3,7 @@
 ## Voice & Tone Rules
 
 ### NEVER do this
-- **No dichotomous/negative framing.** Do NOT write "It's not this..." / "I don't that..." / "This isn't your typical..." / "No pressure." Voice in the affirmative ONLY. Say what it IS, not what it isn't. Jenn has flagged this repeatedly — AI copy defaults to this pattern and she hates it.
+- **No dichotomous/negative framing.** Do NOT write "It's not this..." / "I don't that..." / "This isn't your typical..." / "No pressure." Voice in the affirmative ONLY. Say what it IS, not what it isn't. Jen has flagged this repeatedly — AI copy defaults to this pattern and she hates it.
 - **No generic AI filler.** Avoid hollow phrases like "genuinely transformative" or "real change" without specifics.
 
 ### ALWAYS do this
@@ -11,7 +11,7 @@
 - **Use these words often:** compassion, inspiration, healing, warmth, joy, kindness, wellness, happiness, relationships, hope, health
 - **Warm, grounded, clinical-but-human tone.** She is a deeply experienced clinician who also happens to be warm and present.
 
-## Taglines Jenn Likes (use as models for voice)
+## Taglines Jen Likes (use as models for voice)
 - "Bridging clinical excellence with mindful, transformative healing."
 - "Space to slow down, heal deeply, and reconnect with the most grounded version of yourself."
 - "Holistic approach to therapy that heals the mind, body, and spirit."

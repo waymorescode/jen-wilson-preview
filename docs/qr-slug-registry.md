@@ -35,7 +35,7 @@ Update this file every time a new slug is created, retired, or repointed.
    - Where it's being used (business card, window sign, spring mailer, etc.)
    - Created date (YYYY-MM-DD)
    - Any notes
-6. Reply to Jenn with the short URL
+6. Reply to Jen with the short URL
 
 ## How to retire a slug
 
