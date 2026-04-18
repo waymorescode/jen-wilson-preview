@@ -6,7 +6,7 @@ Your marketing folks were right. The site reads beautifully; what it was missing
 
 ---
 
-## Phase 1 — Done ✓
+## Phase 1 — Done ✓ (just had claude do it and pushed)
 
 - **Site map + crawl permissions** so Google can find every page
 - **Page titles** now lead with *"Therapist in St. Augustine Beach"* + your credentials
@@ -17,7 +17,7 @@ Your marketing folks were right. The site reads beautifully; what it was missing
 
 ---
 
-## Phase 2 — I'll do next
+## Phase 2 — I can do next (Time and Materials)
 
 - **Google Search Console** — dashboard showing which searches find you
 - **Bing Webmaster Tools** — same for Bing + ChatGPT
@@ -30,7 +30,7 @@ Your marketing folks were right. The site reads beautifully; what it was missing
 This is the work Google trusts most, because *you* create these listings.
 
 - **Google Business Profile** — the map pin (the big one)
-- **Psychology Today** — industry-standard directory, ~$30/mo
+- **Psychology Today** — refresh your existing listing so the website, bio, and specialties match the new site
 - **Free directories** — GoodTherapy, TherapyDen, NPI, NASW Florida
 
 **→ Step-by-step in `seo-checklist-for-jen.md`.**

@@ -54,28 +54,33 @@ Google will send a postcard (5–10 days) or offer video verification. Follow th
 
 ---
 
-## 2. Psychology Today (30 min + $30/mo)
+## 2. Psychology Today — refresh your existing listing (20 min)
 
-**Go to:** https://www.psychologytoday.com &nbsp;→ *List Your Practice*
+You're already on Psychology Today, so the work here is **updating**, not signing up. The highest-leverage move is making sure your listing points at `drjenniferwilson.com` and reflects the new positioning (intensives, current bio, current specialties).
 
-### Have ready
-- LCSW license number (Florida)
-- Professional headshot
-- Payment: Private pay, superbills provided
-- Fee range: $200 individual · $300 couples · $1,800 / $3,200 intensives
+**Go to:** https://member.psychologytoday.com &nbsp;→ sign in to your therapist account
 
-### Specialties to select
-Life Transitions · Relationship Patterns · Identity & Purpose · Parenting · Couples · Anxiety · Trauma · Midlife · Women's Issues
+### Update these five fields
 
-### Short tagline (shows on listing cards)
+1. **Website** → `https://drjenniferwilson.com` (confirm, replace any old URL)
+2. **Profile photo** → upload `images/dr-wilson-portrait.jpeg` if it's outdated
+3. **Specialties** (check every box that applies):
+   Life Transitions · Relationship Patterns · Identity & Purpose · Parenting · Couples · Anxiety · Trauma · Midlife · Women's Issues
+4. **Short tagline / "Personal Statement" opener** — replace with:
 
-> Dr. Jennifer Wilson, PhD, LCSW — therapist in St. Augustine Beach & Jacksonville. 20+ years of clinical experience. Individual, couples, and boutique intensives.
+   > Dr. Jennifer Wilson, PhD, LCSW — therapist in St. Augustine Beach & Jacksonville. 20+ years of clinical experience. Individual, couples, and boutique intensives.
 
-### Long bio — paste from your site
+5. **Long bio / "Personal Statement"** — replace with the current version from your site:
 
-> I've always wanted to be a steady, trusting presence for people — someone they can bring their stories to and feel heard. My PhD focused on how early trauma shapes development, driven by a desire to understand what helps people heal. I've spent thousands of hours in therapy rooms, child and family practice, taught graduate students and clinicians, published research, served as the clinical director of agencies, supervised the development of ongoing clinicians, directed academic programs, and been a professor for 20 years. I'm also a mother, a neighbor, a friend and I care deeply about the people I work with. I show up with focused attention, notice what's beneath the words, stay curious about what will help you move forward, and find that our work together builds and sustains me too. After a long career, committing myself to this work with you matters deeply to me.
->
-> Therapy in my office is a steadier, deeper pace — careful, reflective work that gets beneath the surface. I draw on psychoanalytic/psychodynamic approaches, CBT, and breathwork to reach roots, shift patterns, and change how you live. Mindfulness and practical self-care weave into our work because how you move through the world matters as much as what you think about it.
+   > I've always wanted to be a steady, trusting presence for people — someone they can bring their stories to and feel heard. My PhD focused on how early trauma shapes development, driven by a desire to understand what helps people heal. I've spent thousands of hours in therapy rooms, child and family practice, taught graduate students and clinicians, published research, served as the clinical director of agencies, supervised the development of ongoing clinicians, directed academic programs, and been a professor for 20 years. I'm also a mother, a neighbor, a friend and I care deeply about the people I work with. I show up with focused attention, notice what's beneath the words, stay curious about what will help you move forward, and find that our work together builds and sustains me too. After a long career, committing myself to this work with you matters deeply to me.
+   >
+   > Therapy in my office is a steadier, deeper pace — careful, reflective work that gets beneath the surface. I draw on psychoanalytic/psychodynamic approaches, CBT, and breathwork to reach roots, shift patterns, and change how you live. Mindfulness and practical self-care weave into our work because how you move through the world matters as much as what you think about it.
+
+### Fees section (if it's there)
+- Individual: $200
+- Couples: $300
+- Intensives: $1,800 (6 weeks) · $3,200 (12 weeks)
+- Payment: Private pay; superbills provided for out-of-network reimbursement
 
 ---
 
