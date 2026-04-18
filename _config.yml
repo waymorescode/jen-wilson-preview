@@ -1,0 +1,15 @@
+# Jekyll configuration for GitHub Pages
+#
+# Keeps internal repo artifacts out of the published site. Without this
+# config, GitHub Pages serves every file in the repo — including internal
+# Rich↔Jen planning docs and agent-configuration files.
+#
+# Files/dirs listed under `exclude` stay in git but are NOT copied into the
+# built site.
+
+exclude:
+  - docs
+  - README.md
+  - CLAUDE.md
+  - .github
+  - .playwright-mcp
