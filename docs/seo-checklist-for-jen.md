@@ -1,60 +1,23 @@
 # Your SEO Action Checklist
 
-**For the afternoon you sit down to do this.** Total time: ~2 hours, splittable across sessions.
+Your Phase 3 work. Total time: **~30–40 minutes**, splittable.
 
-I'll be with you on the first one (Google Business Profile). The rest you can knock out solo or we can do them together — whichever feels good.
+Phase 2 items (Google Search Console, Bing, analytics, Google Business Profile) are on my plate. I'll loop you in for ~15 minutes when it's time to verify the Business Profile with your Google Workspace login.
 
 ---
 
-## Before we start (5 min)
+## Before you start (5 min)
 
 Have these ready:
 
-- [ ] Your Google Workspace login (the one you use for email)
-- [ ] Your Florida LCSW license number
-- [ ] Phone number you want to publish
-- [ ] Decision: publish a street address, or "service area only"?
-  - Default recommendation: **service area only** (St. Augustine Beach + Jacksonville). Matches the privacy stance you took with Jane.
-
-Images we'll use (already in your site repo — I'll hand them to you):
-- `images/dr-wilson-portrait.jpeg` — profile photo
-- `images/beach-golden.jpg` — cover image
-- `logo-exports/lotus-logo-512.png` — logo
+- [ ] Your Psychology Today therapist login
+- [ ] Your current PT profile photo — decide if it still represents you well
+- [ ] Decision on what to publish publicly for location: *service area* ("St. Augustine Beach + Jacksonville, Florida") or a specific office address
+  - Default recommendation: **service area only** — matches the privacy stance you took with Jane.
 
 ---
 
-## 1. Google Business Profile (45 min)
-
-**Go to:** https://business.google.com &nbsp;→ *Manage now*
-
-### Key fields
-
-| Field | Value |
-|---|---|
-| Business name | Conscious Practice — Dr. Jennifer Wilson, PhD, LCSW |
-| Category (primary) | Psychotherapist |
-| Category (additional) | Licensed Clinical Social Worker |
-| Service area | St. Augustine Beach, Jacksonville, Florida |
-| Website | https://drjenniferwilson.com |
-| Phone | [your practice phone] |
-| Hours | [what you want to publish] |
-
-### Description (paste exactly)
-
-> Private-pay psychotherapy practice in St. Augustine Beach and Jacksonville, Florida. Dr. Jennifer Wilson, PhD, LCSW brings 20+ years of clinical experience. Individual therapy, couples work, and boutique 6- or 12-week intensives. A steadier, deeper pace for lasting change.
-
-### Photos to upload
-- **Logo:** `logo-exports/lotus-logo-512.png`
-- **Cover:** `images/beach-golden.jpg`
-- **Profile:** `images/dr-wilson-portrait.jpeg`
-- **Interior (optional):** `images/dr-wilson-lobby.jpeg`
-
-### Verification
-Google will send a postcard (5–10 days) or offer video verification. Follow through whichever comes up — verification is the switch that turns the map pin on.
-
----
-
-## 2. Psychology Today — refresh your existing listing (20 min)
+## 1. Psychology Today — refresh your existing listing (20 min)
 
 You're already on Psychology Today, so the work here is **updating**, not signing up. The highest-leverage move is making sure your listing points at `drjenniferwilson.com` and reflects the new positioning (intensives, current bio, current specialties).
 
@@ -84,7 +47,7 @@ You're already on Psychology Today, so the work here is **updating**, not signin
 
 ---
 
-## 3. Free directories (20 min total)
+## 2. Free directories (20 min total)
 
 | Directory | URL | Notes |
 |---|---|---|
@@ -99,6 +62,6 @@ Each one wants a short profile and a link back to `drjenniferwilson.com`. Re-use
 
 ## When you're done
 
-Ping me. Phase 2 (Search Console + Bing) goes in the same day. From there we watch the signals come in.
+Ping me. I'll confirm the backlinks are counting and we move on to the Phase 4 slow-burn pieces (content + reviews).
 
 *— Rich*

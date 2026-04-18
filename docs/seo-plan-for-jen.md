@@ -22,14 +22,14 @@ Your marketing folks were right. The site reads beautifully; what it was missing
 - **Google Search Console** — dashboard showing which searches find you
 - **Bing Webmaster Tools** — same for Bing + ChatGPT
 - **Light analytics** — traffic numbers, no creepy tracking
+- **Google Business Profile** — the map pin (the big one); I'll need ~15 min of your time to verify with your Google Workspace login
 
 ---
 
-## Phase 3 — Your part (one afternoon, together)
+## Phase 3 — Your part (30–40 minutes, solo or together)
 
 This is the work Google trusts most, because *you* create these listings.
 
-- **Google Business Profile** — the map pin (the big one)
 - **Psychology Today** — refresh your existing listing so the website, bio, and specialties match the new site
 - **Free directories** — GoodTherapy, TherapyDen, NPI, NASW Florida
 
@@ -58,6 +58,6 @@ SEO is slow medicine. What's done is the root system. The leaves take a season.
 
 ---
 
-**Your move:** pick an afternoon. One hour together. Open the checklist. We go.
+**Your move:** give me the go-ahead on Phase 2 and open the checklist for your Phase 3 bits. We can knock it all out on one call if you'd rather.
 
 *— Rich*
