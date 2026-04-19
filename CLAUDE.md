@@ -50,13 +50,21 @@
 ### Hero/Card Credentials:
 "Dr. Jennifer Wilson, PhD, LCSW — 20+ years. Clinical expertise, empathic listening, deep breaths, real transformation."
 
-### Areas of Focus:
-- Life Transitions
+### Areas of Focus (updated 2026-04-18 per Jen's tracked-changes edits):
 - Relationship Patterns
+- Trauma
+- Life Transitions
 - Identity & Purpose
-- Parenting
-- Couples
+- Parenting & Child Well-being
+- Couples Therapy & Relational Conflict
 - Anxiety & Overwhelm
+
+### Other Services (separate from Areas of Focus — specialized/adjacent work):
+- Child Sexual Abuse
+- Teen Therapy
+- Parenting Support
+- Adoption Home Studies
+- Clinical Supervision for Registered Interns
 
 ### Credential Statements (use in about page, trust bars, etc.):
 - "Court-recognized forensic clinician specializing in clinical assessment and trauma treatment."
