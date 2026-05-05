@@ -1,13 +1,3 @@
-# robots.txt for drjenniferwilson.com
-# All crawlers welcome on the whole site, except internal repo artifacts.
-
+# PREVIEW BUILD — block all crawlers
 User-agent: *
-Allow: /
-Disallow: /docs/
-Disallow: /README.md
-Disallow: /CLAUDE.md
-
-# AI agent guide (schema is in /llms.txt per the llms.txt convention)
-# https://llmstxt.org
-
-Sitemap: https://drjenniferwilson.com/sitemap.xml
+Disallow: /
