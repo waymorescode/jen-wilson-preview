@@ -61,18 +61,38 @@ nav {
 .nav-brand a {
   display: flex;
   align-items: center;
+  gap: 0.75rem;
   text-decoration: none;
 }
 
-.nav-logo {
-  height: 64px;
-  width: auto;
-  display: block;
+.logo-icon {
+  width: 40px;
+  height: 40px;
   object-fit: contain;
 }
 
-@media (max-width: 900px) {
-  .nav-logo { height: 52px; }
+.nav-brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.nav-brand-main {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+}
+
+.nav-brand-sub {
+  font-size: 0.7rem;
+  color: var(--accent);
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .mobile-menu-toggle {
