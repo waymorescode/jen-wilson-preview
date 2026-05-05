@@ -14,11 +14,18 @@ A note on the preview: it's set to "do not index," so search engines won't pick 
 Shows up in the top nav, page titles, footer copyright, and the metadata search engines and social shares pull from.
 **See it:** any page in the preview — top-left and footer.
 
-### 2. New logo in the top-left of every page
-The full lotus-and-wordmark lockup now anchors the navigation, so the brand carries across every page.
-**See it:** <https://waymorescode.github.io/jen-wilson-preview/> — top-left corner.
+### 2. The new logo — a small ask before we put it in the nav
+We love the new lotus-and-wordmark logo. Before it can sit cleanly in the navigation, we'd love a version of the asset where the **lotus mark is delivered separately from the wordmark** — two files instead of the single combined image.
 
-> *Note from us:* the logo is currently a square, which works but looks best at this size. A horizontal version would let it sit more elegantly in the nav at very narrow widths. We can request that from your designer when you're ready.
+The reason: the current logo is a square that contains the lotus, "Conscious Practice," "Therapy and Wellness," and "Jennifer Wilson, PhD, LCSW" all stacked together. When we shrink that whole image to fit a nav bar (about 40 pixels tall), the words inside become unreadable and the lotus loses its presence.
+
+With the lotus on its own, we can place it beside the existing text setup in the top-left — the lotus as a clean mark, "Conscious Practice Therapy and Wellness" as the brand line, and "Dr. Jennifer Wilson, PhD, LCSW" beneath it. A true nav lockup, in your colors, with everything fully readable at any size.
+
+**For now**, the navigation still uses the small lotus icon you've had — nothing has changed visually in the top-left of the preview. The full square logo we received remains saved in the project so we can use it for social sharing images and the like in the meantime.
+
+**To unblock the nav placement**, we'd love the designer to provide:
+- The lotus mark on its own as an SVG (or a transparent PNG at 1024×1024+).
+- The wordmark on its own (also separate), in case we'd like a horizontal version later.
 
 ### 3. "The Five Intensives" highlighted on the homepage
 Two new touches surface the intensives earlier in the journey:
