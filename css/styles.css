@@ -150,6 +150,18 @@ nav {
   text-align: center;
 }
 
+.hero-logo {
+  display: block;
+  width: 300px;
+  max-width: 80vw;
+  height: auto;
+  margin: 0 auto 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .hero-logo { width: 220px; }
+}
+
 .hero h1 {
   font-family: var(--font-serif);
   font-size: 3rem;
