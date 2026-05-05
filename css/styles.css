@@ -54,42 +54,25 @@ nav {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1.25rem 2rem;
+  padding: 0.75rem 2rem;
+  gap: 1.5rem;
 }
 
 .nav-brand a {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
   text-decoration: none;
 }
 
-.logo-icon {
-  width: 40px;
-  height: 40px;
+.nav-logo {
+  height: 64px;
+  width: auto;
+  display: block;
   object-fit: contain;
 }
 
-.nav-brand-text {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.nav-brand-main {
-  font-family: var(--font-serif);
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--primary);
-  letter-spacing: -0.5px;
-}
-
-.nav-brand-sub {
-  font-size: 0.7rem;
-  color: var(--accent);
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+@media (max-width: 900px) {
+  .nav-logo { height: 52px; }
 }
 
 .mobile-menu-toggle {
@@ -123,6 +106,7 @@ nav {
   font-size: 0.9rem;
   font-weight: 500;
   transition: color 0.3s ease;
+  white-space: nowrap;
 }
 
 .nav-links a:hover { color: var(--accent); }
@@ -135,6 +119,7 @@ nav {
   font-weight: 600 !important;
   font-size: 0.85rem !important;
   transition: background-color 0.3s ease;
+  white-space: nowrap;
 }
 
 .nav-cta:hover {
@@ -148,18 +133,6 @@ nav {
   background-color: var(--light-bg);
   padding: 5rem 2rem;
   text-align: center;
-}
-
-.hero-logo {
-  display: block;
-  width: 300px;
-  max-width: 80vw;
-  height: auto;
-  margin: 0 auto 1.5rem;
-}
-
-@media (max-width: 600px) {
-  .hero-logo { width: 220px; }
 }
 
 .hero h1 {
