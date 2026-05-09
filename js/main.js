@@ -67,7 +67,7 @@ function initHeroPhotoRotation() {
 // Workspace account). Set MAILING_LIST_ENDPOINT after deploy.
 // See site/docs/email-signup/SETUP.md for the runbook.
 // ============================================
-const MAILING_LIST_ENDPOINT = ''; // paste the Apps Script Web App URL here
+const MAILING_LIST_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwZ4iyVfTeN0e54X7NeMz0gez1S57YHZVXHsIcRFg5oj_GpyBj1K0IaH460QdROmqmS/exec';
 
 function initMailingListForm() {
     const form = document.getElementById('cp-mailing-list-form');
