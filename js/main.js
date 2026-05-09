@@ -46,16 +46,18 @@ function initHeroPhotoRotation() {
     // [imagePath, focalY] -- focalY anchors the most important detail
     // when the image gets cropped to the hero frame's aspect ratio.
     // Jen's confirmed keepers + the granite-pair lions.
-    // Focal points calibrated visually against the rendered hero.
+    // [path, focalY, size?] -- focal + size calibrated visually against
+    // the rendered hero.
     const photos = [
-        ['images/hero-st-aug-3.jpg',  '25%'],  // Flagler tower in upper third
-        ['images/hero-st-aug-7.jpg',  '70%'],  // Castillo + palms (pan down past sky)
-        ['images/hero-jax-2.jpg',     '50%'],  // pier + horizon middle
-        ['images/hero-st-aug-12.jpg', '40%']   // granite pair on grass
+        ['images/hero-st-aug-3.jpg',  '50%', 'contain'],  // Flagler tower zoomed out so full spire is visible
+        ['images/hero-st-aug-7.jpg',  '70%', 'cover'],    // Castillo + palms (pan down past sky)
+        ['images/hero-jax-2.jpg',     '50%', 'cover'],    // pier + horizon middle
+        ['images/hero-st-aug-12.jpg', '40%', 'cover']     // granite pair on grass
     ];
-    const [path, focal] = photos[Math.floor(Math.random() * photos.length)];
+    const [path, focal, size] = photos[Math.floor(Math.random() * photos.length)];
     hero.style.backgroundImage = `url('${path}')`;
     hero.style.backgroundPosition = `center ${focal}`;
+    hero.style.backgroundSize = size;
 }
 
 // Mobile Menu Toggle
