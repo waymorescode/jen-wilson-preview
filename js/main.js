@@ -37,20 +37,29 @@ function initTaglineRotation() {
 
 // ============================================
 // HERO PHOTO ROTATION
-// Picks a random St. Augustine landmark photo per visit
-// on any hero marked data-hero-rotate="st-augustine"
+// Picks a random St. Augustine or Jacksonville Beach photo per visit
+// on any hero marked data-hero-rotate="locations"
 // ============================================
 function initHeroPhotoRotation() {
-    const hero = document.querySelector('.hero[data-hero-rotate="st-augustine"]');
+    const hero = document.querySelector('.hero[data-hero-rotate="locations"]');
     if (!hero) return;
     const photos = [
+        // St. Augustine
         'images/hero-st-aug-1.jpg',
         'images/hero-st-aug-2.jpg',
         'images/hero-st-aug-3.jpg',
         'images/hero-st-aug-4.jpg',
         'images/hero-st-aug-5.jpg',
         'images/hero-st-aug-6.jpg',
-        'images/hero-st-aug-7.jpg'
+        'images/hero-st-aug-7.jpg',
+        // Jacksonville Beach
+        'images/hero-jax-1.jpg',
+        'images/hero-jax-2.jpg',
+        'images/hero-jax-3.jpg',
+        'images/hero-jax-4.jpg',
+        'images/hero-jax-5.jpg',
+        'images/hero-jax-6.jpg',
+        'images/hero-jax-7.jpg'
     ];
     const choice = photos[Math.floor(Math.random() * photos.length)];
     hero.style.backgroundImage = `url('${choice}')`;
