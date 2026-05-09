@@ -176,10 +176,10 @@ nav {
   position: relative;
   background-color: var(--primary);
   background-size: cover;
-  background-position: center 55%;
+  background-position: center 40%;
   background-repeat: no-repeat;
-  padding: 6rem 2rem;
-  min-height: 380px;
+  padding: 7rem 2rem;
+  min-height: 520px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -211,8 +211,8 @@ nav {
 
 @media (max-width: 640px) {
   .hero[data-hero-rotate] {
-    padding: 4rem 1.5rem;
-    min-height: 280px;
+    padding: 4.5rem 1.5rem;
+    min-height: 360px;
   }
 }
 
