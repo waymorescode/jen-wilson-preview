@@ -49,7 +49,7 @@ function initHeroPhotoRotation() {
     // [path, focalY, size?] -- focal + size calibrated visually against
     // the rendered hero.
     const photos = [
-        ['images/hero-st-aug-3.jpg',  '50%', 'contain'],  // Flagler tower zoomed out so full spire is visible
+        ['images/hero-st-aug-3.jpg',  '70%', 'cover'],    // Flagler tower (full width, more bottom than top)
         ['images/hero-st-aug-7.jpg',  '70%', 'cover'],    // Castillo + palms (pan down past sky)
         ['images/hero-jax-2.jpg',     '50%', 'cover'],    // pier + horizon middle
         ['images/hero-st-aug-12.jpg', '40%', 'cover']     // granite pair on grass
