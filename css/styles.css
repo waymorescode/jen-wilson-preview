@@ -178,8 +178,8 @@ nav {
   background-size: cover;
   background-position: center 40%;
   background-repeat: no-repeat;
-  padding: 8rem 2rem;
-  min-height: 600px;
+  padding: 7rem 2rem;
+  min-height: 560px;
   display: flex;
   flex-direction: column;
   justify-content: center;
