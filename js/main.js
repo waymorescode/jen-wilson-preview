@@ -35,10 +35,32 @@ function initTaglineRotation() {
     setInterval(rotateTagline, 8000);
 }
 
+// ============================================
+// HERO PHOTO ROTATION
+// Picks a random St. Augustine landmark photo per visit
+// on any hero marked data-hero-rotate="st-augustine"
+// ============================================
+function initHeroPhotoRotation() {
+    const hero = document.querySelector('.hero[data-hero-rotate="st-augustine"]');
+    if (!hero) return;
+    const photos = [
+        'images/hero-st-aug-1.jpg',
+        'images/hero-st-aug-2.jpg',
+        'images/hero-st-aug-3.jpg',
+        'images/hero-st-aug-4.jpg',
+        'images/hero-st-aug-5.jpg',
+        'images/hero-st-aug-6.jpg',
+        'images/hero-st-aug-7.jpg'
+    ];
+    const choice = photos[Math.floor(Math.random() * photos.length)];
+    hero.style.backgroundImage = `url('${choice}')`;
+}
+
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize tagline rotation on homepage
     initTaglineRotation();
+    initHeroPhotoRotation();
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navMenu = document.querySelector('.nav-links');
     const dropdowns = document.querySelectorAll('.dropdown');

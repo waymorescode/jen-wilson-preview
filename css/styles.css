@@ -170,6 +170,52 @@ nav {
   text-align: center;
 }
 
+/* Photo-rotation variant (homepage). JS picks a random St. Augustine
+   image on load and sets background-image on the element. */
+.hero[data-hero-rotate] {
+  position: relative;
+  background-color: var(--primary);
+  background-size: cover;
+  background-position: center 55%;
+  background-repeat: no-repeat;
+  padding: 6rem 2rem;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero[data-hero-rotate]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(20, 30, 20, 0.55) 0%, rgba(20, 30, 20, 0.30) 50%, rgba(20, 30, 20, 0.65) 100%);
+  z-index: 0;
+}
+
+.hero[data-hero-rotate] > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero[data-hero-rotate] h1 {
+  color: #FFFFFF;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);
+}
+
+.hero[data-hero-rotate] .subtitle {
+  color: rgba(255, 255, 255, 0.96);
+  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.55);
+}
+
+@media (max-width: 640px) {
+  .hero[data-hero-rotate] {
+    padding: 4rem 1.5rem;
+    min-height: 280px;
+  }
+}
+
 .hero h1 {
   font-family: var(--font-serif);
   font-size: 3rem;
