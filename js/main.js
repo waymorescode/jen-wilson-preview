@@ -52,6 +52,8 @@ function initHeroPhotoRotation() {
         'images/hero-st-aug-5.jpg',
         'images/hero-st-aug-6.jpg',
         'images/hero-st-aug-7.jpg',
+        'images/hero-st-aug-8.jpg',
+        'images/hero-st-aug-9.jpg',
         // Jacksonville Beach
         'images/hero-jax-1.jpg',
         'images/hero-jax-2.jpg',
