@@ -432,6 +432,13 @@ nav {
   border-bottom: none;
 }
 
+.other-services-list a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+.other-services-list a:hover { color: var(--accent); }
+
 .service-card-simple {
   padding: 2rem 0 0;
   display: flex;
