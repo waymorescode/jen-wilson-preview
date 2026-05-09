@@ -3,7 +3,7 @@
 // Cycles through pre-set taglines on the homepage hero
 // ============================================
 const TAGLINES = [
-    "Therapy for deeper well-being",
+    "Therapy for deeper well-being in St. Augustine Beach & Jacksonville",
     "Space to slow down, heal deeply, and reconnect with the most grounded version of yourself.",
     "Holistic approach to therapy that heals the mind, body, and spirit.",
     "Discover new relationship skills, find peaceful moments of introspection, release old wounds."
