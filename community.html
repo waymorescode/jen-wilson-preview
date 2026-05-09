@@ -207,20 +207,26 @@
             border-top: 1px solid #E0DDD4;
         }
 
-        .event-rsvp p {
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
+        .event-register-btn {
+            display: inline-block;
+            margin: 0.75rem 0 1.25rem;
+        }
+
+        .event-rsvp-secondary {
+            font-size: 0.9rem;
+            color: var(--accent);
+            margin: 0;
             line-height: 1.6;
         }
 
-        .event-rsvp a {
+        .event-rsvp-secondary a {
             color: var(--primary);
             font-weight: 600;
             text-decoration: none;
             border-bottom: 1px solid currentColor;
         }
 
-        .event-rsvp a:hover {
+        .event-rsvp-secondary a:hover {
             color: var(--accent);
         }
 
@@ -325,9 +331,9 @@
                 </div>
 
                 <div class="event-rsvp">
-                    <p class="event-label">RSVP &amp; Host Inquiries</p>
-                    <p>Jennifer Wilson<br>
-                    <a href="mailto:jen@drjenniferwilson.com">jen@drjenniferwilson.com</a> &middot; <a href="tel:+15617014984">561-701-4984</a></p>
+                    <span class="event-label">Reserve Your Place</span>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFGpHqfgbWcm-n95znDzMj9c5DbQu42GL9BxbGOOoWFhtE0w/viewform?usp=header" class="cta-button event-register-btn" target="_blank" rel="noopener">RSVP for the Inner Circle &rarr;</a>
+                    <p class="event-rsvp-secondary">Or reach out directly: <a href="mailto:jen@drjenniferwilson.com">jen@drjenniferwilson.com</a> &middot; <a href="tel:+15617014984">561-701-4984</a></p>
                 </div>
             </article>
         </div>
