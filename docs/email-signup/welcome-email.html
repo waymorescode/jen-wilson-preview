@@ -1,0 +1,91 @@
+<!--
+  Welcome email — Conscious Practice Therapy and Wellness
+
+  This template is rendered by Apps Script on every signup.
+
+  Editable freely — change the copy, swap the lotus image, adjust the
+  signature. Available placeholder: <?= name ?>  (the subscriber's first
+  name, or "friend" if no name was provided).
+
+  Keep CSS inline for email-client compatibility. Avoid background-image
+  CSS; many clients strip it.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Welcome to the Conscious Practice community</title>
+</head>
+<body style="margin:0; padding:0; background-color:#F4F3F0; font-family:Georgia, 'Cormorant Garamond', serif; color:#2A2A2A;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#F4F3F0;">
+    <tr>
+      <td align="center" style="padding:32px 16px;">
+
+        <!-- Card -->
+        <table role="presentation" width="560" cellpadding="0" cellspacing="0" style="max-width:560px; width:100%; background-color:#FFFFFF; border-radius:8px; overflow:hidden;">
+
+          <!-- Lotus + brand header -->
+          <tr>
+            <td align="center" style="padding:36px 32px 24px; border-bottom:1px solid #EAE7DF;">
+              <img src="https://drjenniferwilson.com/images/lotus-only.png" alt="Conscious Practice Therapy and Wellness" width="72" height="72" style="display:block; margin:0 auto 16px;">
+              <div style="font-family:Georgia, 'Cormorant Garamond', serif; font-size:22px; color:#2D3D2D; font-weight:600;">Conscious Practice</div>
+              <div style="font-family:Georgia, 'Cormorant Garamond', serif; font-size:16px; color:#2D3D2D;">Therapy and Wellness</div>
+              <div style="font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#7A8B6F; letter-spacing:1px; text-transform:uppercase; margin-top:6px;">Dr. Jennifer Wilson, PhD, LCSW</div>
+            </td>
+          </tr>
+
+          <!-- Body -->
+          <tr>
+            <td style="padding:32px 36px 24px;">
+              <p style="font-family:Georgia, 'Cormorant Garamond', serif; font-size:18px; color:#2D3D2D; margin:0 0 18px; line-height:1.5;">Hi <?= name ?>,</p>
+
+              <p style="font-family:Georgia, serif; font-size:16px; color:#2A2A2A; margin:0 0 14px; line-height:1.7;">
+                Thank you for joining the Conscious Practice community.
+              </p>
+
+              <p style="font-family:Georgia, serif; font-size:16px; color:#2A2A2A; margin:0 0 14px; line-height:1.7;">
+                I share thoughtful notes from time to time — invitations to gatherings, the occasional piece of writing, and updates when a new intensive opens for booking. Always considered. Never more than feels right.
+              </p>
+
+              <p style="font-family:Georgia, serif; font-size:16px; color:#2A2A2A; margin:0 0 24px; line-height:1.7;">
+                If something brought you here today and you'd like to talk, the door is open. A complimentary 15-minute consultation is the easiest first step.
+              </p>
+
+              <!-- CTA -->
+              <table role="presentation" cellpadding="0" cellspacing="0" align="center" style="margin:8px auto 16px;">
+                <tr>
+                  <td bgcolor="#2D3D2D" style="border-radius:4px;">
+                    <a href="https://drjenniferwilson.com/book/" style="display:inline-block; padding:12px 26px; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:600; color:#FFFFFF; text-decoration:none; letter-spacing:0.5px;">Schedule a Consultation</a>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="font-family:Georgia, serif; font-size:16px; color:#2A2A2A; margin:24px 0 8px; line-height:1.7;">Warmly,</p>
+              <p style="font-family:Georgia, 'Cormorant Garamond', serif; font-size:18px; color:#2D3D2D; margin:0 0 4px; font-style:italic;">Jennifer</p>
+              <p style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#7A8B6F; letter-spacing:0.5px; margin:0;">Dr. Jennifer Wilson, PhD, LCSW</p>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding:18px 36px 28px; border-top:1px solid #EAE7DF; background-color:#F8F7F2;">
+              <p style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#6B7B6B; margin:0 0 6px; line-height:1.6;">
+                Conscious Practice Therapy and Wellness<br>
+                St. Augustine Beach &amp; Jacksonville, Florida<br>
+                <a href="mailto:hello@drjenniferwilson.com" style="color:#2D3D2D; text-decoration:none;">hello@drjenniferwilson.com</a>
+                &nbsp;·&nbsp;
+                <a href="tel:+19049069403" style="color:#2D3D2D; text-decoration:none;">+1 904-906-9403</a>
+              </p>
+              <p style="font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#9AA59A; margin:10px 0 0; line-height:1.5;">
+                You're receiving this because you signed up at drjenniferwilson.com or were added by Dr. Wilson directly. To unsubscribe, reply with "unsubscribe" and we'll remove you right away.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

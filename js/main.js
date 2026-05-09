@@ -60,11 +60,86 @@ function initHeroPhotoRotation() {
     hero.style.backgroundSize = size;
 }
 
+// ============================================
+// MAILING LIST SIGNUP
+// Posts the community-page form to a Google Apps Script Web App
+// (Conscious Practice mailing-list endpoint, deployed under Jen's
+// Workspace account). Set MAILING_LIST_ENDPOINT after deploy.
+// See site/docs/email-signup/SETUP.md for the runbook.
+// ============================================
+const MAILING_LIST_ENDPOINT = ''; // paste the Apps Script Web App URL here
+
+function initMailingListForm() {
+    const form = document.getElementById('cp-mailing-list-form');
+    if (!form) return;
+    const message = form.querySelector('.cp-form-message');
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalLabel = submitBtn ? submitBtn.textContent : 'Join the Conversation';
+
+    function setMessage(text, tone) {
+        if (!message) return;
+        message.textContent = text;
+        message.style.color = tone === 'error'
+            ? '#a8442a'
+            : (tone === 'success' ? 'var(--primary, #2D3D2D)' : 'var(--accent, #6B7B6B)');
+    }
+
+    form.addEventListener('submit', async function (ev) {
+        ev.preventDefault();
+        if (!MAILING_LIST_ENDPOINT) {
+            setMessage('Signup is being set up. For now, please email hello@drjenniferwilson.com to be added.', 'error');
+            return;
+        }
+        const fd = new FormData(form);
+        const payload = {
+            name: (fd.get('name') || '').toString().trim(),
+            email: (fd.get('email') || '').toString().trim(),
+            company_website: (fd.get('company_website') || '').toString(),
+            source: 'website'
+        };
+        if (!payload.email) {
+            setMessage('Please add your email address.', 'error');
+            return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+        setMessage('', 'info');
+
+        try {
+            // Apps Script Web Apps return JSON but their CORS policy means
+            // we use a no-cors fetch with form-encoded body. We won't be
+            // able to read the response, so we treat a non-throwing fetch
+            // as success and rely on the script to handle validation.
+            const body = new URLSearchParams(payload).toString();
+            await fetch(MAILING_LIST_ENDPOINT, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: body
+            });
+            form.reset();
+            submitBtn.textContent = 'Thank you';
+            setMessage("You're in. Look for a welcome note in your inbox.", 'success');
+            setTimeout(function () {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalLabel;
+            }, 4000);
+        } catch (err) {
+            console.error('Mailing-list signup failed', err);
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalLabel;
+            setMessage('Something went off-script. Please try again, or email hello@drjenniferwilson.com directly.', 'error');
+        }
+    });
+}
+
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize tagline rotation on homepage
     initTaglineRotation();
     initHeroPhotoRotation();
+    initMailingListForm();
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navMenu = document.querySelector('.nav-links');
     const dropdowns = document.querySelectorAll('.dropdown');

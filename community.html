@@ -351,10 +351,14 @@
                 <h3>Stay Connected</h3>
                 <p>Get updates on community events, workshops, and thoughts worth sharing — delivered to your inbox, only what matters most.</p>
 
-                <div class="email-signup">
-                    <input type="email" placeholder="Your email address" required>
+                <form class="email-signup" id="cp-mailing-list-form" novalidate>
+                    <input type="text" name="name" placeholder="Your name" autocomplete="name" required>
+                    <input type="email" name="email" placeholder="Your email address" autocomplete="email" required>
+                    <!-- Honeypot — hidden from real users, bots fill it. Field name must match HONEYPOT_FIELD in Apps Script. -->
+                    <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute; left:-10000px; width:1px; height:1px; opacity:0;">
                     <button type="submit">Join the Conversation</button>
-                </div>
+                    <p class="cp-form-message" role="status" aria-live="polite" style="margin-top:0.75rem; min-height:1.4em; font-size:0.95rem;"></p>
+                </form>
 
                 <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--accent);">We respect your privacy. You can unsubscribe at any time.</p>
             </div>
