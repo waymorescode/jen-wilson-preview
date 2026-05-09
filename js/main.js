@@ -52,7 +52,6 @@ function initHeroPhotoRotation() {
         ['images/hero-st-aug-3.jpg',  '25%'],  // Flagler tower in upper third
         ['images/hero-st-aug-7.jpg',  '40%'],  // Castillo + palms middle band
         ['images/hero-jax-2.jpg',     '50%'],  // pier + horizon middle
-        ['images/hero-st-aug-8.jpg',  '50%'],  // lion profile centered
         ['images/hero-st-aug-9.jpg',  '35%'],  // pair frontal, big lion head + body
         ['images/hero-st-aug-10.jpg', '25%'],  // Medici lion head + inscription
         ['images/hero-st-aug-11.jpg', '30%'],  // west-end lion + bay
