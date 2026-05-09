@@ -13,7 +13,7 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Conscious Practice — Dr. Jennifer Wilson, PhD, LCSW">
+    <meta property="og:site_name" content="Conscious Practice Therapy and Wellness — Dr. Jennifer Wilson, PhD, LCSW">
     <meta property="og:title" content="Community &amp; Events | Dr. Jennifer Wilson, PhD, LCSW">
     <meta property="og:description" content="Community events and workshops focused on wellness, relationships, and life transitions in St. Augustine Beach.">
     <meta property="og:url" content="https://drjenniferwilson.com/community.html">
@@ -146,9 +146,96 @@
             background-color: var(--accent);
         }
 
+        .event-card {
+            background-color: var(--cream);
+            border: 1px solid #E0DDD4;
+            border-radius: 10px;
+            padding: 2.5rem;
+            margin-top: 1.25rem;
+        }
+
+        .event-card-header {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid #E0DDD4;
+        }
+
+        .event-card-header h3 {
+            font-family: var(--font-serif);
+            font-size: 1.65rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            line-height: 1.25;
+        }
+
+        .event-meta {
+            font-size: 0.95rem;
+            color: var(--accent);
+            font-style: italic;
+            margin: 0;
+        }
+
+        .event-details {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #E0DDD4;
+        }
+
+        .event-detail p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .event-label {
+            display: block;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-rsvp {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #E0DDD4;
+        }
+
+        .event-rsvp p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .event-rsvp a {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .event-rsvp a:hover {
+            color: var(--accent);
+        }
+
         @media (max-width: 768px) {
             .stay-connected-section {
                 padding: 2rem 1.5rem;
+            }
+
+            .event-card {
+                padding: 1.75rem 1.5rem;
+            }
+
+            .event-details {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
             }
         }
     </style>
@@ -162,9 +249,10 @@
     <div class="nav-container">
         <div class="nav-brand">
             <a href="index.html">
-                <img src="images/lotus-logo.svg" alt="" class="logo-icon">
+                <img src="images/lotus-only.png" alt="Conscious Practice Therapy and Wellness lotus mark" class="logo-icon">
                 <div class="nav-brand-text">
                     <div class="nav-brand-main">Conscious Practice</div>
+                    <div class="nav-brand-tagline">Therapy and Wellness</div>
                     <div class="nav-brand-sub">Dr. Jennifer Wilson, PhD, LCSW</div>
                 </div>
             </a>
@@ -183,7 +271,7 @@
             <li><a href="intensives.html">Intensives</a></li>
             <li><a href="fees.html">Fees</a></li>
             <li><a href="community.html">Community</a></li>
-            <li><a href="/book/" class="nav-cta">Schedule a Consultation</a></li>
+            <li><a href="https://drjenniferwilson.janeapp.com/#/staff_member/1/treatment/3" class="nav-cta">Returning Client</a></li>
         </ul>
     </div>
 </nav>
@@ -208,11 +296,47 @@
             <p>That's why I host gatherings, workshops, and community events. These are warm, open spaces where you can think about something important with other people who care about similar things — conversations rooted in compassion and shared growth.</p>
         </div>
 
+        <!-- Upcoming Event -->
+        <div class="community-section">
+            <h2>Upcoming Event</h2>
+            <article class="event-card">
+                <div class="event-card-header">
+                    <h3>Inner Circle &mdash; Reinvention &amp; Quiet Power</h3>
+                    <p class="event-meta">Thursday, July 10 &middot; 6:00 &ndash; 7:30 PM &middot; Seaside Spiritual Spa, St. Augustine</p>
+                </div>
+
+                <p>An intimate evening where women of all ages gather to reflect, reclaim, connect, and inspire one another. This curated, guided salon blends reinvention &mdash; the woman you're becoming &mdash; with quiet power, exploring gentle boundaries, self-respect, and choosing yourself without guilt.</p>
+
+                <p>The restorative conversation will leave you grounded, renewed, and more attuned to looking and feeling well from the inside out. The evening includes guided discussion and practical strategies for self-care and wellness to bring home.</p>
+
+                <div class="event-details">
+                    <div class="event-detail">
+                        <span class="event-label">Where</span>
+                        <p>Seaside Spiritual Spa<br>128 Sea Grove Main Street<br>St. Augustine, Florida 32080</p>
+                    </div>
+                    <div class="event-detail">
+                        <span class="event-label">When</span>
+                        <p>Thursday, July 10, 2026<br>6:00 PM &ndash; 7:30 PM</p>
+                    </div>
+                    <div class="event-detail">
+                        <span class="event-label">The Evening</span>
+                        <p>Small group, limited space, complimentary<br>Light, elegant bites; sparkling wine; adaptogenic nonalcoholic spritzes<br>Calm, warmly lit, gently guided conversation<br>Phone-free, confidential circle</p>
+                    </div>
+                </div>
+
+                <div class="event-rsvp">
+                    <p class="event-label">RSVP &amp; Host Inquiries</p>
+                    <p>Jennifer Wilson<br>
+                    <a href="mailto:jen@drjenniferwilson.com">jen@drjenniferwilson.com</a> &middot; <a href="tel:+15617014984">561-701-4984</a></p>
+                </div>
+            </article>
+        </div>
+
         <!-- What We're Planning -->
         <div class="community-section">
             <h2>What We're Planning</h2>
-            <p>We host seasonal workshops and community gatherings — panels on relationships and identity, wellness conversations, space to think through the transitions that affect us all.</p>
-            <p>Stay tuned for upcoming events. For now, if you want to know when gatherings are scheduled, reach out and I'll add you to the community list.</p>
+            <p>We host seasonal workshops and community gatherings &mdash; panels on relationships and identity, wellness conversations, space to think through the transitions that affect us all.</p>
+            <p>If you'd like to know when the next gathering is scheduled, reach out and I'll add you to the community list.</p>
         </div>
 
         <!-- Stay Connected -->
@@ -273,7 +397,7 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; 2026 Conscious Practice. All rights reserved. | Private pay + Superbill.</p>
+        <p>&copy; 2026 Conscious Practice Therapy and Wellness. All rights reserved. | Private pay + Superbill.</p>
     </div>
 </footer>
 

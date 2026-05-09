@@ -1,6 +1,6 @@
-# Dr. Jennifer Wilson — Conscious Practice
+# Dr. Jennifer Wilson — Conscious Practice Therapy and Wellness
 
-Static HTML website for Dr. Jennifer Wilson, PhD, LCSW (Conscious Practice), a private-pay psychotherapy practice in Florida.
+Static HTML website for Dr. Jennifer Wilson, PhD, LCSW (Conscious Practice Therapy and Wellness), a private-pay psychotherapy practice in Florida.
 
 - **Live site:** [drjenniferwilson.com](https://drjenniferwilson.com)
 - **Hosting:** GitHub Pages
