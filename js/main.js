@@ -49,7 +49,7 @@ function initHeroPhotoRotation() {
     // Focal points calibrated visually against the rendered hero.
     const photos = [
         ['images/hero-st-aug-3.jpg',  '25%'],  // Flagler tower in upper third
-        ['images/hero-st-aug-7.jpg',  '40%'],  // Castillo + palms middle band
+        ['images/hero-st-aug-7.jpg',  '70%'],  // Castillo + palms (pan down past sky)
         ['images/hero-jax-2.jpg',     '50%'],  // pier + horizon middle
         ['images/hero-st-aug-12.jpg', '40%']   // granite pair on grass
     ];
