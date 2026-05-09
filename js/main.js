@@ -55,6 +55,10 @@ function initHeroPhotoRotation() {
         ['images/hero-st-aug-6.jpg',  '40%'],
         ['images/hero-st-aug-7.jpg',  '50%'],
         ['images/hero-st-aug-8.jpg',  '30%'],  // lion profile, head upper
+        ['images/hero-st-aug-9.jpg',  '40%'],  // pair frontal
+        ['images/hero-st-aug-10.jpg', '30%'],  // medici lion
+        ['images/hero-st-aug-11.jpg', '30%'],  // west-end + bay
+        ['images/hero-st-aug-12.jpg', '40%'],  // east-side granite pair
         // Jacksonville Beach
         ['images/hero-jax-1.jpg',     '40%'],
         ['images/hero-jax-2.jpg',     '50%'],
